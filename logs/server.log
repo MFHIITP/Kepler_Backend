@@ -1,0 +1,550 @@
+{"level":"info","message":"Server ","timestamp":"2025-03-11T18:26:40.243Z"}
+{"level":"info","message":"Server Started Successfully at ","timestamp":"2025-03-11T18:27:05.401Z"}
+{"level":"info","message":"Server Started Successfully at http://","timestamp":"2025-03-11T18:27:10.245Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:28:45.203Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-11T18:28:48.389Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:33:16.733Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:33:25.592Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-11T18:33:28.741Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:33:49.564Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-11T18:33:52.615Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:34:00.884Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:34:06.929Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-11T18:34:10.270Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:39:47.457Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-11T18:39:52.152Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-11T18:39:55.532Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-12T05:42:52.635Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-12T05:42:58.655Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-12T17:39:44.950Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-12T17:39:48.423Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-12T19:29:27.818Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-12T19:29:31.717Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T13:31:34.275Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T13:31:38.031Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:15:46.730Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:15:49.874Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:19:56.181Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:19:59.348Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:20:04.461Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:20:10.374Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:20:13.356Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:20:18.476Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:20:21.572Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:20:27.759Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:20:33.112Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:20:35.988Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:22:22.998Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:22:26.166Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:22:49.408Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:22:52.497Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-14T16:23:33.144Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-14T16:23:36.407Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-15T06:26:18.269Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-15T06:26:22.105Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-15T11:25:39.731Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-15T11:25:43.475Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-16T06:10:38.007Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-16T06:10:41.518Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-16T10:39:11.723Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-16T10:39:15.657Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-17T17:45:36.640Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2025-03-17T17:46:06.942Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-17T17:46:44.073Z"}
+{"level":"info","message":"Database error Error: querySrv ESERVFAIL _mongodb._tcp.clusterfarshid.vcl5snh.mongodb.net","timestamp":"2025-03-17T17:46:46.069Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-17T17:46:55.147Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-17T17:50:58.914Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-17T17:51:02.400Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-19T18:32:21.593Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-19T18:32:25.030Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-20T17:45:37.780Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-20T17:45:41.138Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-20T17:52:01.312Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-20T17:52:04.651Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-20T17:58:15.431Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-20T17:58:18.932Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:16:15.249Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:16:18.299Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:26:24.542Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:26:28.159Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:26:35.092Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:26:38.248Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:46:06.152Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:46:10.291Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:48:11.774Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:48:14.797Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-03-28T21:49:55.529Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-03-28T21:49:58.355Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:03:29.406Z"}
+{"level":"info","message":"Database error Error: querySrv ETIMEOUT _mongodb._tcp.clusterfarshid.vcl5snh.mongodb.net","timestamp":"2025-04-08T13:03:29.473Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:16:03.731Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:16:07.293Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:23:02.673Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:23:06.414Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:23:13.053Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:23:15.952Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:23:45.892Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:23:48.875Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:23:58.597Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:24:01.541Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:24:05.192Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:24:08.845Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:37:47.317Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:37:50.738Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:38:01.887Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:38:04.776Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:38:55.655Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:38:58.982Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:39:22.238Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:39:25.201Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:39:32.268Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:39:36.780Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:39:39.776Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:39:54.426Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:39:57.397Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:40:11.087Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:40:13.928Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:40:26.821Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:40:29.839Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:40:34.976Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:40:37.994Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:40:41.568Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:40:44.683Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:42:39.336Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:42:42.783Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:42:48.709Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:42:51.694Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:44:15.437Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:44:18.768Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:44:53.875Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:44:57.702Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:45:01.021Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:45:36.682Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:45:44.577Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:45:47.324Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:46:07.962Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:46:10.827Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:48:20.582Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:48:23.675Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:48:57.663Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:49:00.764Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:50:44.944Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:50:48.506Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:12.089Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:52:15.622Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:27.155Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:38.745Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:42.898Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:50.546Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:52:56.399Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:53:00.826Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:53:03.784Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:53:32.708Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:53:36.383Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:53:45.347Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:53:49.013Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:54:21.672Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:54:27.700Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:54:43.269Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:54:54.302Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:54:58.750Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:55:07.798Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:55:10.820Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:55:18.236Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:55:22.120Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:55:38.043Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:55:41.170Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:55:46.417Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:55:49.323Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:56:24.374Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:56:27.388Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:56:39.320Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:56:42.723Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:56:49.112Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:56:52.323Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:57:05.251Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:57:08.669Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:57:16.816Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:57:23.141Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:57:26.279Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:57:47.218Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:58:04.661Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:58:07.970Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:58:18.427Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:58:22.956Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:58:30.562Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T13:58:34.123Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:59:14.196Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T13:59:36.885Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:00:03.155Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:00:06.599Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:02:06.876Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:02:10.576Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:02:54.547Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:02:57.449Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:08:40.510Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:08:43.619Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:09:00.798Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:09:03.745Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:09:17.238Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:09:30.712Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:09:40.362Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:09:43.544Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:09:49.508Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:09:52.352Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:10:14.754Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:10:18.540Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:10:21.638Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:10:28.541Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:10:31.390Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:10:49.321Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:11:05.138Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:11:09.637Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:11:37.908Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:11:48.160Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:11:52.534Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:11:56.069Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:12:03.306Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:12:06.266Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:12:27.697Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:12:32.750Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:12:41.786Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:12:50.919Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:12:53.913Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:13:01.493Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:13:07.005Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:13:10.282Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:13:19.175Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:13:22.069Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:13:25.647Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:13:28.496Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:13:49.603Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:13:53.233Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:14:00.939Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:14:04.667Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:14:19.761Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:14:23.235Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:14:51.282Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:14:54.301Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:15:08.055Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:15:10.912Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:15:20.665Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:41:50.478Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:41:55.081Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:42:59.676Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:43:03.536Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:48:06.505Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:48:09.578Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:48:26.549Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:48:31.646Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:48:34.467Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:48:44.187Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:48:47.707Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:48:51.519Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:48:54.424Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:50:37.782Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:50:41.119Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:50:57.779Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:51:00.765Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:51:28.637Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:51:32.325Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:52:09.065Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:52:15.223Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:53:18.198Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:53:24.190Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:53:27.874Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:55:01.343Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T14:55:05.962Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T14:55:08.963Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:14:22.269Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:14:27.385Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:14:30.696Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:14:52.936Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:14:59.483Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:15:06.352Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:15:14.364Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:15:17.723Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:15:26.559Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:15:33.072Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:15:35.416Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:15:38.760Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:04.949Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:08.789Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:12.549Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:15.768Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:26.569Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:29.869Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:36.868Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:40.406Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:43.713Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:47.870Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:51.362Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:16:54.383Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:16:58.015Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:08.284Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:17:11.961Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:16.302Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:17:19.676Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:33.090Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:36.020Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:45.678Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:49.201Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:55.026Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:17:58.399Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:18:02.030Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:18:14.551Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:18:19.785Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:19:49.582Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:19:53.923Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:19:57.436Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:03.016Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:20:06.215Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:10.967Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:15.609Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:19.654Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:25.999Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:31.632Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:20:35.008Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:20:45.809Z"}
+{"level":"info","message":"Database error Error: querySrv ETIMEOUT _mongodb._tcp.clusterfarshid.vcl5snh.mongodb.net","timestamp":"2025-04-08T15:21:05.206Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:21:19.155Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:21:36.153Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:21:54.199Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:21:59.891Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:04.430Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:22:08.169Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:22.064Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:22:25.557Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:32.926Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:38.133Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:43.316Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:52.739Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:22:59.026Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:23:04.841Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:23:08.295Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:23:39.771Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:23:47.965Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:23:51.165Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:23:54.547Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:23:58.262Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:24:01.615Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:11.523Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:14.890Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:19.257Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:26.261Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:24:29.380Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:36.067Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:24:40.424Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:24:44.032Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:25:16.938Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:25:21.555Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:25:23.626Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:25:30.727Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:25:45.513Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:25:48.937Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:27:39.532Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:27:53.544Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:32:21.631Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:32:29.563Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:32:32.787Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:32:49.803Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:32:53.260Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:33:08.193Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:33:11.594Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:33:17.748Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:33:21.379Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:33:32.844Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:33:35.756Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:33:39.018Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:33:52.183Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:33:55.915Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:03.157Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:05.557Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:34:08.972Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:11.999Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:34:15.381Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:18.440Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:34:21.904Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:27.044Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:36.042Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:43.629Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:34:46.876Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:34:55.432Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:34:58.733Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:35:05.808Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:35:09.154Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:35:16.403Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:35:19.730Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:35:27.679Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:35:35.254Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:35:51.500Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:35:55.023Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:39:47.667Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:39:51.353Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:41:41.671Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:41:45.352Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:46:49.104Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:46:59.456Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:47:01.107Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:47:19.023Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:52:33.590Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:52:37.560Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:53:02.118Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:53:05.554Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:53:29.682Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T15:53:33.620Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T15:53:37.442Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:00:18.239Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:00:21.641Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:00:25.492Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:00:28.494Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:00:34.321Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:00:44.469Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:00:47.899Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:00:50.943Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:01:07.997Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:01:10.426Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:04:54.732Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:04:58.472Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:15:53.752Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:15:57.756Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:18:58.049Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:19:02.255Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:19:05.577Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:19:11.867Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:19:15.157Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:19:43.918Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:19:46.220Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:19:50.150Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:20:21.398Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:20:33.845Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:24:54.872Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:24:58.854Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:25:17.679Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:25:21.086Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:26:54.077Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:26:55.906Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:27:00.252Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T16:34:35.309Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T16:34:38.809Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:13:08.754Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:13:11.953Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:21:59.545Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:22:03.177Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:22:50.336Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:22:53.977Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:23:35.851Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:23:39.307Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:24:35.276Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:24:44.012Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:24:55.163Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:24:58.650Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:25:14.055Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:25:19.969Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:25:43.975Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:25:47.638Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:26:32.381Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:26:35.863Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:27:08.619Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:27:12.225Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:28:26.732Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:28:30.526Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:31:22.894Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:31:37.549Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:31:41.299Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:31:47.899Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:31:50.987Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:01.177Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:13.124Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:32:16.273Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:27.568Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:35.767Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:32:38.939Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:44.556Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:32:53.729Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:32:56.888Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:33:55.314Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:33:59.140Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:34:47.377Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:34:50.851Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:37:14.690Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:37:18.278Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T17:45:09.182Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T17:45:13.863Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T18:04:10.960Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T18:04:14.780Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T21:40:20.330Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T21:40:24.005Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T21:40:38.596Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T21:40:41.899Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-08T22:04:55.397Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-08T22:04:59.028Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:09:49.271Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:09:53.279Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:25:15.156Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:25:18.547Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:32:38.300Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:32:42.212Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:33:03.471Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:33:06.507Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:35:01.532Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:35:05.137Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:35:24.390Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:35:33.170Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:35:36.175Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T19:36:25.441Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T19:36:28.734Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-11T20:00:35.416Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-11T20:00:38.626Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-14T09:53:24.609Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-14T09:53:29.822Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-15T10:59:08.410Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-15T10:59:12.353Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-22T06:59:28.790Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-22T06:59:31.188Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-22T07:07:00.203Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-22T07:07:02.723Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-22T07:09:52.645Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-22T07:09:55.276Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-22T07:10:02.343Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-22T07:10:04.771Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-22T07:11:04.105Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-22T07:11:06.742Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-04-26T15:55:40.274Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-04-26T15:55:43.525Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-05-07T14:41:02.373Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-05-07T14:41:05.869Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-05-28T18:03:22.896Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-05-28T18:03:28.656Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T06:39:18.257Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T06:39:21.558Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T06:43:06.991Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T06:43:10.201Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:12:06.941Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:12:10.672Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:12:37.096Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:12:40.630Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:14:18.737Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:14:22.460Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:23:30.859Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:23:34.782Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:23:39.849Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:23:43.571Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T07:54:31.780Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T07:54:35.645Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T08:25:58.064Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T08:26:11.016Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T11:22:39.220Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T11:22:42.591Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T11:48:17.868Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T11:48:20.806Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T11:48:24.363Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T11:48:26.917Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T12:07:16.907Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T12:07:20.231Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-09T12:33:38.972Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-09T12:33:42.638Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-10T15:49:26.930Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-10T15:49:30.990Z"}
+{"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-06-10T16:24:14.105Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-06-10T16:24:18.705Z"}
