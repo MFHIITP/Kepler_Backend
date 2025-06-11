@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 var librarySchema = new mongoose.Schema({
     course: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     title: {
         type: String,

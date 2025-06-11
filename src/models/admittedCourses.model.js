@@ -2,7 +2,8 @@ import mongoose from "mongoose";
 var admittedCoursesSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     name: {
         type: String,

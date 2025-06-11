@@ -12,6 +12,7 @@ const Historymodel = mongoose.Schema({
     email: {
         type: String,
         required: true,
+        index: true
     },
     logintime: {
         type: Date,
