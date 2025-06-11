@@ -19,7 +19,6 @@ import removetoken from "./controllers/logout.controller.js";
 import liveuser from "./controllers/extras/LiveUser.controller.js";
 import historyuser from "./controllers/extras/Historyuser.controller.js"
 import updatelogouthistory from "./utils/nodecron.js";
-import checktoken from "./utils/Checktokens.js";
 import webSocketControl from "./utils/Websocket.utils.js";
 import cookieParser from 'cookie-parser';
 import loginrouter from './routers/login.route.js';
@@ -28,6 +27,8 @@ import paymentRouter from './routers/paymentRoutes.js'
 import {Strategy as GoogleStrategy} from 'passport-google-oauth20'
 import {rateLimit} from 'express-rate-limit'
 import logger from "./utils/winston_logger.js";
+import checkAccessToken from "./auths/checkAccessTokens.js";
+import refreshAuthRouter from "./routers/authRefresh.route.js"
 
 dotenv.config();
 const app = express();
@@ -54,7 +55,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html"); 
 
-export const JWT_SECRET = process.env.JWT_SECRET;
+export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
+export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 const port = 8000;
 const hostname = "localhost";
 export const otpStore = [];
@@ -92,20 +94,17 @@ app.get('/auth/google/callback',
     res.redirect(`https://8ppzcvlk-3001.inc1.devtunnels.ms/authlogin/${req.user.userInfo.email}`)
   }
 );
+app.use("/authRefreshToken", refreshAuthRouter);
 
 app.use("/login", loginrouter);
+app.use("/users", userrouter); 
+app.use("/api", apiroute);
+app.post("/logout", removetoken)
 
-app.post("/removeprofile", async (req, res) => {
-  const mail = await collection.deleteOne({ email: req.body.email });
-  res.status(200).send("Deleted");
-});
-
-app.post("/checktoken", checktoken);
+// Protected Routes
+app.use(checkAccessToken)
 app.get("/liveusers", liveuser)
 app.get("/historyusers", historyuser);
-app.post("/logout", removetoken)
-app.use("/api", apiroute);
-app.use("/users", userrouter); 
 app.use("/talks", talkrouter);
 app.use('/library', libraryrouter);
 app.use('/devteam', devrouter)
@@ -116,6 +115,11 @@ app.use('/treasuryteam', treasuryrouter);
 app.use('/coreteam', corerouter);
 app.use('/number', numberrouter)
 app.use('/payment', paymentRouter)
+
+app.post("/removeprofile", async (req, res) => {
+  const mail = await collection.deleteOne({ email: req.body.email });
+  res.status(200).send("Deleted");
+});
 
 export const httpserver = app.listen(port, hostname, () => {
   logger.info(`Server Started Successfully at http://${hostname}/${port}`)

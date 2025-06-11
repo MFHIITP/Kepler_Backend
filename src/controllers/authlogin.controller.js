@@ -1,6 +1,6 @@
 import { collection } from "../models/collection.model.js";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "../index.js";
+import { JWT_ACCESS_SECRET, JWT_REFRESH_SECRET } from "../index.js";
 import tokenschema from "../models/Token.model.js";
 import historyschema from "../models/History.model.js";
 import dotenv from "dotenv";
