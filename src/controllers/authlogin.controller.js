@@ -21,21 +21,31 @@ const authlogin = async (req, res) => {
       message: "You have not registered before. Please register first.",
     });
   } else {
-    const token = jwt.sign(
+    const accessToken = jwt.sign(
       {
         id: mail[0]._id,
         email: mail[0].email,
       },
-      JWT_SECRET,
+      JWT_ACCESS_SECRET,
       {
-        expiresIn: "24h",
+        expiresIn: "10s",
+      }
+    );
+    const refreshToken = jwt.sign(
+      {
+        email: mail[0].email,
+        type: "Refresh",
+      },
+      JWT_REFRESH_SECRET,
+      {
+        expiresIn: "20s",
       }
     );
     const tokenelement = new tokenschema({
       userId: mail[0]._id,
       email_id: mail[0].email,
       name: mail[0].name,
-      token: token,
+      token: accessToken,
       details: JSON.stringify({
         OperatingSystem: userdetails.os,
         Browser: userdetails.device,
@@ -95,12 +105,13 @@ const authlogin = async (req, res) => {
     console.log("Sending");
     res
       .status(200)
-      .cookie("TestCookie", token, {
+      .cookie("TestCookie", accessToken, {
         domain: ".localhost",
       })
       .json({
         message: "OK",
-        token: token,
+        accessToken: accessToken,
+        refreshToken: refreshToken,
         profileinfo: profiles,
       });
   }
