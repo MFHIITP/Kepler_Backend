@@ -9,6 +9,7 @@ const checkAccessToken = async(req, res, next) => {
         next();
     }
     catch(err){
+        console.log(err);
         res.status(401).send("Access Token Expired");
     }
 }

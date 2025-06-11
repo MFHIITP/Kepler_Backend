@@ -2,12 +2,14 @@ import mongoose from 'mongoose'
 
 const talkschema = new mongoose.Schema({
     group_id: {
-        type: Number || String,
-        required: true
+        type: Number,
+        required: true,
+        index: true
     },
     name: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     email: {
         type: String,
