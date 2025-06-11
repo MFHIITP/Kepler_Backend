@@ -28,7 +28,7 @@ const authlogin = async (req, res) => {
       },
       JWT_ACCESS_SECRET,
       {
-        expiresIn: "10s",
+        expiresIn: "1h",
       }
     );
     const refreshToken = jwt.sign(
@@ -38,7 +38,7 @@ const authlogin = async (req, res) => {
       },
       JWT_REFRESH_SECRET,
       {
-        expiresIn: "20s",
+        expiresIn: "24h",
       }
     );
     const tokenelement = new tokenschema({
