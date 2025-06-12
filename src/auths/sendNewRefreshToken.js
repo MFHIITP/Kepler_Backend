@@ -8,6 +8,7 @@ const createNewAccessToken = async(req, res)=>{
         const email = decode.email;
         const accessToken = jwt.sign(
             {
+                type: "Access",
                 email: email,
             },
             JWT_ACCESS_SECRET,

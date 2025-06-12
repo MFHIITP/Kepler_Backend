@@ -24,7 +24,7 @@ const loginaction = async (req, res) => {
     } else {
       const accessToken = jwt.sign(
         {
-          id: mail[0]._id,
+          type: "Access",
           email: mail[0].email,
         },
         JWT_ACCESS_SECRET,
