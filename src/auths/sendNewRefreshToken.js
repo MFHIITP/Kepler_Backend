@@ -13,7 +13,7 @@ const createNewAccessToken = async(req, res)=>{
             },
             JWT_ACCESS_SECRET,
             {
-                expiresIn: '10s'
+                expiresIn: '1h'
             }
         )
         res.status(200).json({
