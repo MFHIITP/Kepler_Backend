@@ -8,11 +8,12 @@ const createNewAccessToken = async(req, res)=>{
         const email = decode.email;
         const accessToken = jwt.sign(
             {
+                type: "Access",
                 email: email,
             },
             JWT_ACCESS_SECRET,
             {
-                expiresIn: '10s'
+                expiresIn: '1h'
             }
         )
         res.status(200).json({

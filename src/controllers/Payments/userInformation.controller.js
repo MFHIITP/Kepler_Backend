@@ -48,7 +48,7 @@ const userInformation = async (req, res) => {
             salutation: "INR",
             value: 3000,
           });
-        } else if (val.startsWith("Mathematics and Computer Science")) {
+        } else if (val.startsWith("Mathematics And Computer Science")) {
           modifiedAdmittedCourses.push({
             name: val,
             salutation: "INR",
@@ -95,7 +95,6 @@ const userInformation = async (req, res) => {
       });
       selectedCourses = modifiedSelectedCourses;
     }
-
 
     const responseData = {
       transaction_details: [

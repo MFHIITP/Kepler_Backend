@@ -24,8 +24,9 @@ const loginaction = async (req, res) => {
     } else {
       const accessToken = jwt.sign(
         {
-          id: mail[0]._id,
+          type: "Access",
           email: mail[0].email,
+          identifier: (Math.random() * 99 + 1).toFixed(2)
         },
         JWT_ACCESS_SECRET,
         {
@@ -39,7 +40,7 @@ const loginaction = async (req, res) => {
         },
         JWT_REFRESH_SECRET,
         {
-          expiresIn: '24h'
+          expiresIn: '3d'
         }
       )
       const tokenelement = new tokenschema({

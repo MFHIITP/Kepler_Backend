@@ -22,7 +22,7 @@ const currentCoursesFetch = async (req, res) => {
         ongoingCourses.push({ name: val, salutation: "INR", value: 1000 });
       } else if (val.startsWith("CAT")) {
         ongoingCourses.push({ name: val, salutation: "INR", value: 3000 });
-      } else if (val.startsWith("Mathematics and Computer Science")) {
+      } else if (val.startsWith("Mathematics And Computer Science")) {
         ongoingCourses.push({ name: val, salutation: "INR", value: 1000 });
       } else if (val.startsWith("GATE")) {
         ongoingCourses.push({ name: val, salutation: "INR", value: 2000 });

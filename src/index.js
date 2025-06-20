@@ -29,6 +29,8 @@ import {rateLimit} from 'express-rate-limit'
 import logger from "./utils/winston_logger.js";
 import checkAccessToken from "./auths/checkAccessTokens.js";
 import refreshAuthRouter from "./routers/authRefresh.route.js"
+import razorpayRouter from "./routers/razorpay.route.js"
+import Razorpay from "razorpay";
 
 dotenv.config();
 const app = express();
@@ -57,6 +59,8 @@ app.set("view-engine", "html");
 
 export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
+export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
+export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const port = 8000;
 const hostname = "localhost";
 export const otpStore = [];
@@ -79,6 +83,11 @@ passport.use(new GoogleStrategy(
     return done(null, { accessToken, userInfo });
   }
 ));
+
+export const razorpay = new Razorpay({
+    key_id: RAZORPAY_KEY_ID,
+    key_secret: RAZORPAY_SECRET
+})
 
 app.use(passport.initialize());
 
@@ -115,6 +124,7 @@ app.use('/treasuryteam', treasuryrouter);
 app.use('/coreteam', corerouter);
 app.use('/number', numberrouter)
 app.use('/payment', paymentRouter)
+app.use('/razorpay', razorpayRouter);
 
 app.post("/removeprofile", async (req, res) => {
   const mail = await collection.deleteOne({ email: req.body.email });
