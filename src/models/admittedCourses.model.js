@@ -10,7 +10,8 @@ var admittedCoursesSchema = new mongoose.Schema({
         required: true,
     },
     admittedCourses: {
-        type: [String]
+        type: [String],
+        index: true
     },
     visibleGroups: {
         type: [String]
