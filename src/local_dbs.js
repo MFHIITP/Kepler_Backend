@@ -43,49 +43,49 @@ export let grouplist = [
   },
   {
     id: 8,
-    name: 'Engineering Mathematics 1',
+    name: 'Mathematics And Computer Science - Engineering Mathematics 1',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 9,
-    name: 'Engineering Mathematics 2',
+    name: 'Mathematics And Computer Science - Engineering Mathematics 2',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 10,
-    name: 'Engineering Mathematics 3',
+    name: 'Mathematics And Computer Science - Engineering Mathematics 3',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 11,
-    name: 'Engineering Mathematics 4',
+    name: 'Mathematics And Computer Science - Engineering Mathematics 4',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 12,
-    name: 'Computer Languages',
+    name: 'Mathematics And Computer Science - Computer Languages',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 13,
-    name: 'Computer Science Fundamentals',
+    name: 'Mathematics And Computer Science - Computer Science Fundamentals',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 14,
-    name: 'Data Structures and Algorithms',
+    name: 'Mathematics And Computer Science - Data Structures And Algorithms',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
   {
     id: 15,
-    name: 'Artificial Intelligence and Machine Learning',
+    name: 'Mathematics And Computer Science - Artificial Intelligence And Machine Learning',
     visibility: 'none',
     description: 'This is the group for the College Exam Preparation, meant for the preparation of the students for the College Semester Exams'
   },
@@ -175,7 +175,7 @@ export let grouplist = [
   }
 ];
 
-export let executive_emails = ["hossainfarshid@gmail.com","supratim.mukherjee123@gmail.com", "kepler.xxiib.cygnus@gmail.com"]
-export let executive_names = ['Md. Farshid Hossain', 'Supratim Mukherjee']
+export let executive_emails = ["supratim.mukherjee123@gmail.com", "kepler.xxiib.cygnus@gmail.com"]
+export let executive_names = ['Supratim Mukherjee']
 export let core_emails = []
 export let teacher_emails = []
