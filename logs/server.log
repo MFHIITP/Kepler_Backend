@@ -1102,3 +1102,5 @@
 {"level":"info","message":"Database Successfully Connected","timestamp":"2025-07-02T10:35:18.193Z"}
 {"level":"info","message":"Server Started Successfully at http://localhost/8000","timestamp":"2025-07-02T10:35:46.900Z"}
 {"level":"info","message":"Database Successfully Connected","timestamp":"2025-07-02T10:35:50.970Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-07-02T10:41:06.510Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-07-02T10:41:10.885Z"}
