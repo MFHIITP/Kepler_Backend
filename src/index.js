@@ -63,7 +63,7 @@ export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const frontendUrl = process.env.FRONTEND_URL
 const port = process.env.PORT || 8000;
-const hostname = "localhost";
+const hostname = "0.0.0.0";
 export const otpStore = [];
 connect();
 updatelogouthistory();
