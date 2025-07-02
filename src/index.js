@@ -37,22 +37,22 @@ const app = express();
 
 app.use(cors({ origin: true, credentials: true }));
 
-// app.use(rateLimit({
-//   windowMs: 15 * 60 * 1000,
-//     max: 1000,
-//     message: {
-//       status: 429,
-//       error: "Rate limit exceeded",
-//       retryAfter: "Try again in a few minutes.",
-//     },
-//     handler: (req, res) => {
-//       res.status(429).json({
-//         error:
-//           "Rate Limit Exceeded from this client. Please try after some time",
-//       });
-//     },
-//     legacyHeaders: false,
-// }))
+app.use(rateLimit({
+  windowMs: 15 * 60 * 1000,
+    max: 1000,
+    message: {
+      status: 429,
+      error: "Rate limit exceeded",
+      retryAfter: "Try again in a few minutes.",
+    },
+    handler: (req, res) => {
+      res.status(429).json({
+        error:
+          "Rate Limit Exceeded from this client. Please try after some time",
+      });
+    },
+    legacyHeaders: false,
+}))
 app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html"); 
@@ -61,6 +61,7 @@ export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
+const frontendUrl = process.env.FRONTEND_URL
 const port = 8000;
 const hostname = "localhost";
 export const otpStore = [];
@@ -100,7 +101,7 @@ app.get('/auth/google/callback',
   (req, res) => {
     const token = req.user.accessToken;
     const userInfo = req.user.userInfo
-    res.redirect(`https://8ppzcvlk-3001.inc1.devtunnels.ms/authlogin/${req.user.userInfo.email}`)
+    res.redirect(`${frontendUrl}/authlogin/${req.user.userInfo.email}`)
   }
 );
 app.use("/authRefreshToken", refreshAuthRouter);
