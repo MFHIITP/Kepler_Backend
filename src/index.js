@@ -35,7 +35,10 @@ import Razorpay from "razorpay";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ 
+  origin: ['https://kepler-22b.vercel.app/', 'http://localhost:3001', 'https://8ppzcvlk-3001.inc1.devtunnels.ms/'], 
+  credentials: true 
+}));
 
 app.use(rateLimit({
   windowMs: 15 * 60 * 1000,
