@@ -62,7 +62,7 @@ export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const frontendUrl = process.env.FRONTEND_URL
-const port = 8000;
+const port = process.env.PORT || 8000;
 const hostname = "localhost";
 export const otpStore = [];
 connect();
