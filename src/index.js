@@ -35,6 +35,8 @@ import Razorpay from "razorpay";
 dotenv.config();
 const app = express();
 
+app.set('trust proxy', 1);
+
 app.use(cors({ 
   origin: ['https://kepler-22b.vercel.app', 'http://localhost:3001', 'https://8ppzcvlk-3001.inc1.devtunnels.ms'], 
   credentials: true 
