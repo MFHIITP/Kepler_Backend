@@ -5,7 +5,7 @@ import userrouter from "./routers/users.routes.js";
 import talkrouter from "./routers/talk.route.js";
 import libraryrouter from './routers/library.route.js';
 import dotenv from "dotenv";
-import loginaction from "./controllers/login.controller.js";
+import googleAuthRouter from "./routers/googleAuthRoute.js"
 import connect from "./utils/connection.utils.js";
 import { collection } from "./models/collection.model.js";
 import devrouter from "./routers/teams/devteam.route.js"
@@ -66,7 +66,6 @@ export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
-const frontendUrl = process.env.FRONTEND_URL
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
 export const otpStore = [];
@@ -90,25 +89,15 @@ passport.use(new GoogleStrategy(
   }
 ));
 
+app.use(passport.initialize());
+
 export const razorpay = new Razorpay({
     key_id: RAZORPAY_KEY_ID,
     key_secret: RAZORPAY_SECRET
 })
 
-app.use(passport.initialize());
+app.use('/auth', googleAuthRouter);
 
-app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] })
-);
-
-app.get('/auth/google/callback',
-  passport.authenticate('google', { session: false, failureRedirect: '/' }),
-  (req, res) => {
-    const token = req.user.accessToken;
-    const userInfo = req.user.userInfo
-    res.redirect(`${frontendUrl}/authlogin/${req.user.userInfo.email}`)
-  }
-);
 app.use("/authRefreshToken", refreshAuthRouter);
 
 app.use("/login", loginrouter);
