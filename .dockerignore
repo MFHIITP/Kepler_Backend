@@ -1,0 +1,5 @@
+.env
+api-mongo.env
+.gitignore
+.git
+node_modules
