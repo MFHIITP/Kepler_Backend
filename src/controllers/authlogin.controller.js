@@ -7,13 +7,13 @@ import dotenv from "dotenv";
 import axios from "axios";
 import useragent from "useragent";
 dotenv.config();
+
 const authlogin = async (req, res) => {
   console.log("Árrived");
   const userdetails = useragent.parse(req.headers["user-agent"]);
-  const ip = req.headers["x-forwarded-for"];
-  const response = await axios.get(
-    `https://ipinfo.io/${ip}/json?token=c13532365e8939`
-  );
+  const ipRaw = req.headers["x-forwarded-for"];
+  const ip = ipRaw.split(',')[0].trim();
+  const response = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`);
 
   const mail = await collection.find({ email: req.body.email });
   if (mail.length === 0) {
@@ -25,7 +25,7 @@ const authlogin = async (req, res) => {
       {
         type: "Access",
         email: mail[0].email,
-        reference: (Math.random() * 99 + 1).toFixed(2)
+        reference: (Math.random() * 99 + 1).toFixed(2),
       },
       JWT_ACCESS_SECRET,
       {

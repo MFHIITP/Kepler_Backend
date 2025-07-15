@@ -7,10 +7,12 @@ import dotenv from "dotenv";
 import axios from 'axios'
 import useragent from 'useragent'
 dotenv.config();
+
 const loginaction = async (req, res) => {
   console.log('Árrived')
   const userdetails = useragent.parse(req.headers['user-agent'])
-  const ip = req.headers['x-forwarded-for']
+  const ipRaw = req.headers['x-forwarded-for']
+  const ip = ipRaw.split(',')[0].trim();
   const response = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`);
 
   const mail = await collection.find({ email: req.body.email });
