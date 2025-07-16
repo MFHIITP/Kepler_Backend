@@ -2,7 +2,7 @@ import { razorpay } from "../index.js";
 const createRazorpayOrder = async(req, res)=>{
     try{
         const amount = req.body.amount;
-        console.log(amount + "is the amount");
+        console.log(amount + " is the amount that is to be paid");
         const options = {
             amount: amount * 100,
             currency: 'INR',

@@ -6,6 +6,7 @@ import historyschema from "../models/History.model.js";
 import dotenv from "dotenv";
 import axios from "axios";
 import useragent from "useragent";
+import { admittedCoursesModel } from "../models/admittedCourses.model.js";
 dotenv.config();
 
 const authlogin = async (req, res) => {
@@ -16,6 +17,7 @@ const authlogin = async (req, res) => {
   const response = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`);
 
   const mail = await collection.find({ email: req.body.email });
+  const courseDetails = await admittedCoursesModel.findOne({email: req.body.email})
   if (mail.length === 0) {
     res.status(400).json({
       message: "You have not registered before. Please register first.",
@@ -104,6 +106,21 @@ const authlogin = async (req, res) => {
       college_stream: mail[0].college_stream,
     };
     console.log("Sending");
+    const lastPaymentDate = courseDetails.lastDate;
+    var isModified = false;
+    if(Date.now() > lastPaymentDate){
+      courseDetails.admittedCourses = [];
+      await courseDetails.save();
+      isModified = true;
+    }
+    if(courseDetails.paidForMonth == true && new Date().getMonth() + 1 != courseDetails.paidMonth && new Date().getDate() > 1){
+      courseDetails.paidForMonth = false;
+      isModified = true
+    }
+    if(isModified){
+      await courseDetails.save();
+    }
+    
     res
       .status(200)
       .cookie("TestCookie", accessToken, {

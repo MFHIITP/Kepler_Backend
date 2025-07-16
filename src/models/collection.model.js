@@ -41,6 +41,9 @@ var Schema = new mongoose.Schema({
   isvalid: {
     type: Number,
     required: true
+  },
+  paidAmount: {
+    type: Boolean,
   }
 });
 

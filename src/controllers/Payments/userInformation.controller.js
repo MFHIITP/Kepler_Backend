@@ -12,10 +12,11 @@ const userInformation = async (req, res) => {
 
     var admittedCourses = courseDetails.admittedCourses || [];
     var selectedCourses = courseDetails.selectedCourses || [];
-
-    const newcourses = selectedCourses.filter(
-      (val) => !admittedCourses.includes(val)
-    );
+    var transaction_details = courseDetails.transaction_details || [];
+    var payment_details = courseDetails.payment_details || [];
+    var upcoming_payment_details = courseDetails.upcoming_payment_details || []
+    var transaction_logs = courseDetails.log_details || [];
+    var paidForMonth = courseDetails.paidForMonth || false;
 
     var modifiedSelectedCourses = [];
     var modifiedAdmittedCourses = [];
@@ -97,78 +98,19 @@ const userInformation = async (req, res) => {
     }
 
     const responseData = {
-      transaction_details: [
-        {
-          name: "Transaction ID:",
-          value: "TXN90876",
-          copy: true,
-        },
-        {
-          name: "Amount:",
-          salutation: "INR",
-          value: 500.0,
-        },
-        {
-          name: "Status:",
-          value: "Success",
-          color: "text-green-700",
-        },
-      ],
+      transaction_details: transaction_details,
       course_details: admittedCourses,
       applied_course_details: selectedCourses,
-      payment_details: [
-        {
-          name: "Payment Date",
-          value: "25 Feb 2025, 05:07 pm",
-        },
-        {
-          name: "Course Period",
-          value: "25 Feb 2024 - 25 Feb 2025",
-        },
-        {
-          name: "Transaction ID",
-          value: "TNX-90876",
-          copy: true,
-        },
-        {
-          name: "Payment Method",
-          value: "UPI/Bank Transfer/NFTF",
-        },
-        {
-          name: "Amount Paid",
-          salutation: "INR",
-          value: 500,
-        },
-        {
-          name: "UTR no (if any)",
-          value: "AXISCNO9255422411",
-        },
-      ],
-      upcoming_payments: [
-        {
-          name: "Upcoming Payment Date",
-          value: "2025-03-22",
-        },
-        {
-          name: "Payment Amount",
-          value: paymentAmount,
-          salutation: "INR",
-          color: "text-purple-900",
-        },
-        {
-          name: "Last Date for Upcoming Payment",
-          value: "2025-03-29",
-          color: "text-red-700",
-        },
-      ],
-      log_details: Array(6)
-        .fill()
-        .map((_, i) => ({
-          name: `Payment-${i + 1}`,
-          value1: "Info",
-          value2: "24 Feb 2025, 01:00:04 pm",
-          value3: "Payment initiation request received",
-        })),
+      payment_details: payment_details,
+      upcoming_payments: upcoming_payment_details,
+      amount: {
+        name: "Payment Amount",
+        value: paymentAmount,
+        salutation: "INR",
+        color: "text-purple-900",
+      },
+      log_details: transaction_logs,
+      paidForMonth: paidForMonth
     };
 
     res.status(200).json({

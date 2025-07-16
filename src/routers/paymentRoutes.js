@@ -8,6 +8,5 @@ const router = Router()
 router.route('/applyCourses').post(applyCourses)
 router.route('/getUserInformation').post(userInformation)
 router.route('/getCurrentCourses').post(currentCoursesFetch)
-router.route('/makePayment').post()
 
 export default router
