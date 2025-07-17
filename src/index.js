@@ -72,9 +72,9 @@ app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html");
 
-app.use((req, res, next)=>{
-  if(req.method == 'OPTIONS'){
-    res.status(202).send("OK");
+app.use((req, res, next) => {
+  if(req.method == "OPTIONS"){
+    res.status(202).send("Options header is passed by default")
   }
   else{
     next();
