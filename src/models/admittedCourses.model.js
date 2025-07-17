@@ -4,7 +4,7 @@ const detailItem = new mongoose.Schema(
     {
         name: String,
         value: String,
-        copy: String,
+        copy: Boolean,
         color: String,
         salutation: String,
     },
