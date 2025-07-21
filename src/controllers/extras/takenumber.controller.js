@@ -8,7 +8,7 @@ const takenumber = async(req, res)=>{
     let newlist = grouplist.sort((a, b) => (a.id - b.id))
     const email = req.body.email
     const data = await admittedCoursesModel.findOne({email: email})
-    const visible_groups = data.admittedCourses || []
+    const visible_groups = data.admittedCourses ? data.admittedCourses : []
     console.log(visible_groups);
     if(!executive_emails.includes(email) && !core_emails.includes(email) && !teacher_emails.includes(email)){
         newlist = newlist.filter((group_name)=>visible_groups.includes(group_name.name))

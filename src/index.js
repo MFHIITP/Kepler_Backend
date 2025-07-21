@@ -72,6 +72,15 @@ app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html");
 
+app.use((req, res, next)=>{
+  if(req.method == "OPTIONS"){
+    res.status(202).send("Options header is passed by default");
+  }
+  else{
+    next();
+  }
+})
+
 export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;

@@ -6,13 +6,13 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const generateReferralCode = (email) => {
-  const secret = 'your-secure-secret-key'; // Replace with your own secret key
+  const secret = 'your-secure-secret-key'; 
   const hash = crypto
     .createHmac('sha256', secret)
     .update(email)
     .digest('hex');
 
-  return hash.substring(0, 8).toUpperCase(); // Return first 8 characters in uppercase
+  return hash.substring(0, 8).toUpperCase(); 
 };
 
 const signupaction = async (req, res) => {

@@ -3,13 +3,13 @@ import dotenv from 'dotenv'
 dotenv.config();
 import logger from "./winston_logger.js";
 
-const server = process.env.SERVER;
-const database = process.env.DATABASE
+const server = "db:27017";
+const database = "Kepler-22B"
 
 const connect = async () => {
     try {
-      const url = `mongodb+srv://${server}/${database}`;
-      // const url = ``
+      const url = `mongodb://${server}/${database}`;
+      // const url = `mongodb+srv://${process.env.SERVER}/${process.env.DATABASE}`
       await mongoose.connect(url);
       logger.info('Database Successfully Connected')
       console.log("Connecion Successful");
