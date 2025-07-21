@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { redis } from "../index.js";
 import { sendRegistrationEmail } from "../utils/mailsend.utils.js";
 import dotenv from 'dotenv'
+import { collection } from "../models/collection.model.js";
 dotenv.config()
 
 const otpVerify = async(req: Request, res: Response)=>{
@@ -10,7 +11,8 @@ const otpVerify = async(req: Request, res: Response)=>{
 
     const storedOTP = await redis.get(`otp${email}`);
     const storeData = await redis.get(`userDetails${email}`);
-    const data = JSON.parse(storeData ?? "");
+    const parsedData = JSON.parse(storeData ?? "");
+    const data = new collection(parsedData)
     if(storedOTP && userOTP == storedOTP){
         await data.save();
         await sendRegistrationEmail(

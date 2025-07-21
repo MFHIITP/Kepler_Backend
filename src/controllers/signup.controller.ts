@@ -7,7 +7,7 @@ import { Request, Response } from 'express';
 dotenv.config()
 
 const generateReferralCode = (email: string) => {
-  const secret = 'your-secure-secret-key'; // Replace with your own secret key
+  const secret = process.env.HASH_SECRET!; 
   const hash = crypto
     .createHmac('sha256', secret)
     .update(email)
@@ -18,8 +18,7 @@ const generateReferralCode = (email: string) => {
 
 const signupaction = async (req: Request, res: Response) => {
   console.log(req.body.name + " came here");
-  let message = "";
-  const data = new collection(req.body);
+  const data = req.body;
   data.refercode = generateReferralCode(data.email)
   data.isvalid = 1
   data.usenumber = 5
