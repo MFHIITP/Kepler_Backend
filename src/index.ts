@@ -31,6 +31,7 @@ import checkAccessToken from "./auths/checkAccessTokens.js";
 import refreshAuthRouter from "./routers/authRefresh.route.js";
 import razorpayRouter from "./routers/razorpay.route.js";
 import Razorpay from "razorpay";
+import Redis from "ioredis"
 
 dotenv.config();
 const app = express();
@@ -87,7 +88,7 @@ export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
-export const otpStore = [];
+export const redis = new Redis(process.env.REDIS_URL!)
 connect();
 updatelogouthistory();
 

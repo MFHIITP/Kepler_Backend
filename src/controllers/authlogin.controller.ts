@@ -107,14 +107,13 @@ const authlogin = async (req: Request, res: Response) => {
       college_stream: mail[0].college_stream,
     };
     console.log("Sending");
-    const lastPaymentDate = courseDetails.lastDate;
+    const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
     var isModified = false;
-    if(Date.now() > lastPaymentDate){
+    if(lastPaymentDate && new Date() > lastPaymentDate){
       courseDetails.admittedCourses = [];
-      await courseDetails.save();
       isModified = true;
     }
-    if(courseDetails.paidForMonth == true && new Date().getMonth() + 1 != courseDetails.paidMonth && new Date().getDate() > 1){
+    if(lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1){
       courseDetails.paidForMonth = false;
       isModified = true
     }

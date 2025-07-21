@@ -1,7 +1,7 @@
 import crypto from 'crypto'
 import { collection } from '../models/collection.model.js';
 import { sendRegistrationEmail } from '../utils/mailsend.utils.js';
-import { otpStore } from '../index.js';
+import { redis } from '../index.js';
 import dotenv from 'dotenv'
 import { Request, Response } from 'express';
 dotenv.config()
@@ -26,13 +26,10 @@ const signupaction = async (req: Request, res: Response) => {
   const mail = await collection.find({ email: req.body.email });
   if (mail.length == 0) {
     const otp = crypto.randomInt(100000, 999999).toString();
-    otpStore[0] = {
-      otp: otp,
-      expiresAt: Date.now() + 300000,
-      data: data 
-    }
+    await redis.set(`otp${req.body.email}`, otp, 'EX', 300);
+    await redis.set(`userDetails${req.body.email}`, JSON.stringify(data), 'EX', 300);
     await sendRegistrationEmail(
-      process.env.GMAIL_USER,
+      process.env.GMAIL_USER ?? "",
       req.body.email,
       "Kepler -- OTP Verification",
       `Your One Time Password is ${otp}`

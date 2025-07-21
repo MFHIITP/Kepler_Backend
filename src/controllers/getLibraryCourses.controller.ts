@@ -5,7 +5,7 @@ import { admittedCoursesModel } from "../models/admittedCourses.model.js";
 const courseList = async(req: Request, res: Response)=>{
     try{
         const emailId = req.body.emailId;
-        let newList = grouplist.sort((a, b)=>{a.id - b.id}).map(val => val.name)
+        let newList = grouplist.sort((a, b)=>{return a.id - b.id;}).map(val => val.name)
         if(executive_emails.includes(emailId) || core_emails.includes(emailId) || teacher_emails.includes(emailId)){
             return res.status(200).json({
                 data: newList

@@ -110,13 +110,13 @@ const loginaction = async (req: Request, res: Response) => {
         school_year: mail[0].school_year,
         college_stream: mail[0].college_stream
       };
-      const lastPaymentDate = new Date(courseDetails.lastDate)
+      const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
       var isModified = false;
-      if(Date.now() > lastPaymentDate){
+      if(lastPaymentDate && new Date() > lastPaymentDate){
         courseDetails.admittedCourses = [];
         isModified = true;
       }
-      if(courseDetails.paidForMonth == true && new Date().getMonth() + 1 != courseDetails.paidMonth && new Date().getDate() > 1){
+      if(lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1){
         courseDetails.paidForMonth = false;
         isModified = true
       }
