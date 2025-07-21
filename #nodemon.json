@@ -1,6 +1,0 @@
-{
-    "watch": ["src"],
-    "ext": "js",
-    "ignore": ["dist"],
-    "exec": "nodemon src/index.js"
-}

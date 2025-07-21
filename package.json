@@ -1,12 +1,14 @@
 {
-  "name": "jms_backend",
+  "name": "kepler-backend",
   "version": "1.0.0",
-  "description": "This is the backend for JMS website",
-  "main": "Backend.js",
+  "description": "This is the backend for the Kepler-22B website",
+  "main": "dist/index.ts",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./src/index.js"
+    "start": "nodemon",
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
   },
   "author": "Farshid Hossain",
   "license": "ISC",
@@ -42,8 +44,15 @@
     "@types/express": "^5.0.0",
     "@types/jsonwebtoken": "^9.0.7",
     "@types/node": "^22.13.10",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^6.4.17",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.16",
     "@types/useragent": "^2.3.4",
+    "@types/ws": "^8.18.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
+    "tsc": "^2.0.4",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
   }
 }
