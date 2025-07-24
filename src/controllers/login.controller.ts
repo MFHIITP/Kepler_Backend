@@ -4,137 +4,144 @@ import { JWT_ACCESS_SECRET, JWT_REFRESH_SECRET } from "../index.js";
 import tokenschema from "../models/Token.model.js";
 import historyschema from "../models/History.model.js";
 import dotenv from "dotenv";
-import axios from 'axios'
-import useragent from 'useragent'
+import axios from "axios";
+import useragent from "useragent";
 import { admittedCoursesModel } from "../models/admittedCourses.model.js";
 import { Request, Response } from "express";
 dotenv.config();
 
 const loginaction = async (req: Request, res: Response) => {
-  console.log('Árrived')
-  const userdetails = useragent.parse(req.headers['user-agent'])
-  const ipRaw = req.headers['x-forwarded-for']
-  const ip = ipRaw?.split(',')[0].trim();
-  const response = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`);
+
+  console.log("Árrived");
+  const userDetails = useragent.parse(req.headers["user-agent"]);
+  const ipRaw = req.headers["x-forwarded-for"];
+  const ip = ipRaw?.split(",")[0].trim();
+  const response = await axios.get(
+    `https://ipinfo.io/${ip}/json?token=c13532365e8939`
+  );
 
   const mail = await collection.find({ email: req.body.email });
-  const courseDetails = await admittedCoursesModel.findOne({email: req.body.email});
+  const courseDetails = await admittedCoursesModel.findOne({
+    email: req.body.email,
+  });
 
   if (mail.length === 0) {
     res.status(400).json({
       message: "You have not registered before. Please register first.",
     });
-  } else {
-    if (mail[0].password !== req.body.password) {
-      res.status(400).json({ message: "Wrong Password" });
-    } else {
-      const accessToken = jwt.sign(
-        {
-          type: "Access",
-          email: mail[0].email,
-          identifier: (Math.random() * 99 + 1).toFixed(2)
-        },
-        JWT_ACCESS_SECRET ?? "",
-        {
-          expiresIn: "1h",
-        }
-      );
-      const refreshToken = jwt.sign(
-        {
-          email: mail[0].email,
-          type: "Refresh"
-        },
-        JWT_REFRESH_SECRET ?? "",
-        {
-          expiresIn: '3d'
-        }
-      )
-      const tokenelement = new tokenschema({
-        userId: mail[0]._id,
-        email_id: mail[0].email,
-        name: mail[0].name,
-        token: accessToken,
-        details: JSON.stringify({
-          OperatingSystem: userdetails.os,
-          Browser: userdetails.device,
-          class: userdetails.family,
-          patch: userdetails.patch,
-          major: userdetails.major,
-          minor: userdetails.minor
-        }),
-        locations: JSON.stringify(response.data)
-      });
-      await tokenelement.save();
-      const prevelement = await historyschema.find({ email: mail[0].email });
-      if (prevelement.length > 0) {
-        await historyschema.updateOne(
-          { email: mail[0].email },
-          {
-            $set: {
-              logintime: Date.now(),
-              status: "active",
-              logouttime: null,
-            },
-          }
-        );
-      } else {
-        const historyelement = new historyschema({
-          userId: mail[0]._id,
-          name: mail[0].name,
-          email: mail[0].email,
+    return;
+  }
+
+  if (mail[0].password !== req.body.password) {
+    res.status(400).json({ message: "Wrong Password" });
+    return;
+  }
+
+  const accessToken = jwt.sign(
+    {
+      type: "Access",
+      email: mail[0].email,
+      identifier: (Math.random() * 99 + 1).toFixed(2),
+    },
+    JWT_ACCESS_SECRET ?? "",
+    {
+      expiresIn: "1h",
+    }
+  );
+  const refreshToken = jwt.sign(
+    {
+      email: mail[0].email,
+      type: "Refresh",
+    },
+    JWT_REFRESH_SECRET ?? "",
+    {
+      expiresIn: "3d",
+    }
+  );
+
+  const tokenElement = new tokenschema({
+    userId: mail[0]._id,
+    email_id: mail[0].email,
+    name: mail[0].name,
+    token: accessToken,
+    details: JSON.stringify({
+      OperatingSystem: userDetails.os,
+      Browser: userDetails.device,
+      class: userDetails.family,
+      patch: userDetails.patch,
+      major: userDetails.major,
+      minor: userDetails.minor,
+    }),
+    locations: JSON.stringify(response.data),
+  });
+  await tokenElement.save();
+
+  const profiles = {
+    name: mail[0].name,
+    email: mail[0].email,
+    password: mail[0].password,
+    phone: mail[0].phone,
+    refercode: mail[0].refercode,
+    isvalid: mail[0].isvalid,
+    usenumber: mail[0].usenumber,
+    college: mail[0].college,
+    school: mail[0].school,
+    college_year: mail[0].college_year,
+    school_year: mail[0].school_year,
+    college_stream: mail[0].college_stream,
+  };
+  const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
+  var isModified = false;
+  if (lastPaymentDate && new Date() > lastPaymentDate) {
+    courseDetails.admittedCourses = [];
+    isModified = true;
+  }
+  if (lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1) {
+    courseDetails.paidForMonth = false;
+    isModified = true;
+  }
+  if (isModified) {
+    await courseDetails.save();
+  }
+  res.status(200).cookie("TestCookie", accessToken, {
+      domain: ".localhost",
+    }).json({
+      message: "OK",
+      accessToken: accessToken,
+      refreshToken: refreshToken,
+      profileinfo: profiles,
+    });
+
+  const prevElement = await historyschema.find({ email: mail[0].email });
+  if (prevElement.length > 0) {
+    await historyschema.updateOne(
+      { email: mail[0].email },
+      {
+        $set: {
           logintime: Date.now(),
           status: "active",
-          details: JSON.stringify({
-            OperatingSystem: userdetails.os,
-            Browser: userdetails.device,
-            class: userdetails.family,
-            patch: userdetails.patch,
-            major: userdetails.major,
-            minor: userdetails.minor
-          }),
-          locations: JSON.stringify(response.data)
-        });
-        await historyelement.save();
+          logouttime: null,
+        },
       }
-      const profiles = {
-        name: mail[0].name,
-        email: mail[0].email,
-        password: mail[0].password,
-        phone: mail[0].phone,
-        refercode: mail[0].refercode,
-        isvalid: mail[0].isvalid,
-        usenumber: mail[0].usenumber,
-        college: mail[0].college,
-        school: mail[0].school,
-        college_year: mail[0].college_year,
-        school_year: mail[0].school_year,
-        college_stream: mail[0].college_stream
-      };
-      const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
-      var isModified = false;
-      if(lastPaymentDate && new Date() > lastPaymentDate){
-        courseDetails.admittedCourses = [];
-        isModified = true;
-      }
-      if(lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1){
-        courseDetails.paidForMonth = false;
-        isModified = true
-      }
-      if(isModified){
-        await courseDetails.save();
-      }
-      res
-        .status(200)
-        .cookie("TestCookie", accessToken, {
-          domain: '.localhost'
-        })
-        .json({
-          message: "OK",
-          accessToken: accessToken,
-          refreshToken: refreshToken,
-          profileinfo: profiles,
-        });
-    }
+    );
+  } else {
+    const historyElement = new historyschema({
+      userId: mail[0]._id,
+      name: mail[0].name,
+      email: mail[0].email,
+      logintime: Date.now(),
+      status: "active",
+      details: JSON.stringify({
+        OperatingSystem: userDetails.os,
+        Browser: userDetails.device,
+        class: userDetails.family,
+        patch: userDetails.patch,
+        major: userDetails.major,
+        minor: userDetails.minor,
+      }),
+      locations: JSON.stringify(response.data),
+    });
+    await historyElement.save();
   }
 };
 

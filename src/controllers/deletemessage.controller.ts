@@ -1,12 +1,18 @@
 import { Request, Response } from "express";
 import talkcollection from "../models/talkcollection.model.js"
+import { executive_emails } from "../local_dbs.js";
 
 const deletefunc = async(req: Request, res: Response)=>{
-    console.log("Came");
+    const {removerEmail, groupName, dateToDelete, removedEmail} = req.body;
+    if(removedEmail != removerEmail || !executive_emails.includes(removerEmail)){
+        res.status(402).send("InEligible for Deletion of this message");
+        return;
+    }
+
     const data = await talkcollection.deleteOne({
-        name: req.body.name,
-        message: req.body.message,
-        image: req.body.image
+        group_name: groupName,
+        date: dateToDelete,
+        email: removedEmail
     })
     res.status(200).send("Deleted");
 }

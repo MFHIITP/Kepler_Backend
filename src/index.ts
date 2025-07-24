@@ -150,7 +150,7 @@ app.post("/removeprofile", async (req, res) => {
   res.status(200).send("Deleted");
 });
 
-export const httpserver = app.listen(port as unknown as number, hostname, () => {
+export const httpServer = app.listen(port as unknown as number, hostname, () => {
   logger.info(`Server Started Successfully at http://${hostname}/${port}`);
   console.log(`http://${hostname}:${port}`);
 });

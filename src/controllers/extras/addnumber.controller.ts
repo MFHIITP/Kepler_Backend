@@ -1,20 +1,28 @@
 import { Request, Response } from 'express';
-import { grouplist } from '../../local_dbs.js';
+import { executive_emails, grouplist } from '../../local_dbs.js';
 
 const addnumber = async(req: Request, res: Response)=>{
-    const newid = req.body.id_num;
-    const newname = req.body.name;
-    const existing_item = grouplist.find((num)=>num.name == newname)
-    if(existing_item) { 
-        existing_item.visibility = 'none'
+    const email = req.body.email;
+    if(!executive_emails.includes(email)){
+        res.status(402).send("Failed to add the new group");
+        return;
     }
+    const groupName = req.body.name;
+    const groupDescription = req.body.description
+
+    const existing_group = grouplist.find((num)=>num.name == groupName);
+    if(existing_group) { 
+        existing_group.visibility = 'none'
+    }
+
     else{
         grouplist.push({
-            id: newid,
-            name: newname
+            name: groupName,
+            description: groupDescription,
+            visibility: 'none'
         })
     }
-    res.status(200).send("Done")
+    res.status(200).send("Added the New Group Successfully")
 }
 
 export default addnumber

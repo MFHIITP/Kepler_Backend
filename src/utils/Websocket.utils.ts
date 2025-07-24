@@ -1,19 +1,19 @@
 import { WebSocketServer } from "ws";
-import { httpserver } from "../index.js";
+import { httpServer } from "../index.js";
 import talkcollection from "../models/talkcollection.model.js";
 
 
 const webSocketControl = async () => {
   const wss = new WebSocketServer({
-    server: httpserver,
+    server: httpServer,
   });
   wss.on("connection", (ws) => {
     console.log("Connected");
     ws.on("message", async (message) => {
       const data = JSON.parse(message);
-      if (data.name && (data.message || data.image)) {
-        const saveddata = new talkcollection({
-          group_id: data.group_id,
+      if (data.format == "GroupChat") {
+        const savedData = new talkcollection({
+          group_name: data.group_name,
           name: data.name,
           email: data.email,
           message: data.message,
@@ -21,12 +21,12 @@ const webSocketControl = async () => {
           image_title: data.image_title,
           date: data.date,
         });
-        await saveddata.save();
         wss.clients.forEach((client) => {
           if (client.readyState == ws.OPEN) {
-            client.send(JSON.stringify(saveddata));
+            client.send(JSON.stringify(savedData));
           }
         });
+        await savedData.save();
       } else if (data.type) {
         wss.clients.forEach((client) => {
           if (client !== ws && client.readyState === ws.OPEN) {

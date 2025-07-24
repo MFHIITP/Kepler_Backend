@@ -14,11 +14,15 @@ const authlogin = async (req: Request, res: Response) => {
   console.log("Árrived");
   const userdetails = useragent.parse(req.headers["user-agent"]);
   const ipRaw = req.headers["x-forwarded-for"];
-  const ip = ipRaw?.split(',')[0].trim();
-  const response = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`);
+  const ip = ipRaw?.split(",")[0].trim();
+  const response = await axios.get(
+    `https://ipinfo.io/${ip}/json?token=c13532365e8939`
+  );
 
   const mail = await collection.find({ email: req.body.email });
-  const courseDetails = await admittedCoursesModel.findOne({email: req.body.email})
+  const courseDetails = await admittedCoursesModel.findOne({
+    email: req.body.email,
+  });
   if (mail.length === 0) {
     res.status(400).json({
       message: "You have not registered before. Please register first.",
@@ -45,7 +49,7 @@ const authlogin = async (req: Request, res: Response) => {
         expiresIn: "3d",
       }
     );
-    const tokenelement = new tokenschema({
+    const tokenElement = new tokenschema({
       userId: mail[0]._id,
       email_id: mail[0].email,
       name: mail[0].name,
@@ -60,38 +64,8 @@ const authlogin = async (req: Request, res: Response) => {
       }),
       locations: JSON.stringify(response.data),
     });
-    await tokenelement.save();
-    const prevelement = await historyschema.find({ email: mail[0].email });
-    if (prevelement.length > 0) {
-      await historyschema.updateOne(
-        { email: mail[0].email },
-        {
-          $set: {
-            logintime: Date.now(),
-            status: "active",
-            logouttime: null,
-          },
-        }
-      );
-    } else {
-      const historyelement = new historyschema({
-        userId: mail[0]._id,
-        name: mail[0].name,
-        email: mail[0].email,
-        logintime: Date.now(),
-        status: "active",
-        details: JSON.stringify({
-          OperatingSystem: userdetails.os,
-          Browser: userdetails.device,
-          class: userdetails.family,
-          patch: userdetails.patch,
-          major: userdetails.major,
-          minor: userdetails.minor,
-        }),
-        locations: JSON.stringify(response.data),
-      });
-      await historyelement.save();
-    }
+    await tokenElement.save();
+
     const profiles = {
       name: mail[0].name,
       email: mail[0].email,
@@ -109,29 +83,63 @@ const authlogin = async (req: Request, res: Response) => {
     console.log("Sending");
     const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
     var isModified = false;
-    if(lastPaymentDate && new Date() > lastPaymentDate){
+    if (lastPaymentDate && new Date() > lastPaymentDate) {
       courseDetails.admittedCourses = [];
       isModified = true;
     }
-    if(lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1){
+    if (
+      lastPaymentDate &&
+      courseDetails?.paidForMonth == true &&
+      new Date().getMonth() + 1 != courseDetails?.paidMonth &&
+      new Date().getDate() > 1
+    ) {
       courseDetails.paidForMonth = false;
-      isModified = true
+      isModified = true;
     }
-    if(isModified){
+    if (isModified) {
       await courseDetails.save();
     }
-    
-    res
-      .status(200)
-      .cookie("TestCookie", accessToken, {
-        domain: ".localhost",
-      })
-      .json({
-        message: "OK",
-        accessToken: accessToken,
-        refreshToken: refreshToken,
-        profileinfo: profiles,
+
+    res.status(200).cookie("TestCookie", accessToken, {
+      domain: ".localhost",
+    }).json({
+      message: "OK",
+      accessToken: accessToken,
+      refreshToken: refreshToken,
+      profileinfo: profiles,
+    });
+
+    const prevElement = await historyschema.find({ email: mail[0].email });
+    if (prevElement.length > 0) {
+      await historyschema.updateOne(
+        { email: mail[0].email },
+        {
+          $set: {
+            logintime: Date.now(),
+            status: "active",
+            logouttime: null,
+          },
+        }
+      );
+    } else {
+      const historyElement = new historyschema({
+        userId: mail[0]._id,
+        name: mail[0].name,
+        email: mail[0].email,
+        logintime: Date.now(),
+        status: "active",
+        details: JSON.stringify({
+          OperatingSystem: userdetails.os,
+          Browser: userdetails.device,
+          class: userdetails.family,
+          patch: userdetails.patch,
+          major: userdetails.major,
+          minor: userdetails.minor,
+        }),
+        locations: JSON.stringify(response.data),
       });
+      await historyElement.save();
+    }
   }
 };
 
