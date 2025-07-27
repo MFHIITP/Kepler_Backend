@@ -1,11 +1,11 @@
 import {Worker} from "bullmq"
-import {sendRegistrationEmail} from '../mailsend.utils.ts'
+import {sendRegistrationEmail} from '../mailsend.utils'
 import dotenv from "dotenv"
-import {redis} from '../../index.ts'
+import {redis} from '../../index'
 
 dotenv.config();
 
-const worker = new Worker("emailQueue", async(job) => {
+export const workerProcess = new Worker("emailQueue", async(job) => {
     const receiverEmail = job.data.receiverEmail;
     const receiverName = job.data.receiverName;
     const courses = job.data.courses;

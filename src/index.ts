@@ -34,6 +34,7 @@ import Razorpay from "razorpay";
 import Redis from "ioredis"
 import checkValidity from "./utils/checkValidity.utils.js";
 import { Queue } from "bullmq";
+import { workerProcess } from "./utils/PaymentEmails/sendCourseDeadlineMail.utils.js";
 
 dotenv.config();
 const app = express();
@@ -97,6 +98,8 @@ export const scheduler = new Queue('emailQueue', {
 })
 
 connect();
+
+workerProcess();
 updatelogouthistory();
 
 passport.use(
