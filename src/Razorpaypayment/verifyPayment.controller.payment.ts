@@ -115,15 +115,13 @@ const verifyPayment = async (req: Request, res: Response) => {
           }
         }
 
-        let admittedCoursesList = doc.admittedCourses;
+        let admittedCoursesList = [];
         coursesSelectedAndAccepted = doc.selectedCourses
 
         doc.selectedCourses.forEach((val) => {
-          if(doc.admittedCourses.find(course => course.name == val)){
-            const pursuingCourse = doc.admittedCourses.find(course => course.name == val)
-
+          const pursuingCourse = doc.admittedCourses.find(course => course.name == val)
+          if(pursuingCourse){
             const firstDate = pursuingCourse?.upcomingPaymentDate!
-            admittedCoursesList = admittedCoursesList.filter((course) => course.name !== val);
 
             if(new Date().getDate() == new Date(firstDate).getDate() && new Date().getMonth() == new Date(firstDate).getMonth() && new Date().getFullYear() == new Date(firstDate).getFullYear()){
               const lastDate = new Date(nextPaymentDate);
