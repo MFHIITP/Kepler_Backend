@@ -83,23 +83,20 @@ const authlogin = async (req: Request, res: Response) => {
     };
 
     let sendAlert: boolean = false;
-    let lastDate: string | null = null
-    let courses: string[] = [];
-    if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
-      courseDetails[0].admittedCourses.forEach((val) => {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        const upComingDate = val?.upcomingPaymentDate!;
-        upComingDate.setHours(0, 0, 0, 0);
-        const endingDate = val?.lastDateToPay!;
-        endingDate.setHours(0, 0, 0, 0)
-        if(today >= upComingDate && today <= endingDate){
-          sendAlert = true;
-          lastDate = val?.lastDateToPay!.toISOString()!
-          courses.push(val.name!);
-        }
-      })
-    }
+  let lastDate: string | null = null
+  let courses: string[] = [];
+  if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
+    courseDetails[0].admittedCourses.forEach((val) => {
+      const today = new Date();
+      const upComingDate = val?.upcomingPaymentDate!;
+      const endingDate = val?.lastDateToPay!;
+      if((today.getDate() == upComingDate.getDate() && today.getMonth() == upComingDate.getMonth() && today.getFullYear() == upComingDate.getFullYear()) || (today.getDate() == endingDate.getDate() && today.getMonth() == endingDate.getMonth() && today.getFullYear() == endingDate.getFullYear())){
+        sendAlert = true;
+        lastDate = val?.lastDateToPay!.toISOString()!
+        courses.push(val.name!);
+      }
+    })
+  }
 
     res.status(200).cookie("TestCookie", accessToken, {
       domain: ".localhost",

@@ -95,12 +95,9 @@ const loginaction = async (req: Request, res: Response) => {
   if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
     courseDetails[0].admittedCourses.forEach((val) => {
       const today = new Date();
-      today.setHours(0, 0, 0, 0);
       const upComingDate = val?.upcomingPaymentDate!;
-      upComingDate.setHours(0, 0, 0, 0);
       const endingDate = val?.lastDateToPay!;
-      endingDate.setHours(0, 0, 0, 0)
-      if(today >= upComingDate && today <= endingDate){
+      if((today.getDate() == upComingDate.getDate() && today.getMonth() == upComingDate.getMonth() && today.getFullYear() == upComingDate.getFullYear()) || (today.getDate() == endingDate.getDate() && today.getMonth() == endingDate.getMonth() && today.getFullYear() == endingDate.getFullYear())){
         sendAlert = true;
         lastDate = val?.lastDateToPay!.toISOString()!
         courses.push(val.name!);
