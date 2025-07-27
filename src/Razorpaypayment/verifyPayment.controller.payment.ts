@@ -216,9 +216,9 @@ const verifyPayment = async (req: Request, res: Response) => {
         "Payment Successful",
         `<div>Greetings from Kepler 22B!</div><br>
         <div>Dear ${userName}</div>
-        <div>This email is to inform you that we have received the payment you made on ${currentTime} for the courses ${coursesSelectedAndAccepted.map((val) => val)}. We thank you for choosing Kepler and we wish you best of luck for your future endeavors.</div>
+        <div>This email is to inform you that we have received the payment you made on ${currentTime} for the courses ${coursesSelectedAndAccepted.join(', ')}. We thank you for choosing Kepler and we wish you best of luck for your future endeavors.</div>
         <br>
-        <div>Please note the validity of these courses is till ${validity.toDateString()}. If yu are unable to pay for these courses before ${validity.toDateString()}, you will lose access to these courses after ${validity.toDateString()}</div>
+        <div>Please note the validity of these courses is till ${validity.toLocaleDateString()}. If you are unable to pay for these courses before ${validity.toLocaleDateString()}, you will lose access to these courses after ${validity.toLocaleDateString()}</div>
         <br>
         <div>Thank you</div>
         <br>

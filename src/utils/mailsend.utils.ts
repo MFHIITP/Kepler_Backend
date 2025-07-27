@@ -17,7 +17,7 @@ const sendRegistrationEmail = async (email_from: string, email_to: string, subje
     from: email_from,
     to: email_to,
     subject: subject,
-    html: `<div>${email_from}</div><div>${body}</div>`,
+    html: `<div>${body}</div>`,
   };
   await transporter.sendMail(mailOptions);
 };
