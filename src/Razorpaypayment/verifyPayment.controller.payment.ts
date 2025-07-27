@@ -218,7 +218,7 @@ const verifyPayment = async (req: Request, res: Response) => {
         <div>Dear ${userName}</div>
         <div>This email is to inform you that we have received the payment you made on ${currentTime} for the courses ${coursesSelectedAndAccepted.join(', ')}. We thank you for choosing Kepler and we wish you best of luck for your future endeavors.</div>
         <br>
-        <div>Please note the validity of these courses is till ${validity.toLocaleDateString()}. If you are unable to pay for these courses before ${validity.toLocaleDateString()}, you will lose access to these courses after ${validity.toLocaleDateString()}</div>
+        <div>Please note the validity of these courses is till ${validity.toLocaleDateString("en-IN")}. If you are unable to pay for these courses before ${validity.toLocaleDateString("en-IN")}, you will lose access to these courses after ${validity.toLocaleDateString("en-IN")}</div>
         <br>
         <div>Thank you</div>
         <br>
