@@ -45,7 +45,7 @@ const verifyPayment = async (req: Request, res: Response) => {
       })
 
       const nextPaymentDate = getNextPaymentDate();
-      const startingDate = nextPaymentDate;
+      const startingDate = new Date(nextPaymentDate);
       startingDate.setDate(startingDate.getDate() - 1);
 
       const transactionDetails = [
@@ -115,13 +115,15 @@ const verifyPayment = async (req: Request, res: Response) => {
           }
         }
 
-        let admittedCoursesList = [];
+        let admittedCoursesList = doc.admittedCourses;
         coursesSelectedAndAccepted = doc.selectedCourses
 
         doc.selectedCourses.forEach((val) => {
           const pursuingCourse = doc.admittedCourses.find(course => course.name == val)
           if(pursuingCourse){
+
             const firstDate = pursuingCourse?.upcomingPaymentDate!
+            admittedCoursesList = admittedCoursesList.filter((course) => course.name !== val);
 
             if(new Date().getDate() == new Date(firstDate).getDate() && new Date().getMonth() == new Date(firstDate).getMonth() && new Date().getFullYear() == new Date(firstDate).getFullYear()){
               const lastDate = new Date(nextPaymentDate);
@@ -178,11 +180,10 @@ const verifyPayment = async (req: Request, res: Response) => {
           },
           {
               name: "Last Date for Upcoming Payment",
-              value: minimumDate.setDate(minimumDate.getDate() + 1).toLocaleString("en-IN"),
+              value: upcomingLastDate.toLocaleDateString("en-IN"),
               color: "text-red-700",
           },
         ]
-
         doc.admittedCourses = admittedCoursesList
         doc.selectedCourses = [];
         doc.transaction_details = transactionDetails

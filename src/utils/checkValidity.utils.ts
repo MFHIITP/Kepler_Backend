@@ -19,7 +19,11 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
     const admittedCourses = courseDetails[0].admittedCourses || [];
 
     const updatedCourses = admittedCourses.filter((course) => {
-        return new Date() <= new Date(course.lastDateToPay!)
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const lastDate = course?.lastDateToPay!;
+        lastDate.setHours(0, 0, 0, 0)
+        return today <= lastDate
     })
 
     if(updatedCourses.length != admittedCourses.length){

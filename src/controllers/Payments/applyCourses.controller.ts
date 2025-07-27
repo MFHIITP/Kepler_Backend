@@ -14,7 +14,11 @@ const applyCourses = async (req: Request, res: Response) => {
 
     if(admittedMap.size > 0){
       for (const [name, date] of admittedMap){
-        if(selectedSet.has(name) && new Date() < date!){
+        const today = new Date();
+        const upcomingDate = date!;
+        today.setHours(0, 0, 0, 0);
+        upcomingDate.setHours(0, 0, 0, 0)
+        if(selectedSet.has(name) && today < upcomingDate){
           isInValid = true;
           break;
         }

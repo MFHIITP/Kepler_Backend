@@ -30,17 +30,17 @@ export let grouplist = [
     description: 'This is the CAT group meant for preparation for the CAT Aspirants'
   },
   {
-    name: 'CAT DILR - 2025',
+    name: 'CAT 2025 - DILR',
     visibility: 'none',
     description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
   },
   {
-    name: 'CAT Quant - 2025',
+    name: 'CAT 2025 - Quant',
     visibility: 'none',
     description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
   },
   {
-    name: 'CAT Coding - 2025',
+    name: 'CAT 2025 - Coding',
     visibility: 'none',
     description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
   },
@@ -156,7 +156,7 @@ export let grouplist = [
   }
 ];
 
-export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com", "kepler.xxiib.cygnus@gmail.com"]
+export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com", "kepler.xxiib.cygnus@gmail.com", "arijit.01paul@gmail.com"]
 export let executive_names: string[] = ['Farshid Hossain', 'Supratim Mukherjee']
 export let core_emails: string[] = []
 export let teacher_emails: string[] = []

@@ -87,7 +87,13 @@ const authlogin = async (req: Request, res: Response) => {
     let courses: string[] = [];
     if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
       courseDetails[0].admittedCourses.forEach((val) => {
-        if(new Date() >= val?.upcomingPaymentDate! && new Date() <= val?.lastDateToPay!){
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const upComingDate = val?.upcomingPaymentDate!;
+        upComingDate.setHours(0, 0, 0, 0);
+        const endingDate = val?.lastDateToPay!;
+        endingDate.setHours(0, 0, 0, 0)
+        if(today >= upComingDate && today <= endingDate){
           sendAlert = true;
           lastDate = val?.lastDateToPay!.toISOString()!
           courses.push(val.name!);

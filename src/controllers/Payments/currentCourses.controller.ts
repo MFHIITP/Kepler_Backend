@@ -18,18 +18,18 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
     let selectedCourses: string[] = userData?.selectedCourses || [];
 
     let onGoingCourses: courseStructure[] = [];
-    let currentCourses: courseStructure[] = [];
+    let currentCourses: string[] = [];
     let preventedCourses: string[] = [];
 
     admittedCourses.forEach((val) => {
       if (val?.name?.startsWith("JEE")) {
-        currentCourses.push({ name: val.name, salutation: 'INT', value: 1000 });
+        currentCourses.push(val.name!);
       } else if (val?.name?.startsWith("CAT")) {
-        currentCourses.push({ name: val.name, salutation: 'INT', value: 3000 });
+        currentCourses.push(val.name!);
       } else if (val?.name?.startsWith("Mathematics And Computer Science")) {
-        currentCourses.push({ name: val.name, salutation: 'INT', value: 1000 });       
+        currentCourses.push(val.name!);      
       } else if (val?.name?.startsWith("GATE")) {
-        currentCourses.push({ name: val.name, salutation: 'INT', value: 2000 });
+        currentCourses.push(val.name!);
       }
 
       if(new Date() >= val?.upcomingPaymentDate! && new Date() <= val?.lastDateToPay!){
