@@ -8,7 +8,7 @@ dotenv.config();
 export const workerProcess = new Worker("emailQueue", async(job) => {
     const receiverEmail = job.data.receiverEmail;
     const receiverName = job.data.receiverName;
-    const courses = job.data.courses;
+    const courses: string[] = job.data.courses;
     await sendRegistrationEmail(process.env.GMAIL_USER ?? "", receiverEmail, "Payment of Fees", `
         <div>Greetings from Kepler-22B</div><br>
         <div>Dear ${receiverName}</div><br>
@@ -17,6 +17,6 @@ export const workerProcess = new Worker("emailQueue", async(job) => {
         <div>Thank you for choosing Kepler</div>
         <br><div>Kepler-22B</div>     
     `)}, {
-        connection: redis
+        connection: redis,
     }
 )

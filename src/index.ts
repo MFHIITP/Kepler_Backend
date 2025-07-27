@@ -34,7 +34,6 @@ import Razorpay from "razorpay";
 import Redis from "ioredis"
 import checkValidity from "./utils/checkValidity.utils.js";
 import { Queue } from "bullmq";
-import { workerProcess } from "./utils/PaymentEmails/sendCourseDeadlineMail.utils.js";
 
 dotenv.config();
 const app = express();
@@ -91,7 +90,9 @@ export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
-export const redis = new Redis(process.env.REDIS_URL!)
+export const redis = new Redis(process.env.REDIS_URL!, {
+  maxRetriesPerRequest: null
+})
 
 export const scheduler = new Queue('emailQueue', {
   connection: redis
@@ -99,7 +100,8 @@ export const scheduler = new Queue('emailQueue', {
 
 connect();
 
-workerProcess();
+import ("./utils/PaymentEmails/sendCourseDeadlineMail.utils.js");
+
 updatelogouthistory();
 
 passport.use(
