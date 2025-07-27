@@ -1,9 +1,6 @@
-const getLastDateOfNextMonth = () => {
-    const now = new Date();
-    const month = now.getMonth();
-    const year = now.getFullYear();
-
-    const lastDate = new Date(year, month + 2, 0);
-    return lastDate;
+const getNextPaymentDate = () => {
+    const getDate30DaysLater = new Date();
+    getDate30DaysLater.setDate(getDate30DaysLater.getDate() + 30);
+    return getDate30DaysLater;
 }
-export {getLastDateOfNextMonth}
+export default getNextPaymentDate;

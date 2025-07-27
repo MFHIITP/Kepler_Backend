@@ -21,9 +21,7 @@ const loginaction = async (req: Request, res: Response) => {
   );
 
   const mail = await collection.find({ email: req.body.email });
-  const courseDetails = await admittedCoursesModel.findOne({
-    email: req.body.email,
-  });
+  const courseDetails = await admittedCoursesModel.find({email: req.body.email});
 
   if (mail.length === 0) {
     res.status(400).json({
@@ -90,19 +88,20 @@ const loginaction = async (req: Request, res: Response) => {
     school_year: mail[0].school_year,
     college_stream: mail[0].college_stream,
   };
-  const lastPaymentDate = courseDetails ? courseDetails.lastDate : null;
-  var isModified = false;
-  if (lastPaymentDate && new Date() > lastPaymentDate) {
-    courseDetails.admittedCourses = [];
-    isModified = true;
+
+  let sendAlert: boolean = false;
+  let lastDate: string | null = null
+  let courses: string[] = [];
+  if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
+    courseDetails[0].admittedCourses.forEach((val) => {
+      if(new Date() >= val?.upcomingPaymentDate! && new Date() <= val?.lastDateToPay!){
+        sendAlert = true;
+        lastDate = val?.lastDateToPay!.toISOString()!
+        courses.push(val.name!);
+      }
+    })
   }
-  if (lastPaymentDate && courseDetails?.paidForMonth == true && new Date().getMonth() + 1 != courseDetails?.paidMonth && new Date().getDate() > 1) {
-    courseDetails.paidForMonth = false;
-    isModified = true;
-  }
-  if (isModified) {
-    await courseDetails.save();
-  }
+
   res.status(200).cookie("TestCookie", accessToken, {
       domain: ".localhost",
     }).json({
@@ -110,6 +109,9 @@ const loginaction = async (req: Request, res: Response) => {
       accessToken: accessToken,
       refreshToken: refreshToken,
       profileinfo: profiles,
+      sendAlert: sendAlert,
+      lastDate: lastDate,
+      courses: courses
     });
 
   const prevElement = await historyschema.find({ email: mail[0].email });

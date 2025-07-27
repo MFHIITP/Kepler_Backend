@@ -30,7 +30,17 @@ export let grouplist = [
     description: 'This is the CAT group meant for preparation for the CAT Aspirants'
   },
   {
-    name: 'CAT - 2025',
+    name: 'CAT DILR - 2025',
+    visibility: 'none',
+    description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
+  },
+  {
+    name: 'CAT Quant - 2025',
+    visibility: 'none',
+    description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
+  },
+  {
+    name: 'CAT Coding - 2025',
     visibility: 'none',
     description: 'This is the group for JEE, meant for the preparation of the JEE Aspirants'
   },

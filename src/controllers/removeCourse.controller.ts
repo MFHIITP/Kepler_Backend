@@ -11,7 +11,7 @@ const removeCourse = async(req: Request, res: Response) => {
     }
 
     console.log(userDetails)
-    userDetails.admittedCourses = userDetails?.admittedCourses.filter((val) => val !== course);
+    userDetails.admittedCourses = userDetails?.admittedCourses.filter((val) => val.name !== course);
     userDetails.selectedCourses = userDetails?.selectedCourses.filter((val) => val !== course);
     await userDetails.save();
     res.status(200).send("Course Removed Successfully")

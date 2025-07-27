@@ -6,9 +6,10 @@ const checkAccessToken = async(req: Request, res: Response, next: NextFunction) 
     try{
         const fullAccessToken = req.headers['authorizationaccesstoken'];
         if(!fullAccessToken){
-            return res.status(400).json({
+            res.status(400).json({
                 message: "Authorisation token missing",
             })
+            return;
         }
         const token = fullAccessToken.split(' ')[1];
         const decode = jwt.verify(token, JWT_ACCESS_SECRET ?? "");

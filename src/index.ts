@@ -32,6 +32,8 @@ import refreshAuthRouter from "./routers/authRefresh.route.js";
 import razorpayRouter from "./routers/razorpay.route.js";
 import Razorpay from "razorpay";
 import Redis from "ioredis"
+import checkValidity from "./utils/checkValidity.utils.js";
+import { Queue } from "bullmq";
 
 dotenv.config();
 const app = express();
@@ -89,6 +91,11 @@ export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
 export const redis = new Redis(process.env.REDIS_URL!)
+
+export const scheduler = new Queue('emailQueue', {
+  connection: redis
+})
+
 connect();
 updatelogouthistory();
 
@@ -133,14 +140,17 @@ app.post("/logout", removetoken);
 app.use(checkAccessToken);
 app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
-app.use("/talks", talkrouter);
-app.use("/library", libraryrouter);
 app.use("/devteam", devrouter);
 app.use("/contentteam", contentrouter);
 app.use("/executiveteam", executiverouter);
 app.use("/prteam", prrouter);
 app.use("/treasuryteam", treasuryrouter);
 app.use("/coreteam", corerouter);
+
+app.use(checkValidity);
+
+app.use("/library", libraryrouter);
+app.use("/talks", talkrouter);
 app.use("/number", numberrouter);
 app.use("/payment", paymentRouter);
 app.use("/razorpay", razorpayRouter);

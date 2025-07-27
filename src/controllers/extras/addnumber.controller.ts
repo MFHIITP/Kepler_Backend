@@ -13,6 +13,7 @@ const addnumber = async(req: Request, res: Response)=>{
     const existing_group = grouplist.find((num)=>num.name == groupName);
     if(existing_group) { 
         existing_group.visibility = 'none'
+        existing_group.description = groupDescription;
     }
 
     else{

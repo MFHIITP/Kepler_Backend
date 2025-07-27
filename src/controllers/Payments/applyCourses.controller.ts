@@ -6,6 +6,26 @@ const applyCourses = async (req: Request, res: Response) => {
   const { selectedCourses, email } = req.body;
   try {
     const userData = await admittedCoursesModel.findOne({ email: email });
+    let isInValid: boolean = false;
+
+    const admittedCourses = userData?.admittedCourses;
+    const selectedSet = new Set(selectedCourses);
+    const admittedMap = new Map(admittedCourses?.map((course) => [course.name, course.upcomingPaymentDate]));
+
+    if(admittedMap.size > 0){
+      for (const [name, date] of admittedMap){
+        if(selectedSet.has(name) && new Date() < date!){
+          isInValid = true;
+          break;
+        }
+      }
+    }
+
+    if(isInValid){
+      res.status(303).send("Remove Duplicate Courses");
+      return;
+    }
+
     if (userData != null) {
       await admittedCoursesModel.updateOne(
         { email: email },

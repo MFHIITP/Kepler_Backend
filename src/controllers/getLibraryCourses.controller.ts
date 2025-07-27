@@ -2,20 +2,29 @@ import { Request, Response } from "express";
 import { core_emails, executive_emails, grouplist, teacher_emails } from "../local_dbs.js";
 import { admittedCoursesModel } from "../models/admittedCourses.model.js";
 
+interface group {
+    name: string,
+    visibility: string,
+    description: string
+}
+
 const courseList = async(req: Request, res: Response)=>{
     try{
         const emailId = req.body.emailId;
-        let newList = grouplist.sort((a, b)=>{return a.id - b.id;}).map(val => val.name)
-        if(executive_emails.includes(emailId) || core_emails.includes(emailId) || teacher_emails.includes(emailId)){
-            return res.status(200).json({
-                data: newList
-            })
+        let newList = grouplist.sort((a: group, b: group) => a.name.localeCompare(b.name)).map(val => val.name)
+
+        const data = await admittedCoursesModel.findOne({email: emailId});
+        const groups = data?.admittedCourses.map((val) => val.name) || []
+        
+        if(!executive_emails.includes(emailId) && !core_emails.includes(emailId) && !teacher_emails.includes(emailId)){
+            newList = newList.filter((group_name) => groups.includes(group_name))
         }
-        const userCourseList = await admittedCoursesModel.findOne({email: emailId});
-        const courseListDetails = userCourseList?.admittedCourses || []
-        courseListDetails.sort((a, b) => (a.id - b.id))
+        if(!executive_emails.includes(emailId)){
+            newList = newList.filter((group_name) => group_name !== 'Executive Group')
+        }
+
         res.status(200).json({
-            data: courseListDetails
+            data: newList
         })
     }
     catch(err){

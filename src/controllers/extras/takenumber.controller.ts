@@ -17,7 +17,7 @@ const takeNumber = async(req: Request, res: Response)=>{
     const email: string = req.body.email;
     
     const data = await admittedCoursesModel.findOne({email: email})
-    const groups = data?.admittedCourses || []
+    const groups = data?.admittedCourses.map((val) => val.name) || []
     if(!executive_emails.includes(email) && !core_emails.includes(email) && !teacher_emails.includes(email)){
         newlist = newlist.filter((group_name)=> groups.includes(group_name.name) && group_name.visibility == 'none')
     }

@@ -17,7 +17,6 @@ const userInformation = async (req: Request, res: Response) => {
     var payment_details = courseDetails.payment_details || [];
     var upcoming_payment_details = courseDetails.upcoming_payment_details || []
     var transaction_logs = courseDetails.log_details || [];
-    var paidForMonth = courseDetails.paidForMonth || false;
 
     var modifiedSelectedCourses = [];
     var modifiedAdmittedCourses = [];
@@ -38,29 +37,44 @@ const userInformation = async (req: Request, res: Response) => {
 
     if (admittedCourses.length > 0) {
       admittedCourses.forEach((val) => {
-        if (val.startsWith("JEE")) {
+        if (val?.name?.startsWith("JEE")) {
           modifiedAdmittedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 1000,
+            name: val.name,
+            coursePaymentDate: val.coursePaymentDate,
+            upcomingPaymentDate: val.upcomingPaymentDate,
+            lastDateToPay: val.lastDateToPay,
+            validity: val.validity,
+            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
           });
-        } else if (val.startsWith("CAT")) {
+        } 
+        else if (val?.name?.startsWith("CAT")) {
           modifiedAdmittedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 3000,
+            name: val.name,
+            coursePaymentDate: val.coursePaymentDate,
+            upcomingPaymentDate: val.upcomingPaymentDate,
+            lastDateToPay: val.lastDateToPay,
+            validity: val.validity,
+            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
           });
-        } else if (val.startsWith("Mathematics And Computer Science")) {
+        } 
+        else if (val?.name?.startsWith("Mathematics And Computer Science")) {
           modifiedAdmittedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 1000,
+            name: val.name,
+            coursePaymentDate: val.coursePaymentDate,
+            upcomingPaymentDate: val.upcomingPaymentDate,
+            lastDateToPay: val.lastDateToPay,
+            validity: val.validity,
+            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
           });
-        } else if (val.startsWith("GATE")) {
+        } 
+        else if (val?.name?.startsWith("GATE")) {
           modifiedAdmittedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 2000,
+            name: val.name,
+            coursePaymentDate: val.coursePaymentDate,
+            upcomingPaymentDate: val.upcomingPaymentDate,
+            lastDateToPay: val.lastDateToPay,
+            validity: val.validity,
+            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
           });
         }
       });
@@ -110,8 +124,7 @@ const userInformation = async (req: Request, res: Response) => {
         salutation: "INR",
         color: "text-purple-900",
       },
-      log_details: transaction_logs,
-      paidForMonth: paidForMonth
+      log_details: transaction_logs
     };
 
     res.status(200).json({

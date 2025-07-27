@@ -22,10 +22,16 @@ var admittedCoursesSchema = new mongoose.Schema({
     required: true,
   },
   admittedCourses: {
-    type: [String],
+    type: [{
+      name: String,
+      coursePaymentDate: String,
+      upcomingPaymentDate: Date,
+      lastDateToPay: Date,
+      validity: Date
+    }],
     index: true,
   },
-  visibleGroups: {
+  newCourses: {
     type: [String],
   },
   selectedCourses: {
@@ -45,18 +51,7 @@ var admittedCoursesSchema = new mongoose.Schema({
     value1: String,
     value2: String,
     value3: String
-  }],
-  paidForMonth: {
-    type: Boolean
-  },
-  paidMonth: {
-    type: Number,
-    min: 1,
-    max: 12
-  },
-  lastDate: {
-    type: Date
-  }
+  }]
 });
 
 export const admittedCoursesModel = mongoose.model("admittedCoursesModel", admittedCoursesSchema);

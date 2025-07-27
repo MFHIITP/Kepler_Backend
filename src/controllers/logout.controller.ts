@@ -5,7 +5,8 @@ import { Request, Response } from "express";
 const removetoken = async (req: Request, res: Response) => {
   const result = await tokenschema.deleteOne({ email_id: req.body.email });
   if (result.deletedCount === 0) {
-    return res.status(500).send("No token found for this email.");
+    res.status(500).send("No token found for this email.");
+    return;
   }
   await historyschema.updateOne(
     { email: req.body.email },  
