@@ -92,7 +92,7 @@ const authlogin = async (req: Request, res: Response) => {
       const endingDate = val?.lastDateToPay!;
       if((today.getDate() == upComingDate.getDate() && today.getMonth() == upComingDate.getMonth() && today.getFullYear() == upComingDate.getFullYear()) || (today.getDate() == endingDate.getDate() && today.getMonth() == endingDate.getMonth() && today.getFullYear() == endingDate.getFullYear())){
         sendAlert = true;
-        lastDate = val?.lastDateToPay!.toISOString()!
+        lastDate = val?.lastDateToPay!.toLocaleDateString("en-IN")
         courses.push(val.name!);
       }
     })

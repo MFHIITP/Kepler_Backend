@@ -44,7 +44,7 @@ const userInformation = async (req: Request, res: Response) => {
             upcomingPaymentDate: val.upcomingPaymentDate,
             lastDateToPay: val.lastDateToPay,
             validity: val.validity,
-            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
+            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
           });
         } 
         else if (val?.name?.startsWith("CAT")) {
@@ -54,7 +54,7 @@ const userInformation = async (req: Request, res: Response) => {
             upcomingPaymentDate: val.upcomingPaymentDate,
             lastDateToPay: val.lastDateToPay,
             validity: val.validity,
-            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
+            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
           });
         } 
         else if (val?.name?.startsWith("Mathematics And Computer Science")) {
@@ -64,7 +64,7 @@ const userInformation = async (req: Request, res: Response) => {
             upcomingPaymentDate: val.upcomingPaymentDate,
             lastDateToPay: val.lastDateToPay,
             validity: val.validity,
-            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
+            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
           });
         } 
         else if (val?.name?.startsWith("GATE")) {
@@ -74,7 +74,7 @@ const userInformation = async (req: Request, res: Response) => {
             upcomingPaymentDate: val.upcomingPaymentDate,
             lastDateToPay: val.lastDateToPay,
             validity: val.validity,
-            color: new Date() >= new Date(val.upcomingPaymentDate!) ? 'text-red-800' : ''
+            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
           });
         }
       });
