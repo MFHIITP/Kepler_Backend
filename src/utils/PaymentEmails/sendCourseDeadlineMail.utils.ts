@@ -12,7 +12,7 @@ export const workerProcess = new Worker("emailQueue", async(job) => {
     await sendRegistrationEmail(process.env.GMAIL_USER ?? "", receiverEmail, "Payment of Fees", `
         <div>Greetings from Kepler-22B</div><br>
         <div>Dear ${receiverName}</div><br>
-        <div>Your payment window for the courses ${courses.join(', ')} is now live for the next 30 days. Please make the payment in order to continue studying these courses. The deadline for the payment is tomorrow till 11:59 pm. Failure to make the payment within deadline will result in preventing the access to these courses.</div>
+        <div>Your payment window for the courses ${courses.join(', ')} is now live for today and tomorrow. Please make the payment before tomorrow end of day in order to continue studying these courses. The deadline for the payment is tomorrow till 11:59 pm. Failure to make the payment within deadline will result in preventing the access to these courses.</div>
         <br>
         <div>Thank you for choosing Kepler</div>
         <br><div>Kepler-22B</div>     

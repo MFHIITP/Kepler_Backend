@@ -1,20 +1,18 @@
 import { scheduler } from "../../index";
 
 export const scheduleEmailPaymentReminder = async(receiverEmail: string, receiverName: string, courses: string[]) => {
-    // const currentDate = new Date();
-    // const IST_OFFSET_MS = 5.5 * 60 * 60 * 1000;
+    const currentDate = new Date();
+    const IST_OFFSET_MS = 5.5 * 60 * 60 * 1000;
 
-    // const istNow = new Date(currentDate.getTime() + IST_OFFSET_MS);
+    const istNow = new Date(currentDate.getTime() + IST_OFFSET_MS);
 
-    // const targetISTDate = new Date(istNow);
-    // targetISTDate.setDate(targetISTDate.getDate() + 29);
-    // targetISTDate.setHours(9, 0, 0, 0);
+    const targetISTDate = new Date(istNow);
+    targetISTDate.setDate(targetISTDate.getDate() + 29);
+    targetISTDate.setHours(9, 0, 0, 0);
 
-    // const targetUTCDate = new Date(targetISTDate.getTime() - IST_OFFSET_MS);
+    const targetUTCDate = new Date(targetISTDate.getTime() - IST_OFFSET_MS);
 
-    // const delay = targetUTCDate.getTime() - currentDate.getTime();
-
-    const delay = 1 * 60 * 1000;
+    const delay = targetUTCDate.getTime() - currentDate.getTime();
 
 
     await scheduler.add('sendPaymentReminder', {
