@@ -12,11 +12,15 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
     const courseDetails = await admittedCoursesModel.find({email: emailId});
     
     if(courseDetails.length == 0){
+        if(req.path.endsWith(`/payment/applyCourses`)){
+            next();
+            return;
+        }
         res.status(405).send("User did not purchase any course");
         return;
     }
 
-    const admittedCourses = courseDetails[0].admittedCourses || [];
+    const admittedCourses = courseDetails[0]?.admittedCourses || [];
 
     const updatedCourses = admittedCourses.filter((course) => {
         const today = new Date();
