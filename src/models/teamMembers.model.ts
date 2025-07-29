@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 
-const DevSchema = new mongoose.Schema({
+const TeamMemberSchema = new mongoose.Schema({
+    teamName: {
+        type: [String],
+        required: true,
+        index: true
+    },
     position: {
         type: String,
         required: true
@@ -9,21 +14,22 @@ const DevSchema = new mongoose.Schema({
         type: String, 
         required: true,
     },
-    phone_number: {
+    phoneNumber: {
         type: String,
         required: true,
     },
-    email_id: {
+    emailId: {
         type: String,
-        required: true
+        required: true,
+        index: true
     },
     degree: {
         type: String,
         required: true,
     },
-    linkedin: {
+    linkedIn: {
         type: String
     }
 })
 
-export const devcollection = mongoose.model("devcollection", DevSchema);
+export const TeamMembersCollection = mongoose.model("teammemberschema", TeamMemberSchema);

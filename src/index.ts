@@ -8,13 +8,8 @@ import dotenv from "dotenv";
 import googleAuthRouter from "./routers/googleAuthRoute.js";
 import connect from "./utils/connection.utils.js";
 import { collection } from "./models/collection.model.js";
-import devrouter from "./routers/teams/devteam.route.js";
-import contentrouter from "./routers/teams/contentteam.route.js";
-import executiverouter from "./routers/teams/executiveteam.route.js";
-import prrouter from "./routers/teams/prteam.route.js";
 import numberrouter from "./routers/number.route.js";
-import treasuryrouter from "./routers/teams/treasury.route.js";
-import corerouter from "./routers/teams/coreteam.route.js";
+import contentRouter from "./routers/teamMembers.route.js"
 import removetoken from "./controllers/logout.controller.js";
 import liveuser from "./controllers/extras/LiveUser.controller.js";
 import historyuser from "./controllers/extras/Historyuser.controller.js";
@@ -145,12 +140,7 @@ app.post("/logout", removetoken);
 app.use(checkAccessToken);
 app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
-app.use("/devteam", devrouter);
-app.use("/contentteam", contentrouter);
-app.use("/executiveteam", executiverouter);
-app.use("/prteam", prrouter);
-app.use("/treasuryteam", treasuryrouter);
-app.use("/coreteam", corerouter);
+app.use("/team", contentRouter);
 
 app.use(checkValidity);
 
