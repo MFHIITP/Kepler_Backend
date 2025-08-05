@@ -6,6 +6,10 @@ const talkschema = new mongoose.Schema({
         required: true,
         index: true
     },
+    problem_name: {
+        type: String,
+        index: true
+    },
     name: {
         type: String,
         required: true,
@@ -26,7 +30,7 @@ const talkschema = new mongoose.Schema({
     date:{
         type: String
     }
-})
+}, {timestamps: true})
 
 const talkcollection = mongoose.model('talkcollection', talkschema);
 export default talkcollection

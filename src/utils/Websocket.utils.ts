@@ -1,4 +1,4 @@
-import { WebSocketServer } from "ws";
+import { WebSocketServer, WebSocket } from "ws";
 import { httpServer } from "../index.js";
 import talkcollection from "../models/talkcollection.model.js";
 
@@ -27,12 +27,21 @@ const webSocketControl = async () => {
           }
         });
         await savedData.save();
-      } else if (data.type) {
+      } else if (data.format == 'commentPost') {
+        const savedData = new talkcollection({
+          group_name: "codingComment",
+          problem_name: data.problem_name,
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          date: data.date
+        })
         wss.clients.forEach((client) => {
-          if (client !== ws && client.readyState === ws.OPEN) {
-            client.send(message);
+          if (client.readyState === ws.OPEN) {
+            client.send(JSON.stringify(savedData));
           }
         });
+        await savedData.save();
       } else {
         console.log("Unknown message type", data);
       }

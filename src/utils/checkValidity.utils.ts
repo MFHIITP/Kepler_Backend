@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken"
 import { JWT_ACCESS_SECRET } from "..";
 import { admittedCoursesModel } from "../models/admittedCourses.model";
+import { executive_emails } from "../local_dbs";
 
 const checkValidity = async(req: Request, res: Response, next: NextFunction) => {
     const fullAccessToken = req.headers['authorizationaccesstoken']
@@ -10,6 +11,11 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
     const emailId = decode.email;
 
     const courseDetails = await admittedCoursesModel.find({email: emailId});
+
+    if(executive_emails.includes(emailId)){
+        next();
+        return;
+    }
     
     if(courseDetails.length == 0){
         if(req.path.endsWith(`/payment/applyCourses`)){
