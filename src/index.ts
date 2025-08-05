@@ -29,6 +29,7 @@ import Razorpay from "razorpay";
 import Redis from "ioredis"
 import checkValidity from "./utils/checkValidity.utils.js";
 import { Queue } from "bullmq";
+import ProblemsRouter from "./routers/problems.route.js"
 
 dotenv.config();
 const app = express();
@@ -83,6 +84,8 @@ export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
+
+export const codeRunnerIP = '13.200.219.70'
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
 export const redis = new Redis(process.env.REDIS_URL!, {
@@ -135,12 +138,13 @@ app.use("/login", loginrouter);
 app.use("/users", userrouter);
 app.use("/api", apiroute);
 app.post("/logout", removetoken);
+app.use("/team", contentRouter);
 
 // Protected Routes
 app.use(checkAccessToken);
 app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
-app.use("/team", contentRouter);
+app.use("/problems", ProblemsRouter);
 
 app.use(checkValidity);
 

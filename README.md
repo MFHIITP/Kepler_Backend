@@ -8,3 +8,5 @@ or for using multiple containers use
 # docker build -t kepler-backend .
 # docker swarm init
 # docker stack deploy -c kepler-backend kepler_backend-api
+
+# IPv4 = 13.200.219.70
