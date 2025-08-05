@@ -85,7 +85,7 @@ export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
 
-export const codeRunnerIP = '13.200.219.70'
+export const codeRunnerIP = '3.110.138.122'
 const port = process.env.PORT || 8000;
 const hostname = "0.0.0.0";
 export const redis = new Redis(process.env.REDIS_URL!, {
