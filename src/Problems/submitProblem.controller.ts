@@ -10,6 +10,10 @@ const submitProblem = async(req: Request, res: Response) => {
     const {code, language, email, name}: {code: string, language: string, email: string, name: string} = req.body;
     const languageCode = languageMapper[language];
     const problem = problemSet.find(val => val.id == new Date().getDate());
+    if(!problem){
+        res.status(607).send("No Problem for Today");
+        return;
+    }
     const hiddenTestCases = problem?.hiddenTestCases || [];
     var errorType = '';
     var hasError = false;

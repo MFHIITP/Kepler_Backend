@@ -36,8 +36,8 @@ const getLeaderboardDetails = async(req: Request, res: Response) => {
     const overallRank = combinedModel.findIndex(user => user.email == email) + 1;
 
     const user = combinedModel.find(user => user.email == email);
-    const college = user.college;
-    const school = user.school;
+    const college = user?.college || "";
+    const school = user?.school || "";
     const instituteList = combinedModel.filter(user => college ? user.college == college : user.school == school);
     const instituteRank = instituteList.findIndex(user => user.email == email) + 1;
 
