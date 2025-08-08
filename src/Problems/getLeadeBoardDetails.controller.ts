@@ -43,7 +43,7 @@ const getLeaderboardDetails = async(req: Request, res: Response) => {
 
     const param = req.query.param as string || ""
 
-    const filteredList = combinedModel.filter(user => user.name.toLowerCase().includes(param.toLowerCase()) || (college ? user.college.toLowerCase().includes(param.toLowerCase()) : user.school.toLowerCase().includes(param.toLowerCase())))
+    const filteredList = combinedModel.filter(user => user.name.toLowerCase().includes(param.toLowerCase()) || (college ? user.college.toLowerCase().includes(param.toLowerCase()) : (user?.school ? user?.school.toLowerCase().includes(param.toLowerCase()) : '')))
 
     res.status(200).json({
         instituteRank: instituteRank,
