@@ -24,20 +24,14 @@ const userInformation = async (req: Request, res: Response) => {
     let paymentAmount = 0;
 
     selectedCourses.forEach((val) => {
-      if (val.startsWith("JEE")) {
-        paymentAmount += 1000;
-      } else if (val.startsWith("CAT")) {
-        paymentAmount += 3000;
-      } else if (val.startsWith("GATE")) {
-        paymentAmount += 2000;
-      } else if (val.startsWith("Mathematics And Computer Science")) {
+      if (val.startsWith("Computer Science")) {
         paymentAmount += 1000;
       }
     });
 
     if (admittedCourses.length > 0) {
       admittedCourses.forEach((val) => {
-        if (val?.name?.startsWith("JEE")) {
+        if (val?.name?.startsWith("Computer Science")) {
           modifiedAdmittedCourses.push({
             name: val.name,
             coursePaymentDate: val.coursePaymentDate,
@@ -47,65 +41,17 @@ const userInformation = async (req: Request, res: Response) => {
             color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
           });
         } 
-        else if (val?.name?.startsWith("CAT")) {
-          modifiedAdmittedCourses.push({
-            name: val.name,
-            coursePaymentDate: val.coursePaymentDate,
-            upcomingPaymentDate: val.upcomingPaymentDate,
-            lastDateToPay: val.lastDateToPay,
-            validity: val.validity,
-            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
-          });
-        } 
-        else if (val?.name?.startsWith("Mathematics And Computer Science")) {
-          modifiedAdmittedCourses.push({
-            name: val.name,
-            coursePaymentDate: val.coursePaymentDate,
-            upcomingPaymentDate: val.upcomingPaymentDate,
-            lastDateToPay: val.lastDateToPay,
-            validity: val.validity,
-            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
-          });
-        } 
-        else if (val?.name?.startsWith("GATE")) {
-          modifiedAdmittedCourses.push({
-            name: val.name,
-            coursePaymentDate: val.coursePaymentDate,
-            upcomingPaymentDate: val.upcomingPaymentDate,
-            lastDateToPay: val.lastDateToPay,
-            validity: val.validity,
-            color: new Date().setHours(0, 0, 0, 0) >= new Date(val.upcomingPaymentDate!).setHours(0, 0, 0, 0) ? 'text-red-800' : ''
-          });
-        }
       });
       admittedCourses = modifiedAdmittedCourses
     }
 
     if (selectedCourses.length > 0) {
       selectedCourses.forEach((val) => {
-        if (val.startsWith("JEE")) {
+        if (val.startsWith("Computer Science")) {
           modifiedSelectedCourses.push({
             name: val,
             salutation: "INR",
             value: 1000,
-          });
-        } else if (val.startsWith("CAT")) {
-          modifiedSelectedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 3000,
-          });
-        } else if (val.startsWith("Mathematics And Computer Science")) {
-          modifiedSelectedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 1000,
-          });
-        } else if (val.startsWith("GATE")) {
-          modifiedSelectedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 2000,
           });
         }
       });
