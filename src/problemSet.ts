@@ -513,6 +513,10 @@ export const problemSet: ProblemInterface[] = [
         input: "pwwkew",
         outputReal: "3",
       },
+      {
+        input: "abcdefghdijklmneopqrg",
+        outputReal: "15"
+      },
     ],
     inputFormat: "A single lowercase string.",
     outputFormat:

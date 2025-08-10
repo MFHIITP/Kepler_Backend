@@ -6,7 +6,6 @@ import talkrouter from "./routers/talk.route.js";
 import libraryrouter from "./routers/library.route.js";
 import dotenv from "dotenv";
 import googleAuthRouter from "./routers/googleAuthRoute.js";
-import connect from "./utils/connection.utils.js";
 import { collection } from "./models/collection.model.js";
 import numberrouter from "./routers/number.route.js";
 import contentRouter from "./routers/teamMembers.route.js"
@@ -96,9 +95,9 @@ export const scheduler = new Queue('emailQueue', {
   connection: redis
 })
 
-connect();
-
+import  ("./utils/connection.utils.js");
 import ("./utils/PaymentEmails/sendCourseDeadlineMail.utils.js");
+import ("./utils/postgresConnection.utils.js");
 
 updatelogouthistory();
 

@@ -8,6 +8,7 @@ import { authsignupaction } from '../controllers/authsignup.controller.js';
 import sendUsers from '../controllers/sendUsers.controller.js';
 import userInformation from '../controllers/moreuserInformation.controller.js';
 import removeCourse from '../controllers/removeCourse.controller.js';
+import getAllCourses from '../controllers/allCourses.controller.js';
 const router = Router();
 
 router.route("/signup").post(signupaction);
@@ -17,6 +18,7 @@ router.route("/update").post(updatefunc)
 router.route('/authsignup').post(authsignupaction)
 router.route('/moreInformation').post(userInformation)
 router.route('/removeCourse').post(removeCourse);
+router.route("/getAllCourses").get(getAllCourses);
 
 router.route("/usernumber").get(async(req, res)=>{
     const users = await allusers()

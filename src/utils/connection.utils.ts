@@ -4,8 +4,8 @@ dotenv.config();
 import logger from "./winston_logger.js";
 
 const server = process.env.SERVER;
-const database = process.env.DATABASE
-const connect = async () => {
+const database = process.env.DATABASE;
+(async () => {
     try {
       await mongoose.connect(`mongodb+srv://${server}/${database}`);
       logger.info('Database Successfully Connected')
@@ -14,5 +14,4 @@ const connect = async () => {
       console.log(err);
       logger.info('Database error ' + err)
     }
-};
-export default connect;
+})();
