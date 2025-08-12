@@ -12,7 +12,6 @@ import contentRouter from "./routers/teamMembers.route.js"
 import removetoken from "./controllers/logout.controller.js";
 import liveuser from "./controllers/extras/LiveUser.controller.js";
 import historyuser from "./controllers/extras/Historyuser.controller.js";
-import updatelogouthistory from "./utils/nodecron.js";
 import webSocketControl from "./utils/Websocket.utils.js";
 import cookieParser from "cookie-parser";
 import loginrouter from "./routers/login.route.js";
@@ -99,7 +98,7 @@ import  ("./utils/connection.utils.js");
 import ("./utils/PaymentEmails/sendCourseDeadlineMail.utils.js");
 import ("./utils/postgresConnection.utils.js");
 
-updatelogouthistory();
+import ("./utils/nodecron.js");
 
 passport.use(
   new GoogleStrategy(

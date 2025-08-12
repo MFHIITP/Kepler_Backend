@@ -1,7 +1,7 @@
 import cron from 'node-cron'
-import historyschema from '../models/History.model.js'
+import historyschema from '../models/History.model.js';
 
-const updatelogouthistory = async()=>{
+(async()=>{
     cron.schedule('0 * * * *', async()=>{
         const now = new Date();
         const cutofftime = new Date(now.getTime() - 24 * 60 * 60 * 1000);
@@ -18,5 +18,4 @@ const updatelogouthistory = async()=>{
         )
         console.log(`Cron job completed. Modified ${result.modifiedCount} documents.`);
     })
-}
-export default updatelogouthistory
+})()
