@@ -1,21 +1,20 @@
-import pool from "../utils/postgresConnection.utils.js";
+import pool from "../utils/postgresConnection.utils";
 
-export const checkTableExists = async (tableName: string): Promise<boolean> => {
-    try {
+const checkTableExists = async (tableName: string) => {
+    try{
         const query = `SELECT EXISTS (
             SELECT 1 
             FROM information_schema.tables
             WHERE table_schema = 'public'
             AND table_name = $1
-        ) AS "exists";`;
+        ) AS "exists";`
         const response = await pool.query(query, [tableName]);
-        if(response.rows[0].exists) {
-            return true;
-        }
-        return false;
+        console.log("Table existence confirmed: ", response.rows[0].exists);
+        return response.rows[0].exists;
     }
-    catch(error) {
-        console.error("Error checking table exists: ", error)
+    catch (error) {
+        console.error("Table NOT found", error);
         return false;
-    }
+    } 
 }
+export default checkTableExists;

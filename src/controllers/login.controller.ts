@@ -12,7 +12,6 @@ dotenv.config();
 
 const loginaction = async (req: Request, res: Response) => {
 
-  console.log("Árrived");
   const userDetails = useragent.parse(req.headers["user-agent"]);
   const ipRaw = req.headers["x-forwarded-for"];
   const ip = ipRaw?.split(",")[0].trim();
