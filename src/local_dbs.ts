@@ -121,7 +121,9 @@ export let grouplist = [
   },
 ];
 
-export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com", "kepler.xxiib.cygnus@gmail.com", "arijit.01paul@gmail.com"]
+export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com"]
 export let executive_names: string[] = ['Farshid Hossain', 'Supratim Mukherjee']
 export let core_emails: string[] = []
-export let teacher_emails: string[] = []
+export let c_suit_emails: string[] = []
+export let GM_emails: string[] = [];
+export let teacher_emails: string[] = [];
