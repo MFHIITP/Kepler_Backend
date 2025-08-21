@@ -14,8 +14,8 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
 
   try {
     const userData = await admittedCoursesModel.findOne({ email: email });
-    const allPossibleCourses = grouplist?.filter(data => data.course == true).map(data => data.name) || []
-    console.log(userData)
+    const allPossibleCourses = grouplist?.filter(data => data.course == true && data.name != 'Community Group').map(data => data.name) || []
+    console.log(userData) 
     const admittedCourses = userData?.admittedCourses || [];
     let selectedCourses: string[] = userData?.selectedCourses || [];
 
