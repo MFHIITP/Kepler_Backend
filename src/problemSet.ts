@@ -986,29 +986,29 @@ export const problemSet: ProblemInterface[] = [
         input: {
           s: "abca",
         },
-        outputReal: true,
+        outputReal: "true",
       },
       {
         input: {
           s: "abc",
         },
-        outputReal: false,
+        outputReal: "false",
       },
     ],
     realTestCases: [
       {
         input: "abca",
-        output: true,
+        output: "true",
       },
       {
         input: "abc",
-        output: false,
+        output: "false",
       },
     ],
     hiddenTestCases: [
       {
         input: "deeee",
-        outputReal: true,
+        outputReal: "true",
       },
     ],
     inputFormat: "A single string of lowercase characters.",
