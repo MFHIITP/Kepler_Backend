@@ -17,7 +17,7 @@ const courseList = async(req: Request, res: Response)=>{
         const groups = data?.admittedCourses.map((val) => val.name) || []
         
         if(!executive_emails.includes(emailId) && !core_emails.includes(emailId) && !teacher_emails.includes(emailId)){
-            newList = newList.filter((group_name) => groups.includes(group_name))
+            newList = newList.filter((group_name) => groups.includes(group_name) || group_name == 'Community Group')
         }
         if(!executive_emails.includes(emailId)){
             newList = newList.filter((group_name) => group_name !== 'Executive Group')

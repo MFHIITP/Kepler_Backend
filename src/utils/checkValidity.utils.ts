@@ -18,11 +18,13 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
     }
     
     if(courseDetails.length == 0){
-        if(req.path.endsWith(`/payment/applyCourses`)){
-            next();
-            return;
-        }
-        res.status(405).send("User did not purchase any course");
+    //     if(req.path.endsWith(`/payment/applyCourses`) || req.path.endsWith(`/payment/getCurrentCourses`) || req.path.endsWith('/library/courses/getCourses')){
+    //         next();
+    //         return;
+    //     }
+    //     res.status(405).send("User did not purchase any course");
+    //     return;
+        next();
         return;
     }
 

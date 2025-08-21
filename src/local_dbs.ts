@@ -119,6 +119,12 @@ export let grouplist = [
     description: 'This is the Teachers group meant explicitly for all the teachers of Kepler 22B',
     course: false
   },
+  {
+    name: 'Community Group',
+    visibility: 'none',
+    description: 'This group is a community group with open visibility to all members of Kepler22B, with or without course purchasing',
+    course: true
+  }
 ];
 
 export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com"]

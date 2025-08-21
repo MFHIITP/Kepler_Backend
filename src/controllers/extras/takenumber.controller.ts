@@ -19,7 +19,7 @@ const takeNumber = async(req: Request, res: Response)=>{
     const data = await admittedCoursesModel.findOne({email: email})
     const groups = data?.admittedCourses.map((val) => val.name) || []
     if(!executive_emails.includes(email) && !core_emails.includes(email) && !teacher_emails.includes(email)){
-        newlist = newlist.filter((group_name)=> groups.includes(group_name.name) && group_name.visibility == 'none')
+        newlist = newlist.filter((group_name)=> (groups.includes(group_name.name) && group_name.visibility == 'none') || group_name.name == 'Community Group')
     }
     if(!executive_emails.includes(email)){
         newlist = newlist.filter((group_name) => group_name.name !== 'Executive Group')

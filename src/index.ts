@@ -143,6 +143,7 @@ app.use(checkAccessToken);
 app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
 app.use("/problems", ProblemsRouter);
+app.use("/razorpay", razorpayRouter);
 
 app.use(checkValidity);
 
@@ -150,7 +151,6 @@ app.use("/library", libraryrouter);
 app.use("/talks", talkrouter);
 app.use("/number", numberrouter);
 app.use("/payment", paymentRouter);
-app.use("/razorpay", razorpayRouter);
 
 app.post("/removeprofile", async (req, res) => {
   const mail = await collection.deleteOne({ email: req.body.email });
