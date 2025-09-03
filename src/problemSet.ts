@@ -15,6 +15,7 @@ export interface ProblemInterface {
     input: string;
     outputReal: string | boolean | BigInteger;
   }[];
+  topics: string[];
   inputFormat: string;
   outputFormat: string;
   constraintsTime: string;
@@ -108,6 +109,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search'],
     inputFormat:
       "The first line contains integer n. The next n integers are the coin values. The last integer is the value of the bill.",
     outputFormat: "A single boolean value: true or false",
@@ -153,6 +155,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "16",
       },
     ],
+    topics: ['arrays', 'dynamic programming', 'string', 'binary search'],
     inputFormat:
       "The first line contains integer n. The next n integers represent the stock prices throughout the day.",
     outputFormat: "A single integer representing the maximum profit.",
@@ -198,6 +201,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "The first line contains integer n. The next n integers represent user IDs.",
     outputFormat: "A single boolean value: true or false",
@@ -243,6 +247,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "0 0 120 0 0",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "The first line contains integer n. The next n integers represent productivity scores.",
     outputFormat: "A space-separated list of n integers.",
@@ -288,6 +293,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "9",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "The first line contains integer n. The next n integers represent hourly mood energy levels.",
     outputFormat:
@@ -334,6 +340,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "1 11",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains n (number of intervals). Then n pairs of integers, each representing start and end of an interval.",
     outputFormat:
@@ -380,6 +387,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "4",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains n (number of days). Then n integers denoting active days (unordered).",
     outputFormat:
@@ -426,6 +434,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat: "Two space-separated lowercase strings.",
     outputFormat:
       "Boolean value: true if the strings are anagrams, else false.",
@@ -471,6 +480,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "2",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains n. Then n space-separated lowercase words.",
     outputFormat: "A single integer: the number of anagram clusters.",
@@ -518,6 +528,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "15"
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat: "A single lowercase string.",
     outputFormat:
       "A single integer: length of the longest substring with no repeating characters.",
@@ -561,6 +572,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "A single line string s containing letters, digits, spaces, or symbols.",
     outputFormat:
@@ -605,6 +617,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "aba",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat: "A single lowercase string s.",
     outputFormat: "A single string: the longest palindromic substring.",
     constraintsTime: "1 <= s.length <= 1000",
@@ -647,6 +660,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "4",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "A space-separated representation of a binary tree in level order with 'null' for empty nodes.",
     outputFormat: "A single integer: the depth of the tree.",
@@ -690,6 +704,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "1 3 2 5 4",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "A space-separated level-order representation of a binary tree, with 'null' for missing nodes.",
     outputFormat:
@@ -736,6 +751,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "false",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "Two space-separated level-order trees separated by '|'. Use 'null' for empty nodes.",
     outputFormat:
@@ -782,6 +798,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "Two binary trees given in level order separated by '|'. Use 'null' for empty nodes.",
     outputFormat:
@@ -830,6 +847,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "5",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "A BST in level-order followed by two integers p and q separated by '|'.",
     outputFormat: "A single integer representing the value of the LCA node.",
@@ -875,6 +893,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "[-2 0 2] [-1 0 1]",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains integer n. Then n integers representing array values.",
     outputFormat:
@@ -921,6 +940,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "35",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains n. Then n space-separated integers representing heights.",
     outputFormat:
@@ -967,6 +987,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "4 5 3 0 0 0",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains integer n. Then n integers representing module statuses.",
     outputFormat:
@@ -1011,6 +1032,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat: "A single string of lowercase characters.",
     outputFormat:
       "Boolean: true if the string can become a palindrome by removing at most one character, otherwise false.",
@@ -1054,6 +1076,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "89",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat: "A single integer n representing the number of steps.",
     outputFormat:
       "An integer representing the number of distinct ways to climb the stairs.",
@@ -1099,6 +1122,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "18",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line contains n. Then n integers representing values in each house.",
     outputFormat:
@@ -1147,6 +1171,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "4",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line: n (number of coin types). Next n integers: coin denominations. Final line: amount to reach.",
     outputFormat: "Fewest number of coins needed, or -1 if not possible.",
@@ -1192,6 +1217,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "6",
       },
     ],
+    topics: ['string', 'array', 'dynamic programming', 'binary search', 'greedy', 'linked list', 'tree', 'graph', 'trie'],
     inputFormat:
       "First line: n. Then n space-separated integers representing scores.",
     outputFormat: "Length of longest increasing subsequence.",
@@ -1227,6 +1253,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "1 2 3 4 8 7 6 5",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First two integers: number of rows and columns. Next values: row-wise matrix values.",
     outputFormat: "List of integers in spiral order.",
@@ -1262,6 +1289,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "true",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First integer: number of operations. Followed by pairs of operation and word.",
     outputFormat: "Boolean for startsWith operation.",
@@ -1296,6 +1324,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "12",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First integer: n (number of bars). Next line: heights of bars.",
     outputFormat: "Maximum area of rectangle in histogram.",
@@ -1331,6 +1360,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "5",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First two integers: rows and cols. Then row-wise values of the grid.",
     outputFormat: "Maximum number of cells in a single island.",
@@ -1374,6 +1404,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "2",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat: "Single string of digits with no spaces.",
     outputFormat: "Total number of valid decodings.",
     constraintsTime: "1 <= s.length <= 100",
@@ -1407,6 +1438,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "9",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First integer n, then n space-separated integers representing heights.",
     outputFormat: "Total water units that can be trapped.",
@@ -1442,6 +1474,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "1",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat: "First line: rows and columns. Then row-wise values (0,1,2).",
     outputFormat: "Minimum minutes to rot all oranges, or -1.",
     constraintsTime: "1 <= rows, cols <= 10",
@@ -1476,6 +1509,7 @@ export const problemSet: ProblemInterface[] = [
         outputReal: "3",
       },
     ],
+    topics: ['greedy', 'tree', 'graph', 'math', 'sorting', 'stack', 'queue'],
     inputFormat:
       "First line: n. Next line: n integers. Final value: target sum k.",
     outputFormat: "Total number of subarrays whose sum is equal to k.",
