@@ -25,12 +25,15 @@ const getAllProblems = async(req:Request, res:Response) => {
         })
         const dailyProblem = modifiedProblems.find(problem  => problem.id == new Date().getDate());
         const codingDetails = await codingModel.find({email: email})
+        const streakValue = codingDetails[0].streak || 0;
+        const keplerBits = codingDetails[0].keplerBits || 0;
+        const solved = codingDetails[0].numberSolved || 0;
         res.status(200).json({
             problemList: modifiedProblems,
             dailyProblem: dailyProblem,
-            streak: codingDetails[0].streak,
-            keplerBits: codingDetails[0].keplerBits,
-            solved: codingDetails[0].numberSolved
+            streak: streakValue,
+            keplerBits: keplerBits,
+            solved: solved
         })
     }
     catch(err){
