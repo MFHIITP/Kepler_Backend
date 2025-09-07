@@ -1,0 +1,12 @@
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T19:03:42.066Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: getaddrinfo ENOTFOUND db","timestamp":"2025-09-03T19:04:12.014Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:40:06.593Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-09-03T20:40:10.669Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:42:06.640Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:42:12.859Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-09-03T20:42:15.756Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:42:35.971Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-09-03T20:42:38.770Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:42:57.183Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2025-09-03T20:43:41.608Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2025-09-03T20:43:44.732Z"}

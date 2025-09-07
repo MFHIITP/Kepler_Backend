@@ -20,12 +20,12 @@ import paymentRouter from "./routers/paymentRoutes.js";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import { rateLimit } from "express-rate-limit";
 import logger from "./utils/winston_logger.js";
-import checkAccessToken from "./auths/checkAccessTokens.js";
+import checkAccessToken from "./middlewares/checkAccessTokens.js";
 import refreshAuthRouter from "./routers/authRefresh.route.js";
 import razorpayRouter from "./routers/razorpay.route.js";
 import Razorpay from "razorpay";
 import Redis from "ioredis"
-import checkValidity from "./utils/checkValidity.utils.js";
+import checkValidity from "./middlewares/checkValidity.utils.js";
 import { Queue } from "bullmq";
 import ProblemsRouter from "./routers/problems.route.js"
 
