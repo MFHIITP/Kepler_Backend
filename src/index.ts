@@ -28,6 +28,7 @@ import Redis from "ioredis"
 import checkValidity from "./middlewares/checkValidity.utils.js";
 import { Queue } from "bullmq";
 import ProblemsRouter from "./routers/problems.route.js"
+import config from "./config.js";
 
 dotenv.config();
 const app = express();
@@ -78,15 +79,15 @@ app.use((req, res, next) => {
   }
 })
 
-export const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
-export const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
-export const RAZORPAY_KEY_ID = process.env.RAZORPAY_KEY_ID;
-export const RAZORPAY_SECRET = process.env.RAZORPAY_SECRET;
+export const JWT_ACCESS_SECRET = config.JWT_ACCESS_SECRET;
+export const JWT_REFRESH_SECRET = config.JWT_REFRESH_SECRET;
+export const RAZORPAY_KEY_ID = config.RAZORPAY_KEY_ID;
+export const RAZORPAY_SECRET = config.RAZORPAY_SECRET;
 
 export const codeRunnerIP = '13.200.236.32'
-const port = process.env.PORT || 8000;
+const port = config.PORT || 8000;
 const hostname = "0.0.0.0";
-export const redis = new Redis(process.env.REDIS_URL!, {
+export const redis = new Redis(config.REDIS_URL!, {
   maxRetriesPerRequest: null
 })
 
@@ -103,10 +104,10 @@ import ("./utils/nodecron.js");
 passport.use(
   new GoogleStrategy(
     {
-      clientID: process.env.GOOGLE_CLIENT_ID || "",
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+      clientID: config.GOOGLE_CLIENT_ID || "",
+      clientSecret: config.GOOGLE_CLIENT_SECRET || "",
       callbackURL:
-        process.env.GOOGLE_CALLBACK_URL ||
+        config.GOOGLE_CALLBACK_URL ||
         `https://8ppzcvlk-8000.inc1.devtunnels.ms/auth/google/callback`,
     },
     (accessToken, refreshToken, profile, done) => {

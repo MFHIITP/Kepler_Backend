@@ -5,6 +5,8 @@ dotenv.config();
 const sendRegistrationEmail = async (email_from: string, email_to: string, subject: string, body: string) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
+    port: 2525,
+    secure: false,
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.AUTH_PASS,

@@ -35,7 +35,7 @@ const signupaction = async (req: Request, res: Response) => {
     )
     res.status(200).send("OK");
   } else {
-    res.status(400).send("Not OK");
+    res.status(400).send("Already Registered");
   }
 };
 
