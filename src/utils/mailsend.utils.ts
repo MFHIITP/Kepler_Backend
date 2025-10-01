@@ -27,7 +27,6 @@ const sendRegistrationEmail = async ( email_from: string, email_to: string, subj
     html: `<div>${body}</div>`,
   };
   try{
-    console.log(config.BREVO_API_KEY);
     await transporter.sendMail(mailOptions);
   }
   catch(err){
