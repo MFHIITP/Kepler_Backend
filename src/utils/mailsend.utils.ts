@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport(new sendinblue({
 
 const sendRegistrationEmail = async ( email_from: string, email_to: string, subject: string, body: string ) => {
   let mailOptions = {
-    from: "kepler.xxiib.cygnus@gmail.com",
+    from: email_from,
     to: email_to,
     subject: subject,
     html: `<div>${body}</div>`,
