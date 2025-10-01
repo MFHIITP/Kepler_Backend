@@ -26,7 +26,6 @@ const homePage = async(req:Request, res:Response) => {
         const ipRaw = req.headers["x-forwarded-for"];
         const ip = ipRaw?.split(",")[0].trim();
         const info = await axios.get(`https://ipinfo.io/${ip}/json?token=c13532365e8939`)
-        console.log(info)
         const query = `INSERT INTO visits (ip_address, country, city, user_agent) values ($1, $2, $3, $4);`;
         await pool.query(query, [ip, info.data.country_name, info.data.city, null])
 
