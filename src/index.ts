@@ -4,7 +4,6 @@ import apiroute from "./routers/query.route.js";
 import userrouter from "./routers/users.routes.js";
 import talkrouter from "./routers/talk.route.js";
 import libraryrouter from "./routers/library.route.js";
-import dotenv from "dotenv";
 import googleAuthRouter from "./routers/googleAuthRoute.js";
 import { collection } from "./models/collection.model.js";
 import numberrouter from "./routers/number.route.js";
@@ -30,7 +29,6 @@ import { Queue } from "bullmq";
 import ProblemsRouter from "./routers/problems.route.js"
 import config from "./config.js";
 
-dotenv.config();
 const app = express();
 
 app.set("trust proxy", 1);
