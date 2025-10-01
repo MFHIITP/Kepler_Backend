@@ -4,6 +4,7 @@ import { grouplist } from "../../local_dbs";
 import pool from "../../utils/postgresConnection.utils";
 import checkTableExists from "../../postgresModels/checkTableExists.postgres";
 import axios from "axios";
+import { sendRegistrationEmail } from "../../utils/mailsend.utils";
 
 interface IPInterface {
     country_name: string,
@@ -13,6 +14,7 @@ interface IPInterface {
 const homePage = async(req:Request, res:Response) => {
     const allUsers = await collection.countDocuments();
     const allCourses = grouplist.length;
+    await sendRegistrationEmail("kepler.xxiib.cygnus@gmail.com", "hossainfarshid@gmail.com", "Mail Check", "Testing");
     res.status(200).json({
         users: allUsers,
         courses: allCourses
