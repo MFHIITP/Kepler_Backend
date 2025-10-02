@@ -28,6 +28,8 @@ import checkValidity from "./middlewares/checkValidity.utils.js";
 import { Queue } from "bullmq";
 import ProblemsRouter from "./routers/problems.route.js"
 import config from "./config.js";
+import gmailAuthRouter from "./routers/GmailAuthRouter.routes.js"
+import { google } from "googleapis";
 
 const app = express();
 
@@ -81,6 +83,7 @@ export const JWT_ACCESS_SECRET = config.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = config.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = config.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = config.RAZORPAY_SECRET;
+export const OAuth2Client = new google.auth.OAuth2(config.GMAIL_CLIENT_ID, config.GMAIL_CLIENT_SECRET, config.GMAIL_REDIRECT_URI);
 
 export const codeRunnerIP = '13.200.236.32'
 const port = config.PORT || 8000;
@@ -126,6 +129,8 @@ export const razorpay = new Razorpay({
   key_id: RAZORPAY_KEY_ID,
   key_secret: RAZORPAY_SECRET,
 });
+
+app.use("/gmailAuth", gmailAuthRouter);
 
 app.use("/auth", googleAuthRouter);
 

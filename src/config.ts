@@ -13,7 +13,11 @@ interface envVariablesInterface {
     GOOGLE_CALLBACK_URL: string | undefined,
     BREVO_API_KEY: string | undefined,
     GMAIL_USER: string | undefined,
-    GMAIL_PASS: string | undefined
+    GMAIL_PASS: string | undefined,
+    GMAIL_CLIENT_ID: string | undefined,
+    GMAIL_CLIENT_SECRET: string | undefined,
+    GMAIL_REFRESH_TOKEN: string | undefined,
+    GMAIL_REDIRECT_URI: string | undefined
 };
 
 const config: envVariablesInterface = {
@@ -28,7 +32,11 @@ const config: envVariablesInterface = {
     GOOGLE_CALLBACK_URL: process.env.GOOGLE_CALLBACK_URL,
     BREVO_API_KEY: process.env.BREVO_API_KEY,
     GMAIL_USER: process.env.GMAIL_USER,
-    GMAIL_PASS: process.env.GMAIL_PASS
+    GMAIL_PASS: process.env.GMAIL_PASS,
+    GMAIL_CLIENT_ID: process.env.GMAIL_CLIENT_ID,
+    GMAIL_CLIENT_SECRET: process.env.GMAIL_CLIENT_SECRET,
+    GMAIL_REDIRECT_URI: process.env.GMAIL_REDIRECT_URI,
+    GMAIL_REFRESH_TOKEN: process.env.GMAIL_REFRESH_TOKEN
 }
 
 export default config;

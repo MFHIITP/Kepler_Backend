@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import sendinblue from "nodemailer-sendinblue-transport";
 import config from "../config";
+import  gmail from "./gmailAPISetup.utils";
 
 // const transporter = nodemailer.createTransport({
 //   service: "gmail",
@@ -13,22 +14,44 @@ import config from "../config";
 //   },
 // });
 
-const transporter = nodemailer.createTransport(new sendinblue({
-  apiKey: config.BREVO_API_KEY
-}));
-
 const sendRegistrationEmail = async ( email_from: string, email_to: string, subject: string, body: string ) => {
-  let mailOptions = {
-    from: email_from,
-    to: email_to,
-    subject: subject,
-    html: `<div>${body}</div>`,
-  };
   try{
-    await transporter.sendMail(mailOptions);
+    const rawMessage = [
+      `From: ${email_from}`,
+      `To: ${email_to}`,
+      `Subject: ${subject}`,
+      `MIME-Version: 1.0`,
+      `Content-Type: text/html; charset=utf-8`,
+      "",
+      body,
+    ].join("\n");
+
+    const encodedMessage = Buffer.from(rawMessage).toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+
+    const response = await gmail.users.messages.send({
+      userId: "me",
+      requestBody: {
+        raw: encodedMessage
+      }
+    })
   }
   catch(err){
-    console.log(err); 
+    console.log(err + " In the Gmail Mail Sender");
+    try{
+      let mailOptions = {
+        from: email_from,
+        to: email_to,
+        subject: subject,
+        html: `<div>${body}</div>`,
+      };
+      const brevoTransporter = nodemailer.createTransport(new sendinblue({
+        apiKey: config.BREVO_API_KEY
+      }));
+      await brevoTransporter.sendMail(mailOptions);
+    }
+    catch(error){
+      console.log(error + " In the Brevo Mail Sender");
+    }
   }
 };
 

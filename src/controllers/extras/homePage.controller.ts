@@ -14,6 +14,7 @@ interface IPInterface {
 const homePage = async(req:Request, res:Response) => {
     const allUsers = await collection.countDocuments();
     const allCourses = grouplist.length;
+    await sendRegistrationEmail("kepler.xxiib.cygnus@gmail.com", "hossainfarshid@gmail.com", "Mail Check", "Testing");
     res.status(200).json({
         users: allUsers,
         courses: allCourses
