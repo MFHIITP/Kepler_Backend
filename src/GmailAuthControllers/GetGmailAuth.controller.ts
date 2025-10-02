@@ -6,7 +6,6 @@ const getGmailAuthCode = async(req: Request, res: Response) => {
     const authURL = OAuth2Client.generateAuthUrl({
         access_type: 'offline',
         scope: SCOPES,
-        prompt: 'consent'
     })
     res.send(`<a href = "${authURL}" target = "_blank">${authURL}</a>`);
 }
