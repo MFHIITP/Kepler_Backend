@@ -30,6 +30,9 @@ import ProblemsRouter from "./routers/problems.route.js"
 import config from "./config.js";
 import gmailAuthRouter from "./routers/GmailAuthRouter.routes.js"
 import { google } from "googleapis";
+import referCodeRouter from "./routers/ReferCodeRouter.route.js";
+import checkTableExists from "./postgresModels/checkTableExists.postgres.js";
+import connectionRouter from "./routers/ConnectionRouter.routes.js";
 
 const app = express();
 
@@ -83,6 +86,7 @@ export const JWT_ACCESS_SECRET = config.JWT_ACCESS_SECRET;
 export const JWT_REFRESH_SECRET = config.JWT_REFRESH_SECRET;
 export const RAZORPAY_KEY_ID = config.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = config.RAZORPAY_SECRET;
+export const userSockets = new Map<string, Set<WebSocket>>();
 export const OAuth2Client = new google.auth.OAuth2(config.GMAIL_CLIENT_ID, config.GMAIL_CLIENT_SECRET, config.GMAIL_REDIRECT_URI);
 
 export const codeRunnerIP = '13.200.236.32'
@@ -130,6 +134,21 @@ export const razorpay = new Razorpay({
   key_secret: RAZORPAY_SECRET,
 });
 
+(async() => {
+  if(await checkTableExists("library") == false){
+      await import ("./postgresModels/LibraryBookSchema/CreateLibrarySchema.postgres.js");
+  }
+  if(await checkTableExists("connectionProfileSchema") == false){
+      await import ("./postgresModels/ConnectionProfileDetails/createConnectionProfileDetails.postgres.js");
+  }
+  if(await checkTableExists("connectedEmailSchema") == false){
+    await import ("./postgresModels/ConnectedEmailSchema/CreateConnectionEmailSchema.postgres.js");
+  }
+  if(await checkTableExists("connectionRequestSchema") == false){
+    await import ("./postgresModels/ConnectedEmailSchema/CreateConnectionRequestSchema.postgres.js");
+  }
+})();
+
 app.use("/gmailAuth", gmailAuthRouter);
 
 app.use("/auth", googleAuthRouter);
@@ -148,6 +167,7 @@ app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
 app.use("/problems", ProblemsRouter);
 app.use("/razorpay", razorpayRouter);
+app.use("/referCode", referCodeRouter);
 
 app.use(checkValidity);
 
@@ -155,6 +175,7 @@ app.use("/library", libraryrouter);
 app.use("/talks", talkrouter);
 app.use("/number", numberrouter);
 app.use("/payment", paymentRouter);
+app.use("/connections", connectionRouter);
 
 app.post("/removeprofile", async (req, res) => {
   const mail = await collection.deleteOne({ email: req.body.email });

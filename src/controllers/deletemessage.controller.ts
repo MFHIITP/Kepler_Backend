@@ -4,7 +4,7 @@ import { executive_emails } from "../local_dbs.js";
 
 const deletefunc = async(req: Request, res: Response)=>{
     const {removerEmail, groupName, dateToDelete, removedEmail} = req.body;
-    if(removedEmail != removerEmail || !executive_emails.includes(removerEmail)){
+    if(removedEmail != removerEmail && !executive_emails.includes(removerEmail)){
         res.status(402).send("InEligible for Deletion of this message");
         return;
     }

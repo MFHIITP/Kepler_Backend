@@ -76,16 +76,7 @@ const loginaction = async (req: Request, res: Response) => {
   const profiles = {
     name: mail[0].name,
     email: mail[0].email,
-    password: mail[0].password,
-    phone: mail[0].phone,
-    refercode: mail[0].refercode,
-    isvalid: mail[0].isvalid,
-    usenumber: mail[0].usenumber,
-    college: mail[0].college,
-    school: mail[0].school,
-    college_year: mail[0].college_year,
-    school_year: mail[0].school_year,
-    college_stream: mail[0].college_stream,
+    phone: mail[0].phone
   };
 
   let sendAlert: boolean = false;

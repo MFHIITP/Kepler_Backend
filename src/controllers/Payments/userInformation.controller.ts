@@ -1,13 +1,15 @@
 import { Request, Response } from "express";
 import { admittedCoursesModel } from "../../models/admittedCourses.model.js";
+import { collection } from "../../models/collection.model.js";
 
 const userInformation = async (req: Request, res: Response) => {
   try {
     const { email, name } = req.body;
 
     const courseDetails = await admittedCoursesModel.findOne({ email, name });
+    const userDetails = await collection.findOne({email: email});
 
-    if (!courseDetails) {
+    if (!courseDetails || !userDetails) {
       return res.status(404).json({ error: "User not found" });
     }
 
@@ -70,7 +72,8 @@ const userInformation = async (req: Request, res: Response) => {
         salutation: "INR",
         color: "text-purple-900",
       },
-      log_details: transaction_logs
+      log_details: transaction_logs,
+      referCode: userDetails.refercode,
     };
 
     res.status(200).json({

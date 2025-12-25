@@ -11,7 +11,7 @@ const checkAccessToken = async(req: Request, res: Response, next: NextFunction) 
             })
             return;
         }
-        const token = fullAccessToken.split(' ')[1];
+        const token = fullAccessToken.toString().split(' ')[1];
         const decode = jwt.verify(token, JWT_ACCESS_SECRET ?? "");
         next();
     }

@@ -70,33 +70,24 @@ const authlogin = async (req: Request, res: Response) => {
     const profiles = {
       name: mail[0].name,
       email: mail[0].email,
-      password: mail[0].password,
-      phone: mail[0].phone,
-      refercode: mail[0].refercode,
-      isvalid: mail[0].isvalid,
-      usenumber: mail[0].usenumber,
-      college: mail[0].college,
-      school: mail[0].school,
-      college_year: mail[0].college_year,
-      school_year: mail[0].school_year,
-      college_stream: mail[0].college_stream,
+      phone: mail[0].phone
     };
 
     let sendAlert: boolean = false;
-  let lastDate: string | null = null
-  let courses: string[] = [];
-  if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
-    courseDetails[0].admittedCourses.forEach((val) => {
-      const today = new Date();
-      const upComingDate = val?.upcomingPaymentDate!;
-      const endingDate = val?.lastDateToPay!;
-      if((today.getDate() == upComingDate.getDate() && today.getMonth() == upComingDate.getMonth() && today.getFullYear() == upComingDate.getFullYear()) || (today.getDate() == endingDate.getDate() && today.getMonth() == endingDate.getMonth() && today.getFullYear() == endingDate.getFullYear())){
-        sendAlert = true;
-        lastDate = val?.lastDateToPay!.toLocaleDateString("en-IN")
-        courses.push(val.name!);
-      }
-    })
-  }
+    let lastDate: string | null = null
+    let courses: string[] = [];
+    if(courseDetails.length > 0 && courseDetails[0].admittedCourses.length > 0){
+      courseDetails[0].admittedCourses.forEach((val) => {
+        const today = new Date();
+        const upComingDate = val?.upcomingPaymentDate!;
+        const endingDate = val?.lastDateToPay!;
+        if((today.getDate() == upComingDate.getDate() && today.getMonth() == upComingDate.getMonth() && today.getFullYear() == upComingDate.getFullYear()) || (today.getDate() == endingDate.getDate() && today.getMonth() == endingDate.getMonth() && today.getFullYear() == endingDate.getFullYear())){
+          sendAlert = true;
+          lastDate = val?.lastDateToPay!.toLocaleDateString("en-IN")
+          courses.push(val.name!);
+        }
+      })
+    }
 
     res.status(200).cookie("TestCookie", accessToken, {
       domain: ".localhost",

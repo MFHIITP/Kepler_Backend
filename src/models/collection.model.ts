@@ -2,49 +2,83 @@ import mongoose from "mongoose";
 var Schema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
   phone: {
     type: String,
-    required: true
+    required: true,
   },
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
   },
-  college:{
+  country: {
+    type: String,
+  },
+  state: {
+    type: String,
+  },
+  city: {
+    type: String,
+  },
+  education_type: {
     type: String
+  },
+  college: {
+    type: String,
   },
   college_stream: {
-    type: String
+    type: String,
   },
   college_year: {
-    type: String
+    type: String,
+  },
+  college_department: {
+    type: String,
   },
   school: {
-    type: String
+    type: String,
   },
   school_year: {
+    type: String,
+  },
+  work_country: {
+    type: String
+  },
+  work_state: {
+    type: String
+  },
+  work_city: {
+    type: String
+  },
+  work_company: {
+    type: String
+  },
+  work_position: {
+    type: String
+  },
+  work_duration: {
     type: String
   },
   refercode: {
-    type: String || Number,
-    required: true
+    type: mongoose.Schema.Types.Mixed,
+    required: true,
   },
-  usenumber:{
+  usenumber: {
     type: Number,
-    required: true
+    required: true,
   },
   isvalid: {
     type: Number,
-    required: true
+    required: true,
   },
   paidAmount: {
     type: Boolean,
-  }
+  },
 });
 
 export const collection = mongoose.model("collection", Schema);
