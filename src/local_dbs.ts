@@ -1,6 +1,6 @@
 export let grouplist = [
   {
-    name: 'Computer Science Languages',
+    name: 'Computer Science - Languages',
     exam: 'languages',
     courseDescription: 'Comprehensive programme for learning popular Object Oriented Languages like C++, Java and Python',
     features: ["Live Classes", "Mock Tests", "Doubt Sessions", "Study Material"],
@@ -12,7 +12,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Data Structures and Algorithms 1',
+    name: 'Computer Science - Data Structures and Algorithms 1',
     exam: "dsa1",
     courseDescription: "Comprehensive DSA and industry oriented coding that will almost surely land you a job in your dream company",
     image: "/Images/CAT_Prep.webp",
@@ -24,7 +24,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Machine Learning 1',
+    name: 'Computer Science - Machine Learning 1',
     exam: "ml1",
     courseDescription: "Complete Machine Learning package with algorithms, Deep Learning, Neural Network and Large Language Models",
     image: "/Images/College_Prep.webp",
@@ -36,7 +36,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Web Technologies 1',
+    name: 'Computer Science - Web Technologies 1',
     exam: "webdev1",
     courseDescription: "Comprehensive Web Development sessions complete with Frontend, Backend, Database and DevOps, and land a full stack job in the company of your choice",
     image: "/Images/GATE_Prep.webp", 
@@ -48,7 +48,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Computer Fundamentals 1',
+    name: 'Computer Science - Computer Fundamentals 1',
     exam: "fundamentals1",
     courseDescription: "Complete CS Fundamentals package comprising Computer Networks, Database Management, Operating Systems and Computer Organization and Architechture and gain the necessary expertise to thrive in the current job market",
     image: "/Images/College_Prep.webp",
@@ -60,7 +60,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Data Structures and Algorithms 2',
+    name: 'Computer Science - Data Structures and Algorithms 2',
     exam: "dsa2",
     courseDescription: "Comprehensive DSA and industry oriented coding that will almost surely land you a job in your dream company",
     image: "/Images/CAT_Prep.webp",
@@ -72,7 +72,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Machine Learning 2',
+    name: 'Computer Science - Machine Learning 2',
     exam: "ml2",
     courseDescription: "Complete Machine Learning package with algorithms, Deep Learning, Neural Network and Large Language Models",
     image: "/Images/College_Prep.webp",
@@ -84,7 +84,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Web Technologies 2',
+    name: 'Computer Science - Web Technologies 2',
     exam: "webdev2",
     courseDescription: "Comprehensive Web Development sessions complete with Frontend, Backend, Database and DevOps, and land a full stack job in the company of your choice",
     image: "/Images/GATE_Prep.webp", 
@@ -96,7 +96,7 @@ export let grouplist = [
     course: true
   },
   {
-    name: 'Computer Science Computer Fundamentals 2',
+    name: 'Computer Science - Computer Fundamentals 2',
     exam: "fundamentals2",
     courseDescription: "Complete CS Fundamentals package comprising Computer Networks, Database Management, Operating Systems and Computer Organization and Architechture and gain the necessary expertise to thrive in the current job market",
     image: "/Images/College_Prep.webp",

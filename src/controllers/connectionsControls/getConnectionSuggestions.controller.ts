@@ -38,6 +38,16 @@ const getConnectionSuggestionsController = async(req: Request, res: Response) =>
                 }
             ]);
             for await (const user of randomizedSameSchoolUsers){
+                const connectedQuery = `SELECT 1 FROM connectedemailschema WHERE owneremail = $1 AND connectedemail = $2`;
+                const connectedQueryResponse = await pool.query(connectedQuery, [personalEmail, user.email]);
+                if(connectedQueryResponse.rows.length !== 0){
+                    continue;
+                }
+                const connectionRequestQuery = `SELECT 1 FROM connectionrequestschema WHERE (senderemail = $1 AND receiveremail = $2) OR (senderemail = $2 AND receiveremail = $1)`;
+                const connectionRequestQueryResponse = await pool.query(connectionRequestQuery, [personalEmail, user.email]);
+                if(connectionRequestQueryResponse.rows.length != 0){
+                    continue;
+                }
                 const suggestedConnectionEmail = user.email;
                 let responseData: any = {};
                 Object.assign(responseData, {
@@ -86,6 +96,16 @@ const getConnectionSuggestionsController = async(req: Request, res: Response) =>
                 }
             ]);
             for await (const user of randomizedSameCollegeUsers){
+                const connectedQuery = `SELECT 1 FROM connectedemailschema WHERE owneremail = $1 AND connectedemail = $2`;
+                const connectedQueryResponse = await pool.query(connectedQuery, [personalEmail, user.email]);
+                if(connectedQueryResponse.rows.length !== 0){
+                    continue;
+                }
+                const connectionRequestQuery = `SELECT 1 FROM connectionrequestschema WHERE (senderemail = $1 AND receiveremail = $2) OR (senderemail = $2 AND receiveremail = $1)`;
+                const connectionRequestQueryResponse = await pool.query(connectionRequestQuery, [personalEmail, user.email]);
+                if(connectionRequestQueryResponse.rows.length != 0){
+                    continue;
+                }
                 let responseData: any = {};
                 const suggestedConnectionEmail = user.email;
                 Object.assign(responseData, {
@@ -135,6 +155,16 @@ const getConnectionSuggestionsController = async(req: Request, res: Response) =>
                 }
             ]);
             for await (const user of randomsizedSameCompanyUsers) {
+                const connectedQuery = `SELECT 1 FROM connectedemailschema WHERE owneremail = $1 AND connectedemail = $2`;
+                const connectedQueryResponse = await pool.query(connectedQuery, [personalEmail, user.email]);
+                if(connectedQueryResponse.rows.length !== 0){
+                    continue;
+                }
+                const connectionRequestQuery = `SELECT 1 FROM connectionrequestschema WHERE (senderemail = $1 AND receiveremail = $2) OR (senderemail = $2 AND receiveremail = $1)`;
+                const connectionRequestQueryResponse = await pool.query(connectionRequestQuery, [personalEmail, user.email]);
+                if(connectionRequestQueryResponse.rows.length != 0){
+                    continue;
+                }
                 const suggestedConnectionEmail = user.email;
                 let responseData: any = {};
                 Object.assign(responseData, {

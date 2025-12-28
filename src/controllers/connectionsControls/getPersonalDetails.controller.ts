@@ -67,7 +67,7 @@ const getPersonalDetails = async (req: Request, res: Response) => {
         const response = await pool.query(query, [email]);
 
         if (response.rows.length === 0) {
-            res.status(404).json({
+            res.status(200).json({
                 profileDetails: responseData,
                 message: "Profile details not found in PostgreSQL",
             });
