@@ -8,6 +8,8 @@ import getAllConnections from "../controllers/connectionsControls/getPersonalCon
 import sendConnectionRequestsController from "../controllers/connectionsControls/sendConnetionRequests.controller";
 import getConnectionSuggestionsController from "../controllers/connectionsControls/getConnectionSuggestions.controller";
 import getDetailsNewConnection from "../controllers/connectionsControls/getDetailsNewConnection.controller";
+import sendChats from "../controllers/connectionsControls/ConnectionChatsControllers/sendConnectionChat.controller";
+import getConnectionChat from "../controllers/connectionsControls/ConnectionChatsControllers/getConnectionChat.controller";
 
 const router = Router();
 
@@ -20,5 +22,9 @@ router.route("/getPersonalConnections").post(getAllConnections);
 router.route("/sendConnectionRequest").post(sendConnectionRequestsController);
 router.route("/getConnectionSuggestions").post(getConnectionSuggestionsController);
 router.route("/getDetailsNewConnection").post(getDetailsNewConnection);
+
+// Connection chat routes
+router.route("/sendConnectionChats").post(sendChats);
+router.route("/getConnectionChats").post(getConnectionChat);
 
 export default router;

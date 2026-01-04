@@ -147,6 +147,9 @@ export const razorpay = new Razorpay({
   if(await checkTableExists("connectionRequestSchema") == false){
     await import ("./postgresModels/ConnectedEmailSchema/CreateConnectionRequestSchema.postgres.js");
   }
+  if(await checkTableExists("kepconchats") == false){
+    await import ("./postgresModels/KepConChatSchema/createKepConChatSchema.postgres.js");
+  }
 })();
 
 app.use("/gmailAuth", gmailAuthRouter);

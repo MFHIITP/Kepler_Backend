@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import pool from "../../utils/postgresConnection.utils";
 import { userSockets } from "../..";
+import { WebSocket } from "ws";
 
 const sendConnectionRequestsController = async(req: Request, res: Response) => {
     const {senderEmail, receiverEmail} = req.body;
@@ -10,9 +11,8 @@ const sendConnectionRequestsController = async(req: Request, res: Response) => {
         await pool.query(insertQuery, values);
         if(userSockets.has(receiverEmail)){
             const sockets = userSockets.get(receiverEmail);
-            // console.log(sockets.size);
             sockets?.forEach((socket) => {
-                if(socket.readyState == socket.OPEN){
+                if(socket.readyState == WebSocket.OPEN){
                     socket.send(JSON.stringify({
                         type: 'NEW_CONNECTION_REQUEST',
                         senderEmail: senderEmail
