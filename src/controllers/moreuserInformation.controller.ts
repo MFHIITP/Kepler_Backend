@@ -5,7 +5,7 @@ const userInformation = async(req:Request, res: Response) => {
     const email = req.body.email;
     const userDetails = await admittedCoursesModel.find({email: email});
     if(userDetails.length == 0){
-        res.status(403).send("No Such User")
+        res.status(404).send("No Such User")
         return;
     }
     const selectedCourses = userDetails[0].selectedCourses

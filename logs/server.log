@@ -1193,3 +1193,33 @@
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-04T15:56:04.683Z"}
 {"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-04T15:57:17.061Z"}
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-04T15:57:20.008Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T12:32:05.203Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-06T12:32:20.793Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T12:33:19.818Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-06T12:33:32.781Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:11:09.641Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:13:24.183Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:13:51.983Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-01-06T19:14:22.561Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:18:05.535Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:19:16.702Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-01-06T19:19:47.187Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:22:23.181Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:22:47.837Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:24:40.488Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:25:18.474Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-01-06T19:25:48.988Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-06T19:37:44.953Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-01-06T19:38:15.452Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-11T17:13:38.859Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-11T17:13:41.519Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-11T17:15:18.603Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-11T17:15:20.956Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-11T17:17:14.187Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-11T17:17:16.519Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-11T17:28:40.820Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-11T17:28:43.110Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-21T18:09:41.476Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-21T18:09:46.907Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-01-21T18:43:30.522Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-01-21T18:43:33.305Z"}
