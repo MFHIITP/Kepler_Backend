@@ -32,10 +32,13 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
         lastDate.setHours(0, 0, 0, 0)
         return today <= lastDate
     })
-
+    
     if(updatedCourses.length != admittedCourses.length){
         courseDetails[0].admittedCourses = updatedCourses;
-        await courseDetails[0].save()
+        if(updatedCourses.length == 0){
+            courseDetails[0].upcoming_payment_details = [];
+        }
+        await courseDetails[0].save();
     }
 
     next();
