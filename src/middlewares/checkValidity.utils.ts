@@ -11,11 +11,6 @@ const checkValidity = async(req: Request, res: Response, next: NextFunction) => 
     const emailId = decode.email;
 
     const courseDetails = await admittedCoursesModel.find({email: emailId});
-
-    if(executive_emails.includes(emailId)){
-        next();
-        return;
-    }
     
     if(courseDetails.length == 0){
     //     if(req.path.endsWith(`/payment/applyCourses`) || req.path.endsWith(`/payment/getCurrentCourses`) || req.path.endsWith('/library/courses/getCourses')){
