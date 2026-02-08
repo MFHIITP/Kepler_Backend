@@ -26,7 +26,10 @@ const sendPendingReferralInformation = async(req: Request, res: Response) => {
         console.log(referral)
         const referralUserInfo = await getUserInformationFromReferCode(referral.referralCode_taker[0].refercode);
         if(referralUserInfo){
-            responseList.push({...referralUserInfo, dateReferred: referral.dateReferred});
+            responseList.push({...referralUserInfo, 
+                dateReferred: referral.dateReferred,
+                amount: 200
+            });
         }
     }
     res.status(200).json({

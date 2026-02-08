@@ -5,7 +5,7 @@ import pool from "../../utils/postgresConnection.utils.js";
 
 const acceptRejectReferralCode = async(req: Request, res:Response) => {
     const { emailId, referralCodeAcceptedOrRejected, status } = req.body;
-    const amountIncrement = process.env.AMOUNT_INCREMENT;
+    const amountIncrement = process.env.AMOUNT_INCREMENT || "200";
     const user = await collection.findOne({email: emailId});
     if(!user){
         res.status(404).json({
@@ -23,15 +23,6 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
         return;
     }
     const parsedReferCodeList = JSON.parse(referCodeList);
-    if(parsedReferCodeList.length == 1){
-        await redis.del(referCode);
-    }
-    else{
-        const filteredList = parsedReferCodeList.filter((referrals: string) => {
-            return referrals != referralCodeAcceptedOrRejected
-        })
-        await redis.set(referCode, JSON.stringify(filteredList), 'EX', 30*24*60*60);
-    }
 
     if(status == true){
         const referredUser = await collection.find({refercode: referralCodeAcceptedOrRejected});
@@ -60,7 +51,7 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
                 const prevBalance = response.rows[0].wallet_balance;
                 const numberOfReferrals = response.rows[0].number_of_referrals;
                 const referralsGiven = response.rows[0].referral_given_list;
-                const newBalance = prevBalance + amountIncrement;
+                const newBalance = parseInt(prevBalance) + parseInt(amountIncrement);
                 const newNumberReferrals = numberOfReferrals + 1;
                 const newRecord = {
                     referCode: referralCodeAcceptedOrRejected,
@@ -88,6 +79,16 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
         })
         return;
     }
+
+    if(parsedReferCodeList.length == 1){
+        await redis.del(referCode);
+    }
+    else{
+        const filteredList = parsedReferCodeList.filter((referrals: string) => {
+            return referrals != referralCodeAcceptedOrRejected
+        })
+        await redis.set(referCode, JSON.stringify(filteredList), 'EX', 30*24*60*60);
+    }
     
     const referralList = await redis.get(referCode);
     if(!referralList){
@@ -95,12 +96,15 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
             referralList: [],
             messageList: "Referral Code status updated successfully",
             status: status == true ? "accepted" : "rejected",
+            referralCodeAcceptedOrRejected: referralCodeAcceptedOrRejected
         })
         return;
     }
     res.status(200).json({
         referralList: JSON.parse(referralList),
         message: "Referral Code status updated succesfully",
+        referralCodeAcceptedOrRejected: referralCodeAcceptedOrRejected,
+        status: status == true ? "accepted" : "rejected",
     })
 }
 

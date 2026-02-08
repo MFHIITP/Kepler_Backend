@@ -19,7 +19,15 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
         const referral_giver = await collection.findOne({email: emailId}).select('refercode');
         const query = `SELECT * FROM user_referral_schema WHERE refer_code = $1`;
         const referral_giver_info = await pool.query(query, [referral_giver?.refercode]);
-        const referral_takers_raw = referral_giver_info.rows[0].referral_given_list;
+        const referral_takers_raw = referral_giver_info.rows[0]?.referral_given_list;
+        if(!referral_takers_raw){
+            res.status(206).json({
+                message: "No referrals found for this user",
+                responseData: {},
+                referralCount: 0
+            });
+            return;
+        }
         const referral_takers = JSON.parse(referral_takers_raw);
 
         if(!referral_takers || referral_takers.length == 0){
@@ -43,7 +51,9 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
                 continue;
             }
             Object.assign(referralInfo, {
-                dateReferred: referredUser.date_of_referral
+                dateReferred: referredUser.date_of_referral,
+                status: "confirmed",
+                amount: 200
             })
             responseData.push(referralInfo);
             send({
