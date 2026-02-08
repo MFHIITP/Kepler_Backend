@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import pool from "../../utils/postgresConnection.utils";
-import { userSockets } from "../..";
+import pool from "../../utils/postgresConnection.utils.js";
+import { userSockets } from "../../index.js";
 
 const acceptConnectionRequestController = async(req: Request, res: Response) => {
     const {senderEmail, receiverEmail, status} = req.body;

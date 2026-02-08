@@ -1,11 +1,15 @@
-import crypto from 'crypto';
-
-export const generateReferralCode = (email: string) => {
-  const secret = process.env.HASH_SECRET!; 
-  const hash = crypto
-    .createHmac('sha256', secret)
-    .update(email)
-    .digest('hex');
-
-  return hash.substring(0, 8).toUpperCase(); // Return first 8 characters in uppercase
+export const generateReferralCode = (emailId: string, nameLetter: string, mobileNumberDigit: number) => {
+  const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
+  let result = '';
+  for (let i = 0; i < 4; i++) {
+    result += letters[Math.floor(Math.random() * letters.length)];
+  }
+  result += emailId;
+  result += nameLetter;
+  const digits = Array.from({ length: 10 }, (_, i) => i);
+  for (let i = 0; i < 4; i++) {
+    result += digits[Math.floor(Math.random() * digits.length)];
+  }
+  result += mobileNumberDigit;
+  return result;
 };

@@ -10,17 +10,20 @@ dotenv.config();
 const signupaction = async (req: Request, res: Response) => {
   console.log(req.body.name + " came here");
   const data = req.body;
-  data.refercode = generateReferralCode(data.email)
+  const name = data.name;
+  const phoneNumber = data.phone;
+  const emailId = data.email;
+  data.refercode = generateReferralCode(emailId[0], phoneNumber[0], name[0]);
   data.isvalid = true;
-  data.usenumber = 5
-  const mail = await collection.find({ email: req.body.email });
+  data.usenumber = 5;
+  const mail = await collection.find({ email: emailId });
   if (mail.length == 0) {
     const otp = crypto.randomInt(100000, 999999).toString();
-    await redis.set(`otp${req.body.email}`, otp, 'EX', 300);
-    await redis.set(`userDetails${req.body.email}`, JSON.stringify(data), 'EX', 300);
+    await redis.set(`otp${emailId}`, otp, 'EX', 300);
+    await redis.set(`userDetails${emailId}`, JSON.stringify(data), 'EX', 300);
     await sendRegistrationEmail(
       process.env.GMAIL_USER ?? "",
-      req.body.email,
+      emailId,
       "Kepler -- OTP Verification",
       `Your One Time Password is ${otp}`
     )

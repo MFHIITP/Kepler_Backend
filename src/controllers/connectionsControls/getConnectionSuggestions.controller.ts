@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { collection } from "../../models/collection.model";
-import pool from "../../utils/postgresConnection.utils";
+import { collection } from "../../models/collection.model.js";
+import pool from "../../utils/postgresConnection.utils.js";
 
 const getConnectionSuggestionsController = async(req: Request, res: Response) => {
     try{

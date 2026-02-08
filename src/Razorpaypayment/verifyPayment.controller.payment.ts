@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { RAZORPAY_SECRET } from "../index.js";
+import { RAZORPAY_SECRET, redis } from "../index.js";
 import { admittedCoursesModel } from "../models/admittedCourses.model.js";
 import axios from "axios";
 import dotenv from "dotenv";
@@ -7,6 +7,7 @@ import { Request, Response } from "express";
 import getNextPaymentDate from "../utils/NextMonthLastDate.js";
 import { sendRegistrationEmail } from "../utils/mailsend.utils.js";
 import { scheduleEmailPaymentReminder } from "../utils/PaymentEmails/scheduleEmail.js";
+import { collection } from "../models/collection.model.js";
 
 dotenv.config();
 
@@ -17,6 +18,9 @@ const verifyPayment = async (req: Request, res: Response) => {
     const razorpay_payment_id = req.body.razorpay_payment_id;
     const razorpay_order_id = req.body.razorpay_order_id;
     const razorpay_signature = req.body.razorpay_signature;
+    const referralCode_giver = req.body.referralCode_giver;
+    const referralCode_taker = await collection.find({email: userEmail}).select('refercode');
+    const [referralCode_giver_emailId, referralCode_giver_name] = await collection.find({refercode: referralCode_giver}).select(['email', 'name']);
 
     const sign = crypto.createHmac("sha256", RAZORPAY_SECRET ?? "").update(`${razorpay_order_id}|${razorpay_payment_id}`).digest("hex");
 
@@ -42,8 +46,48 @@ const verifyPayment = async (req: Request, res: Response) => {
         day: "2-digit",
         hour: "2-digit",
         minute: "2-digit"
-      })
-
+      })  
+      if(referralCode_giver != null){
+        const prevReferrals = await redis.get(referralCode_giver);
+        if(prevReferrals != null){
+          const parsedPrevReferrals = JSON.parse(prevReferrals);
+          const referralInfo = {
+            referralCode_taker: referralCode_taker,
+            dateReferred: currentTime
+          }
+          parsedPrevReferrals.push(referralInfo);
+          await redis.set(referralCode_giver, JSON.stringify(parsedPrevReferrals), 'EX', 2592000); // 1 month in seconds
+        }
+        else{
+          const referralArray = [];
+          const referralInfo = {
+            referralCode_taker: referralCode_taker,
+            dateReferred: currentTime
+          }
+          referralArray.push(referralInfo);
+          await redis.set(referralCode_giver, JSON.stringify(referralArray), 'EX', 2592000); // 1 month in seconds
+        }
+        await sendRegistrationEmail("kepler.xxiib.cygnus@gmail.com", JSON.stringify(referralCode_giver_emailId), "Required: Verify Referral Purchase on Your Kepler Account", `
+          <div>Hello ${referralCode_giver_name}</div>
+          <br/>
+          <div>We noticed that a student may have used your Kepler referral code while purchasing a course. To confirm and credit the referral correctly (to claim your reward), we need you to verify this from your Kepler account. Please log in to your Kepler dashboard and check the <b>Referral History</b> section to confirm whether the following student is visible under your referrals:</div>
+          <br/>
+          <div>Student Name: <b>${userName}</b></div>
+          <br/>
+          <div>Registered Email: <b>${userEmail}</b></div>
+          <br/>
+          <div>Date of Purchase: <b>${currentTime}</b></div>
+          <br/>
+          <div>If you can see this entry, please log in to your website, go to the aforementioned section and respond with a quick confirmation, which should be the <b>"yes"</b> option. If you <b>do not</b> know about the entry, respond with the <b>“no”</b> option so we can investigate and resolve it.</div>
+          <br/>
+          <div>Login link: <a href="https://kepler-22b.vercel.app">https://kepler-22b.vercel.app</a></div>
+          <br/>
+          <div>Thanks for your help, this will ensure your referral credit is processed without delay.</div>
+          <br/>
+          <div>Regards</div>
+          <div>Kepler Codes</div>
+        `);
+      }
       const nextPaymentDate = getNextPaymentDate();
       const startingDate = new Date(nextPaymentDate);
       startingDate.setDate(startingDate.getDate() - 1);
@@ -225,7 +269,8 @@ const verifyPayment = async (req: Request, res: Response) => {
         <div>Kepler 22B</div>`
       );
       await scheduleEmailPaymentReminder(userEmail, userName, coursesSelectedAndAccepted) 
-    } else {
+    } 
+    else {
       res.status(900).json({
         status: "Failure",
         message: "Invalid Signature",

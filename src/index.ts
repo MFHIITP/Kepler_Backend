@@ -36,7 +36,7 @@ import connectionRouter from "./routers/ConnectionRouter.routes.js";
 
 const app = express();
 
-app.set("trust proxy", 1);
+app.set("trust proxy", 1);  
 
 const corsConfig = {
   origin: [
@@ -149,6 +149,9 @@ export const razorpay = new Razorpay({
   }
   if(await checkTableExists("kepconchats") == false){
     await import ("./postgresModels/KepConChatSchema/createKepConChatSchema.postgres.js");
+  }
+  if(await checkTableExists("user_referral_schema") == false){
+    await import ("./postgresModels/UserReferralSchema/CreateUserReferralSchema.postgres.js");
   }
 })();
 

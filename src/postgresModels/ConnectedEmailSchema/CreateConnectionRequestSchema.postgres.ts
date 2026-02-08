@@ -1,4 +1,4 @@
-import pool from "../../utils/postgresConnection.utils";
+import pool from "../../utils/postgresConnection.utils.js";
 
 (async() => {
     const query = `CREATE TABLE IF NOT EXISTS connectionrequestschema (

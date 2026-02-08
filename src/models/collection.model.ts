@@ -79,6 +79,11 @@ var Schema = new mongoose.Schema({
   paidAmount: {
     type: Boolean,
   },
+  referrer_refer_code: {
+    type: String,
+    required: true,
+    default: "NULL",
+  }
 });
 
 export const collection = mongoose.model("collection", Schema);

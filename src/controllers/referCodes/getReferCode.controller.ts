@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { collection } from "../../models/collection.model";
+import { collection } from "../../models/collection.model.js";
 
 const getReferCode = async (req: Request, res: Response) => {
   const { email } = req.body;
