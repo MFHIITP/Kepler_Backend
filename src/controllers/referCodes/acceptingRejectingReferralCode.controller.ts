@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { collection } from "../../models/collection.model.js";
 import { redis } from "../../index.js";
 import pool from "../../utils/postgresConnection.utils.js";
+import { sendRegistrationEmail } from "../../utils/mailsend.utils.js";
 
 const acceptRejectReferralCode = async(req: Request, res:Response) => {
     const { emailId, referralCodeAcceptedOrRejected, status } = req.body;
@@ -60,6 +61,31 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
                 const updatedList = [...JSON.parse(referralsGiven), newRecord];
                 const updateQuery = `UPDATE user_referral_schema SET wallet_balance = $1, number_of_referrals = $2, referral_given_list = $3 WHERE refer_code = $4;`;
                 const updateResponse = await pool.query(updateQuery, [newBalance, newNumberReferrals, JSON.stringify(updatedList), referCode]);
+            }
+            const presenceCheckQuery = `SELECT * FROM referral_money_tracker WHERE referral_giver_refer_code = $1`;
+            const presenceCheckResponse = await pool.query(presenceCheckQuery, [referCode]);
+            if(presenceCheckResponse.rowCount == 0){
+                const checkRedisExistence = await redis.get(`MoneyTransferLogs`);
+                if(!checkRedisExistence){
+                    const newlyConfirmedLogs = [
+                        {
+                            referCode: referCode,
+                            date_confirmed: new Date().toISOString(),
+                            emailId: emailId
+                        }
+                    ]
+                    await redis.set(`MoneyTransferLogs`, JSON.stringify(newlyConfirmedLogs));
+                }
+                const parsedRedisExistence = JSON.parse(checkRedisExistence ?? "");
+                const alreadyPresentUser = parsedRedisExistence.find((user: { referCode: string; date_confirmed: string; emailId: string }) => user.referCode == referCode);
+                if(!alreadyPresentUser){
+                    parsedRedisExistence.push({
+                        referCode: referCode,
+                        date_confirmed: new Date().toISOString(),
+                        emailId: emailId
+                    })
+                    await redis.set(`MoneyTransferLogs`, JSON.stringify(parsedRedisExistence));
+                }
             }
         }
         catch(error){

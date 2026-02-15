@@ -1,4 +1,4 @@
-import pool from "../utils/postgresConnection.utils";
+import pool from "../utils/postgresConnection.utils.js";
 
 const checkTableExists = async (tableName: string) => {
     try{

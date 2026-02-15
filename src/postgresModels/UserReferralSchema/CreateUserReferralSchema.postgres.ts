@@ -10,8 +10,10 @@ import pool from "../../utils/postgresConnection.utils.js";
         account_number VARCHAR(255) NOT NULL DEFAULT '',
         ifsc_code VARCHAR(255) NOT NULL DEFAULT '',
         account_holder_name VARCHAR(255) NOT NULL DEFAULT '',
-        branch VARCHAR(255) NOT NULL DEFAULT ''
-    );`
+        branch VARCHAR(255) NOT NULL DEFAULT '',
+        upi_id VARCHAR(255) NOT NULL DEFAULT '',
+        bank_name VARCHAR(255) NOT NULL DEFAULT ''
+    );`;
     try{
         const tableResponse = await pool.query(tableQuery);
         console.log("User Referral Schema created successfully", tableResponse);

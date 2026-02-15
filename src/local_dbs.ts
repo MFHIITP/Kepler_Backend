@@ -133,3 +133,15 @@ export let core_emails: string[] = []
 export let c_suit_emails: string[] = []
 export let GM_emails: string[] = [];
 export let teacher_emails: string[] = [];
+export const adminSecretCodes = [
+  {
+    name: "Md. Farshid Hossain",
+    email: "hossainfarshid@gmail.com",
+    secretCode: "Farshid@123"
+  },
+  {
+    name: "Supratim Mukherjee",
+    email: "supratim.mukherjee123@gmail.com",
+    secretCode: "gublu@1331"
+  }
+]

@@ -23,7 +23,7 @@ import checkAccessToken from "./middlewares/checkAccessTokens.js";
 import refreshAuthRouter from "./routers/authRefresh.route.js";
 import razorpayRouter from "./routers/razorpay.route.js";
 import Razorpay from "razorpay";
-import Redis from "ioredis"
+import { Redis } from "ioredis"
 import checkValidity from "./middlewares/checkValidity.utils.js";
 import { Queue } from "bullmq";
 import ProblemsRouter from "./routers/problems.route.js"
@@ -33,6 +33,7 @@ import { google } from "googleapis";
 import referCodeRouter from "./routers/ReferCodeRouter.route.js";
 import checkTableExists from "./postgresModels/checkTableExists.postgres.js";
 import connectionRouter from "./routers/ConnectionRouter.routes.js";
+import ReferralMoneyTransfer from "./routers/ReferralMoneyTracker.route.js";
 
 const app = express();
 
@@ -153,6 +154,9 @@ export const razorpay = new Razorpay({
   if(await checkTableExists("user_referral_schema") == false){
     await import ("./postgresModels/UserReferralSchema/CreateUserReferralSchema.postgres.js");
   }
+  if(await checkTableExists("referral_money_tracker") == false){
+    await import("./postgresModels/ReferralMoneyTracker/CreatReferrlalMoneyTracker.postgresModel.js");
+  }
 })();
 
 app.use("/gmailAuth", gmailAuthRouter);
@@ -182,6 +186,8 @@ app.use("/talks", talkrouter);
 app.use("/number", numberrouter);
 app.use("/payment", paymentRouter);
 app.use("/connections", connectionRouter);
+
+app.use("/referralMoneyTracker", ReferralMoneyTransfer);
 
 app.post("/removeprofile", async (req, res) => {
   const mail = await collection.deleteOne({ email: req.body.email });
