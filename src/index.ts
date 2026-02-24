@@ -35,7 +35,7 @@ import checkTableExists from "./postgresModels/checkTableExists.postgres.js";
 import connectionRouter from "./routers/ConnectionRouter.routes.js";
 import ReferralMoneyTransfer from "./routers/ReferralMoneyTracker.route.js";
 import PlayListRouter from "./routers/Playlist.route.js"
-import AdminRouter from "./routers/adminRouter.route.js";
+import AdminRouter from "./routers/AdminRouter.route.js";
 
 const app = express();
 

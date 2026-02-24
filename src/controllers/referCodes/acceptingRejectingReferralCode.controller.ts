@@ -2,11 +2,10 @@ import { Request, Response } from "express";
 import { collection } from "../../models/collection.model.js";
 import { redis } from "../../index.js";
 import pool from "../../utils/postgresConnection.utils.js";
-import { sendRegistrationEmail } from "../../utils/mailsend.utils.js";
+import { FindCourseReferralAmount } from "./findCourseAmount.js";
 
 const acceptRejectReferralCode = async(req: Request, res:Response) => {
     const { emailId, referralCodeAcceptedOrRejected, status } = req.body;
-    const amountIncrement = process.env.AMOUNT_INCREMENT || "200";
     const user = await collection.findOne({email: emailId});
     if(!user){
         res.status(404).json({
@@ -24,6 +23,7 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
         return;
     }
     const parsedReferCodeList = JSON.parse(referCodeList);
+    const amountIncrement = FindCourseReferralAmount.findAmount({courseList: parsedReferCodeList.courseList, additionalCourses: parsedReferCodeList.additionalCourses})
 
     if(status == true){
         const referredUser = await collection.find({refercode: referralCodeAcceptedOrRejected});
@@ -45,6 +45,7 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
                 const recordValue = [{
                     referCode: referralCodeAcceptedOrRejected,
                     date_of_referral: new Date().toISOString(),
+                    amountIncrement: amountIncrement
                 }];
                 const insertResponse = await pool.query(insertQuery, [referCode, amountIncrement, 1, JSON.stringify(recordValue)]);
             }
@@ -52,11 +53,12 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
                 const prevBalance = response.rows[0].wallet_balance;
                 const numberOfReferrals = response.rows[0].number_of_referrals;
                 const referralsGiven = response.rows[0].referral_given_list;
-                const newBalance = parseInt(prevBalance) + parseInt(amountIncrement);
+                const newBalance = parseInt(prevBalance) + amountIncrement;
                 const newNumberReferrals = numberOfReferrals + 1;
                 const newRecord = {
                     referCode: referralCodeAcceptedOrRejected,
                     date_of_referral: new Date().toISOString(),
+                    amountIncrement: amountIncrement
                 };
                 const updatedList = [...JSON.parse(referralsGiven), newRecord];
                 const updateQuery = `UPDATE user_referral_schema SET wallet_balance = $1, number_of_referrals = $2, referral_given_list = $3 WHERE refer_code = $4;`;

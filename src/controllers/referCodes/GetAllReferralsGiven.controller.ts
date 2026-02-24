@@ -49,6 +49,7 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
 
         for(const referredUser of [...referral_takers].reverse()){
             const referralInfo = await getUserInformationFromReferCode(referredUser.referCode);
+            const amountIncrement = referredUser.referral_given_list.amountIncrement;
             if(!referralInfo){
                 continue;
             }
@@ -57,12 +58,12 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
                 paidAmount = true;
             }
             else{
-                count = count + 200;
+                count = count + amountIncrement;
             }
             Object.assign(referralInfo, {
                 dateReferred: referredUser.date_of_referral,
                 status: "confirmed",
-                amount: 200,
+                amount: amountIncrement,
                 paidAmount: paidAmount
             })
             responseData.push(referralInfo);

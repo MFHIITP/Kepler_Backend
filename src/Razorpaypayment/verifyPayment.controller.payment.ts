@@ -19,6 +19,8 @@ const verifyPayment = async (req: Request, res: Response) => {
     const razorpay_order_id = req.body.razorpay_order_id;
     const razorpay_signature = req.body.razorpay_signature;
     const referralCode_giver = req.body.referralCode_giver;
+    const coursesBought = req.body.coursesBought;
+    const additionalCourses = req.body.additionalCourses;
     const referralCode_taker = await collection.find({email: userEmail}).select('refercode');
     const [referralCode_giver_emailId, referralCode_giver_name] = await collection.find({refercode: referralCode_giver}).select(['email', 'name']);
 
@@ -53,7 +55,9 @@ const verifyPayment = async (req: Request, res: Response) => {
           const parsedPrevReferrals = JSON.parse(prevReferrals);
           const referralInfo = {
             referralCode_taker: referralCode_taker,
-            dateReferred: currentTime
+            dateReferred: currentTime,
+            coursesBought: coursesBought,
+            additionalCourses: additionalCourses,
           }
           parsedPrevReferrals.push(referralInfo);
           await redis.set(referralCode_giver, JSON.stringify(parsedPrevReferrals), 'EX', 2592000); // 1 month in seconds
@@ -62,7 +66,9 @@ const verifyPayment = async (req: Request, res: Response) => {
           const referralArray = [];
           const referralInfo = {
             referralCode_taker: referralCode_taker,
-            dateReferred: currentTime
+            dateReferred: currentTime,
+            coursesBought: coursesBought,
+            additionalCourses: additionalCourses,
           }
           referralArray.push(referralInfo);
           await redis.set(referralCode_giver, JSON.stringify(referralArray), 'EX', 2592000); // 1 month in seconds

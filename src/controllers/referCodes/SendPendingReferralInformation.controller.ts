@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { collection } from "../../models/collection.model.js";
 import { redis } from "../../index.js";
 import getUserInformationFromReferCode from "./GetUserInfoFromReferCode.controller.js";
+import { FindCourseReferralAmount } from "./findCourseAmount.js";
 
 const sendPendingReferralInformation = async(req: Request, res: Response) => {
     const emailId = req.body.emailId;
@@ -23,12 +24,14 @@ const sendPendingReferralInformation = async(req: Request, res: Response) => {
     const parsedReferralList = JSON.parse(referrals || '[]');
     const responseList = [];
     for(const referral of parsedReferralList){
-        console.log(referral)
+        const courseList = referral.coursesBought;
+        const additionalCourses = referral.additionalCourses;
+        const amount = FindCourseReferralAmount.findAmount({courseList, additionalCourses});
         const referralUserInfo = await getUserInformationFromReferCode(referral.referralCode_taker[0].refercode);
         if(referralUserInfo){
             responseList.push({...referralUserInfo, 
                 dateReferred: referral.dateReferred,
-                amount: 200
+                amount: amount
             });
         }
     }
