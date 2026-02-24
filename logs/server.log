@@ -866,3 +866,763 @@
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T14:17:22.911Z"}
 {"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T14:50:30.492Z"}
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T14:50:33.071Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T14:58:18.398Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T14:58:21.247Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:29:39.939Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:29:42.326Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:30:05.663Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:30:08.236Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:30:25.572Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:30:28.004Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:34:19.189Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:34:21.567Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:43:07.396Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:43:09.799Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:43:57.922Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:44:00.900Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:44:12.062Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:44:22.372Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:44:25.238Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:44:57.235Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:45:00.648Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:45:33.635Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:45:36.821Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:46:57.022Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:47:00.466Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:52:31.352Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:52:40.721Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:53:22.109Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:53:24.530Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:53:47.880Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:53:50.245Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:54:04.752Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:54:07.190Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:54:21.324Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:54:30.517Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:54:33.099Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:54:46.584Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:54:48.946Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:55:03.077Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:55:06.684Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T17:55:32.978Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T17:55:35.403Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:14:44.511Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:14:46.883Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:27:08.511Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:27:11.300Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:27:25.237Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:27:27.634Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:28:04.300Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:28:06.655Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:41:23.450Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:41:26.393Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:41:44.330Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:41:46.684Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:46:57.654Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:47:00.008Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:47:30.800Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:47:33.641Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:47:54.822Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:47:57.291Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:48:45.560Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:48:47.868Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:49:53.338Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:49:56.015Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T18:56:09.246Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T18:56:11.543Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:00:15.300Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:00:17.895Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:01:07.803Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:01:10.323Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:03:33.045Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:03:35.504Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:04:43.545Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:04:46.212Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:06:19.695Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:06:21.987Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:07:34.413Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:07:36.826Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:18:09.431Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:18:11.789Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:20:30.289Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:20:33.007Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:20:50.743Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:20:52.993Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:23:13.176Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:23:15.458Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:31:39.295Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:31:41.869Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:32:21.169Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:32:23.605Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T19:38:48.127Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T19:38:50.607Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:15:42.787Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:15:45.663Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:16:14.757Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:16:17.261Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:16:37.867Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:16:40.562Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:19:47.723Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:19:50.698Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:27:57.665Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:28:00.223Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-15T20:33:44.276Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-15T20:33:46.823Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T16:50:25.063Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T16:50:27.999Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T16:51:53.734Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T16:51:56.395Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:20:01.904Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:20:04.331Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:20:50.322Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:20:53.915Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:21:17.709Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:21:20.177Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:21:38.750Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:21:41.101Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:22:00.319Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:22:03.468Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:22:17.622Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:22:20.008Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:29:41.809Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:29:47.513Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:33:32.723Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:33:35.679Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:38:12.923Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:38:15.603Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:38:46.810Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:38:49.408Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T17:39:34.928Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T17:39:37.460Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:04:35.383Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:04:37.858Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:49:54.287Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:49:56.777Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:50:31.184Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:50:46.884Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:50:49.232Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:51:23.823Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:51:26.282Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:53:52.198Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:53:54.636Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:54:51.994Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:54:54.270Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:58:03.840Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:58:06.283Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:58:32.561Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:58:34.922Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T20:59:49.167Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T20:59:51.570Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T21:38:26.584Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T21:39:07.324Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T21:39:09.794Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T21:39:54.474Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T21:39:56.917Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-16T21:42:38.127Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-16T21:42:40.953Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:03:41.003Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:03:43.747Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:10:29.093Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:10:31.923Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:13:02.222Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:13:09.592Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:13:12.289Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:13:39.735Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:13:42.377Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:15:10.403Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:15:13.157Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:15:38.845Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:15:48.880Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:15:51.576Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:17:16.554Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:17:23.752Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:17:26.453Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:18:25.343Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:18:28.088Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:19:02.901Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:19:05.604Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:20:01.603Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:20:04.275Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:20:26.139Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:20:28.909Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:20:54.635Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:20:57.350Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:21:16.024Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:21:18.669Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:21:37.105Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:21:39.832Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:26:32.423Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:26:35.004Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:26:58.830Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:27:01.309Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:27:25.304Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:27:27.852Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:28:46.899Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:28:49.619Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:29:23.232Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:29:25.681Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:29:37.780Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:29:40.112Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:30:25.702Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:30:49.132Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:30:51.566Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:31:09.142Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:31:11.535Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:31:21.533Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:31:24.179Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:31:51.917Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:32:10.173Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:32:14.134Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:32:42.919Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:32:45.299Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:35:04.724Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:35:07.239Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:35:58.662Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:36:02.829Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:39:59.377Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:40:04.837Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:40:35.304Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:40:37.648Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T16:40:47.855Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T16:40:50.245Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T17:18:43.088Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T17:18:47.553Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:38:43.239Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:38:56.403Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:39:19.107Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:39:21.486Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:39:41.325Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:39:43.642Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:53:44.948Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:54:04.090Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:54:15.777Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:55:16.422Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:55:40.712Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:55:43.094Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:56:08.706Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:56:11.065Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:57:12.381Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:57:39.837Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:57:42.440Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:58:19.343Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:58:21.736Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T19:59:54.104Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T19:59:56.519Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:00:25.848Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:00:28.240Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:00:38.746Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:00:41.086Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:00:56.953Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:00:59.975Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:01:13.976Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:01:16.260Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:01:46.278Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:01:48.604Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:02:14.203Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:02:16.575Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:02:36.194Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:02:38.526Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:05:29.438Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:05:31.783Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:07:00.124Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:07:02.468Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:08:24.092Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:08:42.748Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:08:45.194Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:09:22.387Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:09:24.691Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:09:41.599Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:09:44.103Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:10:01.964Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:10:04.437Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:25:51.651Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:25:54.048Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:26:31.319Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:26:33.711Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:29:07.827Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:29:10.296Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:34:43.633Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:34:58.494Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:35:00.928Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:35:18.836Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:35:21.328Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:35:47.472Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:35:50.013Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:37:33.638Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:37:36.011Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:38:04.237Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:38:06.624Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:39:07.037Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:39:09.440Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:40:03.679Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:40:06.057Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:44:15.763Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:44:18.058Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:46:24.703Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:46:26.993Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:49:57.244Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:49:59.549Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:50:25.454Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:50:28.007Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:50:46.851Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:50:49.533Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:51:27.376Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:51:29.633Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:53:35.023Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:53:37.362Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T20:59:11.632Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T20:59:14.197Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-17T21:01:24.343Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-17T21:01:26.715Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:30:11.336Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:30:13.747Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:51:33.824Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:51:36.111Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:52:12.114Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:52:14.411Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:52:35.804Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:52:38.153Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:53:37.974Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:53:40.388Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:54:23.689Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:54:25.997Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:55:05.440Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:55:07.726Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:55:29.218Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:55:35.306Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:55:37.677Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:56:01.668Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:56:03.999Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:56:27.681Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:56:41.376Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:56:43.806Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:56:58.337Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:57:00.584Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:57:11.825Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:57:34.297Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:57:36.686Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:57:50.478Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:58:20.807Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:58:33.577Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:58:35.951Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:58:47.743Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:58:50.128Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T20:59:47.488Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T20:59:49.870Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:00:40.524Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:00:43.007Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:01:05.092Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:01:18.315Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:01:20.595Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:01:41.608Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:01:44.143Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:03:27.803Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:03:42.634Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:03:44.982Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:04:05.861Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:04:17.705Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:04:20.036Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:04:29.551Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:04:31.879Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:04:51.547Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:04:54.160Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:05:13.459Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:05:15.740Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:05:42.199Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:05:45.146Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:06:14.804Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:06:17.171Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:06:39.125Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:06:41.463Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:06:51.790Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:06:54.174Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:07:23.654Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:07:26.021Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:07:37.826Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:07:40.070Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:08:16.125Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:08:18.645Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:08:44.943Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:08:55.200Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:09:03.763Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:09:06.265Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:09:42.550Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:09:53.442Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:09:55.876Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:10:11.610Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:10:14.031Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:10:42.143Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:10:51.296Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:10:53.756Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:11:16.762Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:11:19.271Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:11:43.910Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:11:46.199Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:12:16.130Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:12:18.427Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:12:53.923Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:12:56.303Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:13:32.309Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-18T21:13:41.344Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-18T21:13:43.616Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:53:12.642Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T17:53:15.047Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:57:32.962Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:58:33.517Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T17:58:36.305Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:59:03.126Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:59:26.724Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T17:59:29.193Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:59:44.662Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T17:59:47.687Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T17:59:56.322Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:00:00.158Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:00:27.004Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:00:37.047Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:00:39.995Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:00:51.311Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:01:06.259Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:01:25.482Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:01:27.939Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:02:25.142Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:02:28.080Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:03:23.616Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:03:26.810Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:03:59.643Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:04:02.159Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:04:45.234Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:04:48.438Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:05:18.335Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:05:22.090Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:06:05.991Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:06:08.420Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:06:45.421Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:06:47.992Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:07:08.177Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:07:15.478Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:07:19.040Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:10:28.145Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:10:55.331Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:10:57.792Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:13:47.104Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:13:57.095Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:14:33.221Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:14:35.672Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:15:15.738Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:15:18.176Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:16:08.507Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:16:10.967Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:17:00.720Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:17:03.296Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:17:42.960Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:17:45.939Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:18:21.589Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:18:24.294Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:20:35.052Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:20:37.493Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:21:37.310Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:21:40.109Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:22:09.386Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:22:11.924Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:22:50.066Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:22:52.611Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:24:19.063Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:24:22.581Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:24:40.337Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:24:42.748Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:24:51.948Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:24:54.341Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:26:20.216Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:26:22.606Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:26:51.062Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:26:53.436Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:27:04.933Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:27:07.416Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:28:01.251Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:28:03.838Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:30:22.201Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:30:24.749Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:30:53.836Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:30:56.260Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:32:27.151Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:32:45.798Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:32:48.134Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:33:53.289Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:33:55.698Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:34:30.134Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:34:32.514Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:35:08.788Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:35:11.147Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:35:19.221Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:35:21.531Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:35:57.605Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:35:59.923Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:36:24.819Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:36:27.133Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:37:07.859Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:37:23.528Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:37:26.088Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:37:44.538Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:37:47.458Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:38:04.578Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:38:06.895Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:38:51.236Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:38:55.813Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:41:52.908Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:41:55.524Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:42:20.082Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:42:22.545Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:42:56.808Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:42:59.687Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:43:20.477Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:43:22.894Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:43:46.023Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:43:48.424Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:44:27.770Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:44:30.027Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:45:23.556Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:45:26.068Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:45:42.259Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:45:44.724Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:46:28.976Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:46:54.281Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:47:22.465Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:47:24.770Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:47:49.639Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:47:52.327Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:49:30.781Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:49:33.159Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:50:09.457Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:50:11.906Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:50:35.099Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:50:55.841Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:51:11.625Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:51:23.054Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:51:25.611Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:52:07.715Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:52:10.087Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:52:55.526Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:52:57.923Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:53:17.356Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:53:19.830Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:54:06.711Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:54:09.131Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:54:44.427Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:56:14.828Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:56:17.467Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:56:47.201Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:56:49.900Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:57:15.363Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:57:17.732Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:57:51.312Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:57:53.912Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:58:05.033Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:58:07.359Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:58:55.287Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:58:57.908Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:59:18.255Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:59:20.599Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T18:59:29.217Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T18:59:31.660Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:00:14.359Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:00:16.647Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:01:05.266Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:01:21.974Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:01:24.381Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:01:40.682Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:01:42.972Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:01:57.531Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:01:59.882Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:03:35.298Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:03:38.283Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:04:07.305Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:04:09.776Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:05:26.534Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:05:29.221Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:05:57.537Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:06:22.355Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:06:24.861Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:06:44.931Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:06:47.318Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:07:44.933Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:07:58.001Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:08:41.225Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:08:43.745Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:08:52.042Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:08:54.425Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:37:05.135Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:37:07.526Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:37:27.145Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:37:44.635Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:38:33.533Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:38:36.046Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:39:14.862Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:39:17.817Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T19:47:36.579Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T19:47:38.972Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:27:28.968Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:27:31.397Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:29:03.548Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:29:06.199Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:30:45.941Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:30:48.424Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:40:46.071Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:40:48.707Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:44:24.042Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:44:26.680Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:44:54.841Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T20:45:05.782Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T20:45:08.152Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-19T21:34:10.118Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-19T21:34:12.500Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-20T16:56:12.230Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-20T16:56:15.588Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-20T18:21:04.885Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-20T18:21:08.422Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-20T18:23:37.254Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-20T18:23:40.116Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-20T18:25:10.394Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-20T18:25:13.038Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T06:31:58.246Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T06:32:00.686Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:03:54.113Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T14:03:56.551Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:04:06.676Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T14:04:09.115Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:04:46.815Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T14:04:49.087Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:08:53.855Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T14:08:56.149Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:09:51.253Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T14:10:41.098Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T14:10:43.675Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:01:33.713Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:01:36.036Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:03:52.323Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:03:54.727Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:04:52.266Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:04:54.757Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:05:39.756Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:05:42.156Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:08:30.773Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:08:34.131Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:13:20.470Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:13:22.864Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T15:15:56.699Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T15:15:59.680Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:31:51.163Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:31:53.859Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:32:51.021Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:33:03.699Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:33:06.179Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:34:15.627Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:34:18.173Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:35:10.494Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:35:13.037Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:36:09.116Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:36:11.663Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T20:36:53.468Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T20:36:55.989Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:09:14.801Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:09:17.540Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:09:55.457Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:09:58.021Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:10:10.678Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:10:13.179Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:24:29.330Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:24:31.777Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:24:43.523Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:24:46.025Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T21:25:19.010Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T21:25:21.466Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T22:03:00.132Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T22:03:02.422Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T22:04:50.636Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-21T22:04:52.957Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-21T22:07:09.234Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","timestamp":"2026-02-21T22:07:39.370Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:03:32.915Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:03:35.271Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:11:52.370Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:11:54.702Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:23:10.699Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:23:13.388Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:24:41.652Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:24:48.981Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:24:51.391Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:25:04.482Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:25:06.753Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:25:39.304Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:25:56.086Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:25:58.644Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:34:08.019Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:34:14.883Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:34:17.273Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:34:59.564Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:35:01.839Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:38:39.627Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:38:41.913Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:39:03.702Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:39:06.061Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:51:26.500Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:51:28.813Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:57:15.374Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:57:17.689Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:57:29.651Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:57:31.971Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:58:18.261Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:58:20.676Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:59:12.692Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:59:15.073Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T07:59:50.561Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T07:59:52.909Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:02:59.394Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:03:01.690Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:03:26.217Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:03:28.567Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:04:09.982Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:04:12.505Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:04:42.858Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:04:45.208Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:06:28.818Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:06:31.223Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:07:41.767Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:07:44.079Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:08:10.230Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:08:12.594Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:13:24.081Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T08:13:33.832Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T08:13:36.119Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:10:43.649Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:10:46.354Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:36:04.384Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:36:07.267Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:36:28.462Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:36:30.979Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:37:22.007Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:37:24.548Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:38:12.273Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:38:15.082Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:42:12.158Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:42:26.134Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:42:28.571Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:50:50.488Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:50:53.069Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T09:51:14.266Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T09:51:16.772Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T10:37:58.104Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T10:38:00.424Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T10:43:38.678Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T10:43:41.039Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T10:43:52.749Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T10:43:55.216Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T10:44:10.646Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T10:44:13.841Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T10:48:54.431Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T10:48:56.800Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T11:09:24.749Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T11:09:27.093Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T11:09:43.391Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T11:09:45.661Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-02-22T15:44:30.161Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-02-22T15:44:34.130Z"}

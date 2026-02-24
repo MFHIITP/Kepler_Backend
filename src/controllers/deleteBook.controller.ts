@@ -5,7 +5,7 @@ import { executive_emails } from '../local_dbs';
 const deleteBook = async (req: Request, res: Response) => {
     const {url, course, email} = req.body;
     if(!executive_emails.includes(email)){
-        res.status(403).send("You are not authorized to delete books");
+        res.status(402).send("You are not authorized to delete books");
         return;
     }
     if(!url || !course) {

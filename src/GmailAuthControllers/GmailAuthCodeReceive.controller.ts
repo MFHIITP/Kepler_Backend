@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import { OAuth2Client } from "../index";
+import { OAuth2Client } from "../index.js";
+import { google } from "googleapis";
 
 const gmailAuthTokenReceiver = async(req: Request, res: Response) => {
     const code = req.query.code
@@ -9,6 +10,23 @@ const gmailAuthTokenReceiver = async(req: Request, res: Response) => {
     }
     try {
         const { tokens } = await OAuth2Client.getToken(code);
+
+        OAuth2Client.setCredentials(tokens);
+
+        const oauth2 = google.oauth2({
+            auth: OAuth2Client,
+            version: "v2",
+        })
+
+        const userInfo = await oauth2.userinfo.get();
+
+        if(userInfo.data.email != "hossainfarshid@gmail.com" && userInfo.data.email != "kepler.xxiib.cygnus@gmail.com"){
+            res.status(401).json({
+                message: "UnAuthorized"
+            })
+            return;
+        }
+
         console.log("Tokens received ", tokens);
         res.send(`
             <h3>Tokens Received</h3>

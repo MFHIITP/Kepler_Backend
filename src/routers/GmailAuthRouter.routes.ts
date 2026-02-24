@@ -1,6 +1,6 @@
 import Router from "express"
-import getGmailAuthCode from "../GmailAuthControllers/GetGmailAuth.controller";
-import gmailAuthTokenReceiver from "../GmailAuthControllers/GmailAuthCodeReceive.controller";
+import getGmailAuthCode from "../GmailAuthControllers/GetGmailAuth.controller.js";
+import gmailAuthTokenReceiver from "../GmailAuthControllers/GmailAuthCodeReceive.controller.js";
 
 const router = Router();
 

@@ -1,15 +1,15 @@
 import { Router } from "express";
-import getPersonalDetails from "../controllers/connectionsControls/getPersonalDetails.controller";
-import saveDetails from "../controllers/connectionsControls/savePersonalDetails.controller";
-import acceptConnectionRequestController from "../controllers/connectionsControls/acceptConnectionRequest.controller";
-import deletePersonalConnectionController from "../controllers/connectionsControls/deletePersonalConnection.controller";
-import getConnectionRequestDetailsController from "../controllers/connectionsControls/getConnectionRequestDetails.controller";
-import getAllConnections from "../controllers/connectionsControls/getPersonalConnections.controller";
-import sendConnectionRequestsController from "../controllers/connectionsControls/sendConnetionRequests.controller";
-import getConnectionSuggestionsController from "../controllers/connectionsControls/getConnectionSuggestions.controller";
-import getDetailsNewConnection from "../controllers/connectionsControls/getDetailsNewConnection.controller";
-import sendChats from "../controllers/connectionsControls/ConnectionChatsControllers/sendConnectionChat.controller";
-import getConnectionChat from "../controllers/connectionsControls/ConnectionChatsControllers/getConnectionChat.controller";
+import getPersonalDetails from "../controllers/connectionsControls/getPersonalDetails.controller.js";
+import saveDetails from "../controllers/connectionsControls/savePersonalDetails.controller.js";
+import acceptConnectionRequestController from "../controllers/connectionsControls/acceptConnectionRequest.controller.js";
+import deletePersonalConnectionController from "../controllers/connectionsControls/deletePersonalConnection.controller.js";
+import getConnectionRequestDetailsController from "../controllers/connectionsControls/getConnectionRequestDetails.controller.js";
+import getAllConnections from "../controllers/connectionsControls/getPersonalConnections.controller.js";
+import sendConnectionRequestsController from "../controllers/connectionsControls/sendConnetionRequests.controller.js";
+import getConnectionSuggestionsController from "../controllers/connectionsControls/getConnectionSuggestions.controller.js";
+import getDetailsNewConnection from "../controllers/connectionsControls/getDetailsNewConnection.controller.js";
+import sendChats from "../controllers/connectionsControls/ConnectionChatsControllers/sendConnectionChat.controller.js";
+import getConnectionChat from "../controllers/connectionsControls/ConnectionChatsControllers/getConnectionChat.controller.js";
 
 const router = Router();
 

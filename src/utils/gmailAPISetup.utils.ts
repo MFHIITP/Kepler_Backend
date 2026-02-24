@@ -1,5 +1,5 @@
 import { google } from "googleapis";
-import config from "../config";
+import config from "../config.js";
 
 const OAuth2Client = new google.auth.OAuth2(config.GMAIL_CLIENT_ID, config.GMAIL_CLIENT_SECRET, config.GMAIL_REDIRECT_URI);
 

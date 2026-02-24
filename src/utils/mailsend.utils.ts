@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import sendinblue from "nodemailer-sendinblue-transport";
-import config from "../config";
-import  gmail from "./gmailAPISetup.utils";
+import config from "../config.js";
+import  gmail from "./gmailAPISetup.utils.js";
 
 // const transporter = nodemailer.createTransport({
 //   service: "gmail",

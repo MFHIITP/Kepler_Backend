@@ -6,11 +6,17 @@ import { collection } from "../../models/collection.model.js";
 
 const confirmReferralMoneyTransfer = async(req: Request, res: Response) => {
     const { referral_giver_refer_code, money_transfer_status, referral_amount } = req.body;
-    const getReferCode = await collection.find({refercode: referral_giver_refer_code});
-    const referral_giver_emailId = getReferCode[0].email;
-    const insertQuery = `INSERT INTO referral_money_tracker (referral_giver_refer_code, referral_giver_email, referral_money_given_date, money_given_status) VALUES ($1, $2, $3, $4);`;
+    const getReferCode = await collection.findOne({refercode: referral_giver_refer_code});
+    if(!getReferCode){
+        res.status(400).json({
+            message: "No user exist with this refer code"
+        })
+        return;
+    }
+    const referral_giver_emailId = getReferCode?.email;
+    const insertQuery = `INSERT INTO referral_money_tracker (referral_giver_refer_code, referral_giver_email, referral_money_given_date, money_given_status, amount_given) VALUES ($1, $2, $3, $4, $5);`;
     try{
-        const response = await pool.query(insertQuery, [referral_giver_emailId, referral_giver_refer_code, new Date().toISOString(), money_transfer_status]);
+        const response = await pool.query(insertQuery, [referral_giver_refer_code, referral_giver_emailId, new Date().toISOString(), money_transfer_status, referral_amount]);
         const checkRedisExistence = await redis.get(`MoneyTransferLogs`);
         if(checkRedisExistence){
             const parsedRedisExistence = JSON.parse(checkRedisExistence ?? "");
@@ -36,7 +42,7 @@ const confirmReferralMoneyTransfer = async(req: Request, res: Response) => {
         return;
     }
     if(money_transfer_status == true){
-        await sendRegistrationEmail(referral_giver_emailId, "kepler.xxiib.cygnus@gmail.com", "Referral Money Transfer Confirmed", `The money transfer for the referrals that you provided to our other students has been confirmed successfully. Please raise a ticket if you do not see the amount in your account within 3-5 buisness days.`);
+        await sendRegistrationEmail(referral_giver_emailId ?? "", "kepler.xxiib.cygnus@gmail.com", "Referral Money Transfer Confirmed", `The money transfer for the referrals that you provided to our other students has been confirmed successfully. Please raise a ticket if you do not see the amount in your account within 3-5 buisness days.`);
         const updateWalletQuery = `UPDATE user_referral_schema SET wallet_balance = wallet_balance - $1 WHERE refer_code = $2;`;
         try{
             const updateWalletResponse = await pool.query(updateWalletQuery, [referral_amount, referral_giver_refer_code]);

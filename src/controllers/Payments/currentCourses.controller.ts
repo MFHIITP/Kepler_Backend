@@ -14,7 +14,7 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
 
   try {
     const userData = await admittedCoursesModel.findOne({ email: email });
-    const allPossibleCourses = grouplist?.filter(data => data.course == true && data.name != 'Community Group').map(data => data.name) || []
+    const allPossibleCourses = grouplist?.filter(data => data.course == true && data.name != 'Community Group').map(data => {return {name: data.name, price: data.price}}) || []
     console.log(userData) 
     const admittedCourses = userData?.admittedCourses || [];
     let selectedCourses: string[] = userData?.selectedCourses || [];
@@ -40,7 +40,8 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
 
     selectedCourses.forEach((val) => {
       if (val.startsWith("Computer Science")) {
-        onGoingCourses.push({ name: val, salutation: "INR", value: 1000 });
+        const price = grouplist.find(data => data.name == val)?.price || 0;
+        onGoingCourses.push({ name: val, salutation: "INR", value: price });
       }
     });
 

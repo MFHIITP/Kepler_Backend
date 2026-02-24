@@ -1,0 +1,15 @@
+import { Router } from "express";
+import getAllCourses from "../controllers/allCourses.controller.js";
+import getLoggedInStudentsWithoutPurchase from "../controllers/AdminDashboard/GetLoggedInStudentsWithoutCoursePurchase.controller.js";
+import getStudentDataFromCourse from "../controllers/AdminDashboard/CourseToStudentData.controller.js";
+import studentDetailsFromStudentData from "../controllers/AdminDashboard/StudentDetailsFromStudentData.controller.js";
+import getStudentInformationFromCourseAndOrganization from "../controllers/AdminDashboard/GetStudentListFromOrganizationAndCourse.controller.js";
+
+const router = Router();
+
+router.route('/getLoggedInStudentsWithoutPurchase').post(getLoggedInStudentsWithoutPurchase);
+router.route('/courseToStudentList').post(getStudentDataFromCourse);
+router.route('/getStudentDetailsFromStudentData').post(studentDetailsFromStudentData);
+router.route('/stuentInformationFromStudentCourseAndOrganization').post(getStudentInformationFromCourseAndOrganization);
+
+export default router;

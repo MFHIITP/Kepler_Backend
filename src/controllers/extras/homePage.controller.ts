@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { collection } from "../../models/collection.model";
-import { grouplist } from "../../local_dbs";
-import pool from "../../utils/postgresConnection.utils";
-import checkTableExists from "../../postgresModels/checkTableExists.postgres";
+import { collection } from "../../models/collection.model.js";
+import { grouplist } from "../../local_dbs.js";
+import pool from "../../utils/postgresConnection.utils.js";
+import checkTableExists from "../../postgresModels/checkTableExists.postgres.js";
 import axios from "axios";
-import { sendRegistrationEmail } from "../../utils/mailsend.utils";
+import { sendRegistrationEmail } from "../../utils/mailsend.utils.js";
 
 interface IPInterface {
     country_name: string,
@@ -20,7 +20,7 @@ const homePage = async(req:Request, res:Response) => {
     })
     try{
         if(await checkTableExists("visits") == false){
-            await import("../../postgresModels/VisitSchema/CreateVisitSchema.postgres");
+            await import("../../postgresModels/VisitSchema/CreateVisitSchema.postgres.js");
         }
         const ipRaw = req.headers["x-forwarded-for"];
         const ip = ipRaw?.split(",")[0].trim();

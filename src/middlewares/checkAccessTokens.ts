@@ -6,7 +6,7 @@ const checkAccessToken = async(req: Request, res: Response, next: NextFunction) 
     try{
         const fullAccessToken = req.headers['authorizationaccesstoken'];
         if(!fullAccessToken){
-            res.status(400).json({
+            res.status(401).json({
                 message: "Authorisation token missing",
             })
             return;

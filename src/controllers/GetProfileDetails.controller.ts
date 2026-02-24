@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { collection } from "../models/collection.model";
+import { collection } from "../models/collection.model.js";
 
 const getProfileDetails = async (req: Request, res: Response) => {
   try {

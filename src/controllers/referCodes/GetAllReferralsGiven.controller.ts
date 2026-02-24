@@ -44,16 +44,26 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
             total: referral_takers.length,
             walletBalance: referral_giver_info.rows[0].wallet_balance,
         })
+        const wallet_balance = referral_giver_info.rows[0].wallet_balance;
+        let count = 0;
 
-        for(const referredUser of referral_takers){
+        for(const referredUser of [...referral_takers].reverse()){
             const referralInfo = await getUserInformationFromReferCode(referredUser.referCode);
             if(!referralInfo){
                 continue;
             }
+            let paidAmount = false;
+            if(count == wallet_balance){
+                paidAmount = true;
+            }
+            else{
+                count = count + 200;
+            }
             Object.assign(referralInfo, {
                 dateReferred: referredUser.date_of_referral,
                 status: "confirmed",
-                amount: 200
+                amount: 200,
+                paidAmount: paidAmount
             })
             responseData.push(referralInfo);
             send({

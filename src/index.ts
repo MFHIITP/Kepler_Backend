@@ -34,6 +34,8 @@ import referCodeRouter from "./routers/ReferCodeRouter.route.js";
 import checkTableExists from "./postgresModels/checkTableExists.postgres.js";
 import connectionRouter from "./routers/ConnectionRouter.routes.js";
 import ReferralMoneyTransfer from "./routers/ReferralMoneyTracker.route.js";
+import PlayListRouter from "./routers/Playlist.route.js"
+import AdminRouter from "./routers/adminRouter.route.js";
 
 const app = express();
 
@@ -186,6 +188,8 @@ app.use("/talks", talkrouter);
 app.use("/number", numberrouter);
 app.use("/payment", paymentRouter);
 app.use("/connections", connectionRouter);
+app.use("/playlist", PlayListRouter);
+app.use("/admins", AdminRouter);
 
 app.use("/referralMoneyTracker", ReferralMoneyTransfer);
 

@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken"
 import { JWT_ACCESS_SECRET } from "..";
-import { admittedCoursesModel } from "../models/admittedCourses.model";
-import { executive_emails } from "../local_dbs";
+import { admittedCoursesModel } from "../models/admittedCourses.model.js";
+import { executive_emails } from "../local_dbs.js";
 
 const checkValidity = async(req: Request, res: Response, next: NextFunction) => {
     const fullAccessToken = req.headers['authorizationaccesstoken']

@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { admittedCoursesModel } from "../../models/admittedCourses.model.js";
 import { collection } from "../../models/collection.model.js";
+import { grouplist } from "../../local_dbs.js";
 
 const userInformation = async (req: Request, res: Response) => {
   try {
@@ -26,9 +27,8 @@ const userInformation = async (req: Request, res: Response) => {
     let paymentAmount = 0;
 
     selectedCourses.forEach((val) => {
-      if (val.startsWith("Computer Science")) {
-        paymentAmount += 1000;
-      }
+      const price = grouplist.find(data => data.name == val)?.price || 0;
+      paymentAmount += price;
     });
 
     if (admittedCourses.length > 0) {
@@ -49,13 +49,12 @@ const userInformation = async (req: Request, res: Response) => {
 
     if (selectedCourses.length > 0) {
       selectedCourses.forEach((val) => {
-        if (val.startsWith("Computer Science")) {
-          modifiedSelectedCourses.push({
-            name: val,
-            salutation: "INR",
-            value: 1000,
-          });
-        }
+        const price = grouplist.find(data => data.name == val)?.price || 0;
+        modifiedSelectedCourses.push({
+          name: val,
+          salutation: "INR",
+          value: price,
+        });
       });
       selectedCourses = modifiedSelectedCourses;
     }

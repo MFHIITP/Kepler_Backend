@@ -12,97 +12,71 @@ export let grouplist = [
   //   course: true
   // },
   {
-    name: 'Computer Science - Data Structures and Algorithms 1',
-    exam: "dsa1",
-    courseDescription: "Comprehensive DSA and industry oriented coding that will almost surely land you a job in your dream company",
+    name: 'Computer Science - DSA for Placement and Contests',
+    _id: "DSA1.1",
+    exam: "dsa",
+    courseDescription: "Comprehensive DSA and industry oriented coding that will almost surely land you a job in your dream company.",
     image: "/Images/DSA1Image.gif",
     features: ["Live Classes", "Live Coding", "Interactive Sessions", "Doubt Clearing"],
     rating: 4.9,
+    price: 249,
     // students: "15,000+",
     visibility: 'none',
     description: 'This is the CAT group meant for preparation for the CAT Aspirants',
     course: true
   },
   {
-    name: 'Computer Science - Machine Learning 1',
-    exam: "ml1",
+    name: 'Computer Science - Artificial Intelligence: Explore the Future',
+    _id: "ML1.1",
+    exam: "ml",
     courseDescription: "Complete Machine Learning package with algorithms, Deep Learning, Neural Network and Large Language Models",
     image: "/Images/ML1Image.gif",
     features: ["AI", "ML", "LLMs", "DL"],
     rating: 4.6,
+    price: 249,
     // students: "30,000+",
     visibility: 'none',
     description: 'This is the CAT group meant for preparation for the CAT Aspirants',
     course: true
   },
   {
-    name: 'Computer Science - Web Technologies 1',
-    exam: "webdev1",
+    name: 'Computer Science - Development Crash Course: Projects Made Easier',
+    _is: "Dev1.1",
+    exam: "webdev",
     courseDescription: "Comprehensive Web Development sessions complete with Frontend, Backend, Database and DevOps, and land a full stack job in the company of your choice",
     image: "/Images/WebDev1Image.gif", 
     features: ["Technical Subjects", "Live Classes", "Doubt Clearing", "Full Stack Projects"],
     rating: 4.7,
+    price: 249,
     // students: "20,000+",
     visibility: 'none',
     description: 'This is the CAT group meant for preparation for the CAT Aspirants',
     course: true
   },
   {
-    name: 'Computer Science - Computer Fundamentals 1',
-    exam: "fundamentals1",
+    name: 'Computer Science - Fundamentals Course: Crack GATE With Ease',
+    _id: "CSF1.1",
+    exam: "fundamentals",
     courseDescription: "Complete CS Fundamentals package comprising Computer Networks, Database Management, Operating Systems and Computer Organization and Architechture and gain the necessary expertise to thrive in the current job market",
     image: "/Images/CSFundamentals1Image.gif",
-    features: ["DBMS", "OS", "COA", "CN"],
+    features: ["DBMS", "OS", "OOPs", "CN"],
     rating: 4.6,
+    price: 249,
     // students: "30,000+",
     visibility: 'none',
     description: 'This is the CAT group meant for preparation for the CAT Aspirants',
     course: true
   },
   {
-    name: 'Computer Science - Data Structures and Algorithms 2',
-    exam: "dsa2",
-    courseDescription: "Comprehensive DSA and industry oriented coding that will almost surely land you a job in your dream company",
-    image: "/Images/DSA1Image.gif",
-    features: ["Live Classes", "Live Coding", "Interactive Sessions", "Doubt Clearing"],
-    rating: 4.9,
-    // students: "15,000+",
-    visibility: 'none',
-    description: 'This is the CAT group meant for preparation for the CAT Aspirants',
-    course: true
-  },
-  {
-    name: 'Computer Science - Machine Learning 2',
-    exam: "ml2",
-    courseDescription: "Complete Machine Learning package with algorithms, Deep Learning, Neural Network and Large Language Models",
-    image: "/Images/ML1Image.gif",
-    features: ["AI", "ML", "LLMs", "DL"],
-    rating: 4.6,
-    // students: "30,000+",
-    visibility: 'none',
-    description: 'This is the CAT group meant for preparation for the CAT Aspirants',
-    course: true
-  },
-  {
-    name: 'Computer Science - Web Technologies 2',
-    exam: "webdev2",
-    courseDescription: "Comprehensive Web Development sessions complete with Frontend, Backend, Database and DevOps, and land a full stack job in the company of your choice",
-    image: "/Images/WebDev1Image.gif", 
-    features: ["Technical Subjects", "Live Classes", "Doubt Clearing", "Full Stack Projects"],
-    rating: 4.7,
-    // students: "20,000+",
-    visibility: 'none',
-    description: 'This is the CAT group meant for preparation for the CAT Aspirants',
-    course: true
-  },
-  {
-    name: 'Computer Science - Computer Fundamentals 2',
-    exam: "fundamentals2",
-    courseDescription: "Complete CS Fundamentals package comprising Computer Networks, Database Management, Operating Systems and Computer Organization and Architechture and gain the necessary expertise to thrive in the current job market",
-    image: "/Images/CSFundamentals1Image.gif",
-    features: ["DBMS", "OS", "COA", "CN"],
-    rating: 4.6,
-    // students: "30,000+",
+    name: 'Computer Science - Placements Made Easier',
+    _id: "Plac1.1",
+    exam: "placement",
+    courseDescription: "Complete package combining DSA, Web Development and CS Fundamentals to help you crack placements and get a job in your dream company",
+    image: "/Images/PlacementImage.gif",
+    features: ["DSA", "Web Dev", "CS Fundamentals", "Placement Preparation"],
+    rating: 4.8,
+    price: 599,
+    // students: "25,000+",
     visibility: 'none',
     description: 'This is the CAT group meant for preparation for the CAT Aspirants',
     course: true
@@ -127,7 +101,7 @@ export let grouplist = [
   }
 ];
 
-export let executive_emails: string[] = ["hossainfarshid@gmail.com", "supratim.mukherjee123@gmail.com", "vivek829h@gmail.com", "pkmisra.it.ug@jadavpuruniversity.in"]
+export let executive_emails: string[] = ["hossainfarshid@gmail.com","supratim.mukherjee123@gmail.com", "vivek829h@gmail.com", "pkmisra.it.ug@jadavpuruniversity.in"]
 export let executive_names: string[] = ['Farshid Hossain', 'Supratim Mukherjee']
 export let core_emails: string[] = []
 export let c_suit_emails: string[] = []

@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import pool from "../utils/postgresConnection.utils.js";
-import { executive_emails } from "../local_dbs";
+import { executive_emails } from "../local_dbs.js";
 
 const addbooks = async(req: Request, res: Response)=>{
     const {email, course, title, author, url} = req.body;
     if(!executive_emails.includes(email)){
-        res.status(403).send("You are not authorized to add books");
+        res.status(402).send("You are not authorized to add books");
         return;
     }
     if(!course || !title || !author || !url){
