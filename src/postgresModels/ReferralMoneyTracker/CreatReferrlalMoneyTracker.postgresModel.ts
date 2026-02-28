@@ -6,6 +6,7 @@ import pool from "../../utils/postgresConnection.utils.js";
         referral_giver_email VARCHAR(255) NOT NULL,
         referral_money_given_date VARCHAR(255) NOT NULL,
         money_given_status VARCHAR(255) NOT NULL,
+        amount_given VARCHAR(255)
     );`;
     try {
         const response = await pool.query(query);

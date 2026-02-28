@@ -49,7 +49,7 @@ const getAllReferralsGiven = async(req: Request, res: Response) => {
 
         for(const referredUser of [...referral_takers].reverse()){
             const referralInfo = await getUserInformationFromReferCode(referredUser.referCode);
-            const amountIncrement = referredUser.referral_given_list.amountIncrement;
+            const amountIncrement = referredUser.amountIncrement;
             if(!referralInfo){
                 continue;
             }

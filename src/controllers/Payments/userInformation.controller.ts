@@ -20,7 +20,7 @@ const userInformation = async (req: Request, res: Response) => {
     var payment_details = courseDetails.payment_details || [];
     var upcoming_payment_details = courseDetails.upcoming_payment_details || []
     var transaction_logs = courseDetails.log_details || [];
-    const additionalCourses = courseDetails.additionalCourses || [];
+    const additionalCoursesApplied = courseDetails.appliedAdditionalCourses || [];
 
     var modifiedSelectedCourses = [];
     var modifiedAdmittedCourses = [];
@@ -63,7 +63,7 @@ const userInformation = async (req: Request, res: Response) => {
     const responseData = {
       transaction_details: transaction_details,
       course_details: admittedCourses,
-      additionalCourses: additionalCourses,
+      additionalCoursesApplied: additionalCoursesApplied,
       applied_course_details: selectedCourses,
       payment_details: payment_details,
       upcoming_payments: upcoming_payment_details,

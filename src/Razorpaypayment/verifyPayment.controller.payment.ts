@@ -20,7 +20,7 @@ const verifyPayment = async (req: Request, res: Response) => {
     const razorpay_signature = req.body.razorpay_signature;
     const referralCode_giver = req.body.referralCode_giver;
     const coursesBought = req.body.coursesBought;
-    const additionalCourses = req.body.additionalCourses;
+    const additionalCoursesApplied = req.body.additionalCoursesApplied;
     const referralCode_taker = await collection.find({email: userEmail}).select('refercode');
     const [referralCode_giver_emailId, referralCode_giver_name] = await collection.find({refercode: referralCode_giver}).select(['email', 'name']);
 
@@ -57,7 +57,7 @@ const verifyPayment = async (req: Request, res: Response) => {
             referralCode_taker: referralCode_taker,
             dateReferred: currentTime,
             coursesBought: coursesBought,
-            additionalCourses: additionalCourses,
+            additionalCourses: additionalCoursesApplied,
           }
           parsedPrevReferrals.push(referralInfo);
           await redis.set(referralCode_giver, JSON.stringify(parsedPrevReferrals), 'EX', 2592000); // 1 month in seconds
@@ -68,7 +68,7 @@ const verifyPayment = async (req: Request, res: Response) => {
             referralCode_taker: referralCode_taker,
             dateReferred: currentTime,
             coursesBought: coursesBought,
-            additionalCourses: additionalCourses,
+            additionalCourses: additionalCoursesApplied,
           }
           referralArray.push(referralInfo);
           await redis.set(referralCode_giver, JSON.stringify(referralArray), 'EX', 2592000); // 1 month in seconds
@@ -240,6 +240,8 @@ const verifyPayment = async (req: Request, res: Response) => {
         doc.payment_details = paymentDetails
         doc.upcoming_payment_details = upcomingPaymentDetails
         doc.log_details = [...(doc.log_details || []), logDetails]
+        doc.additionalCourses = additionalCoursesApplied;
+        doc.appliedAdditionalCourses = [];
         
         await doc.save();
       } else {

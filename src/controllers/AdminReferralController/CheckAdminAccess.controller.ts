@@ -3,7 +3,7 @@ import { adminSecretCodes, executive_emails } from "../../local_dbs.js";
 import { collection } from "../../models/collection.model.js";
 
 const checkAdminAccess = async (req: Request, res: Response) => {
-    let {email, secretCode, referCode} = req.body;
+    let {email, secretCode, referCode, emailId} = req.body;
 
     if(!email){
         const user = await collection.findOne({refercode: referCode});
@@ -12,13 +12,13 @@ const checkAdminAccess = async (req: Request, res: Response) => {
         }
     }
 
-    if(!executive_emails.includes(email)){
+    if(!executive_emails.includes(emailId)){
         res.status(402).json({
             message: "Unauthorized Access"
         });
         return;
     }
-    const adminJSON = adminSecretCodes.find(admin => admin.email == email);
+    const adminJSON = adminSecretCodes.find(admin => admin.email == emailId);
     const adminSecretCode = adminJSON?.secretCode;
     if(adminSecretCode != secretCode){
         res.status(402).json({

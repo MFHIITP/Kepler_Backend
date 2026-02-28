@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import pool from "../../utils/postgresConnection.utils.js";
 import { redis } from "../../index.js";
+import { collection } from "../../models/collection.model.js";
 
 interface responseInterface {
   referral_giver_refer_code: string;
@@ -40,13 +41,13 @@ const getAllReferralMoney = async (req: Request, res: Response) => {
             referral_giver_refer_code: user.referCode,
             referral_giver_email: user.emailId,
             referral_money_given_date: user.date_confirmed,
-            referral_giver_upi_id: newlyConfimedUsersResponse.upi_id,
-            referral_giver_account_number: newlyConfimedUsersResponse.account_number,
-            referral_giver_ifsc_code: newlyConfimedUsersResponse.ifse_code,
-            referral_giver_account_name: newlyConfimedUsersResponse.account_holder_name,
-            referral_giver_bank_name: newlyConfimedUsersResponse.bank_name,
+            referral_giver_upi_id: newlyConfimedUsersResponse?.upi_id,
+            referral_giver_account_number: newlyConfimedUsersResponse?.account_number,
+            referral_giver_ifsc_code: newlyConfimedUsersResponse?.ifse_code,
+            referral_giver_account_name: newlyConfimedUsersResponse?.account_holder_name,
+            referral_giver_bank_name: newlyConfimedUsersResponse?.bank_name,
             money_given_status: false,
-            wallet_balance: newlyConfimedUsersResponse.wallet_balance,
+            wallet_balance: newlyConfimedUsersResponse?.wallet_balance,
             toChange: false
           });
         }
@@ -61,10 +62,11 @@ const getAllReferralMoney = async (req: Request, res: Response) => {
       },
     );
 
-    oldConfirmedUsers.forEach((oldUser) => {
+    oldConfirmedUsers.forEach(async (oldUser) => {
       if (existingUsers.has(oldUser.refer_code)) {
         return;
       }
+      console.log(oldUser);
       const referralMoneyInformationResponse =
         referral_money_information.rows.filter((referralMoneyInformation) => {
           return (
@@ -75,9 +77,11 @@ const getAllReferralMoney = async (req: Request, res: Response) => {
       const lastApprovedDate =
         referralMoneyInformationResponse[0].referral_money_given_date;
 
+      const emailID = await collection.findOne({refercode: oldUser.refer_code});
+
       responseData.push({
         referral_giver_refer_code: oldUser.refer_code,
-        referral_giver_email: oldUser.email_id,
+        referral_giver_email: emailID?.email ?? "",
         referral_money_given_date: lastApprovedDate,
         referral_giver_upi_id: oldUser.upi_id,
         referral_giver_account_number: oldUser.account_number,

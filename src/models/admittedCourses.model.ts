@@ -34,6 +34,9 @@ var admittedCoursesSchema = new mongoose.Schema({
   additionalCourses: {
     type: [String],
   },
+  appliedAdditionalCourses: {
+    type: [String],
+  },
   selectedCourses: {
     type: [String],
   },

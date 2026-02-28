@@ -5,7 +5,7 @@ import pool from "../../utils/postgresConnection.utils.js";
 import { FindCourseReferralAmount } from "./findCourseAmount.js";
 
 const acceptRejectReferralCode = async(req: Request, res:Response) => {
-    const { emailId, referralCodeAcceptedOrRejected, status } = req.body;
+    const { emailId, referralCodeAcceptedOrRejected, status, dateReferred } = req.body;
     const user = await collection.findOne({email: emailId});
     if(!user){
         res.status(404).json({
@@ -22,8 +22,9 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
         })
         return;
     }
-    const parsedReferCodeList = JSON.parse(referCodeList);
-    const amountIncrement = FindCourseReferralAmount.findAmount({courseList: parsedReferCodeList.courseList, additionalCourses: parsedReferCodeList.additionalCourses})
+    const parsedReferCodeList: [{refercode: string, dateReferred: string, coursesBought: [string], additionalCourses: [string]}] = JSON.parse(referCodeList);
+    const referralInfo = parsedReferCodeList.find(referralVal => referralVal.dateReferred == dateReferred)
+    const amountIncrement = FindCourseReferralAmount.findAmount({courseList: referralInfo?.coursesBought ?? [], additionalCourses: referralInfo?.additionalCourses ?? []})
 
     if(status == true){
         const referredUser = await collection.find({refercode: referralCodeAcceptedOrRejected});
@@ -112,8 +113,8 @@ const acceptRejectReferralCode = async(req: Request, res:Response) => {
         await redis.del(referCode);
     }
     else{
-        const filteredList = parsedReferCodeList.filter((referrals: string) => {
-            return referrals != referralCodeAcceptedOrRejected
+        const filteredList = parsedReferCodeList.filter((referrals) => {
+            return referrals.refercode != referralCodeAcceptedOrRejected && referrals.dateReferred != dateReferred
         })
         await redis.set(referCode, JSON.stringify(filteredList), 'EX', 30*24*60*60);
     }
