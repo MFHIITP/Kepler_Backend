@@ -32,6 +32,18 @@ const userInformation = async (req: Request, res: Response) => {
       paymentAmount += price;
     });
 
+    if(selectedCourses.length >= 2 && !selectedCourses.includes("Computer Science - Placements Made Easier")){
+      paymentAmount = paymentAmount * 0.8;
+    }
+
+    if(selectedCourses.includes("Computer Science - Placements Made Easier") && selectedCourses.includes("Computer Science - Artificial Intelligence: Explore the Future") && selectedCourses.length == 2){
+      paymentAmount = paymentAmount * 0.8;
+    }
+
+    if(userDetails.education_type == "college" && userDetails.college == "Jadavpur University"){
+      paymentAmount = paymentAmount * 0.5;
+    }
+
     if (admittedCourses.length > 0) {
       admittedCourses.forEach((val) => {
         if (val?.name?.startsWith("Computer Science")) {

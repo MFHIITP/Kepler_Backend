@@ -5,8 +5,8 @@ const createRazorpayOrder = async(req: Request, res: Response)=>{
         const amount = req.body.amount;
         console.log(amount + " is the amount that is to be paid");
         const options = {
-            amount: 1 * 100,
-            // amount: amount * 100,
+            // amount: 1 * 100,
+            amount: amount,
             currency: 'INR',
             receipt: "receipt_order_" + Date.now()
         }
