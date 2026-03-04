@@ -7,7 +7,6 @@ import libraryrouter from "./routers/library.route.js";
 import googleAuthRouter from "./routers/googleAuthRoute.js";
 import { collection } from "./models/collection.model.js";
 import numberrouter from "./routers/number.route.js";
-import contentRouter from "./routers/teamMembers.route.js"
 import removetoken from "./controllers/logout.controller.js";
 import liveuser from "./controllers/extras/LiveUser.controller.js";
 import historyuser from "./controllers/extras/Historyuser.controller.js";
@@ -171,7 +170,6 @@ app.use("/login", loginrouter);
 app.use("/users", userrouter);
 app.use("/api", apiroute);
 app.post("/logout", removetoken);
-app.use("/team", contentRouter);
 
 // Protected Routes
 app.use(checkAccessToken);
