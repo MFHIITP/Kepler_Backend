@@ -38,6 +38,15 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
       }
     });
 
+    if(preventedCourses.length > 0 && preventedCourses.includes("Computer Science - Placements Made Easier")){
+      preventedCourses = ["Computer Science - DSA for Placement and Contests", "Computer Science - Artificial Intelligence: Explore the Future", "Computer Science - Development Crash Course: Projects Made Easier", "Computer Science - Fundamentals Course: Crack GATE With Ease", "Computer Science - Placements Made Easier"]
+    }
+    else if(preventedCourses.length > 0 && !preventedCourses.includes("Computer Science - Placements Made Easier")){
+      if(!preventedCourses.includes("Computer Science - Placements Made Easier")){
+        preventedCourses.push("Computer Science - Placements Made Easier");
+      }
+    }
+
     selectedCourses.forEach((val) => {
       if (val.startsWith("Computer Science")) {
         const price = grouplist.find(data => data.name == val)?.price || 0;

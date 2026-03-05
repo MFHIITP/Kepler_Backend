@@ -52,25 +52,25 @@ const corsConfig = {
 app.options("*", cors(corsConfig));
 app.use(cors(corsConfig));
 
-app.use(
-  rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 1000,
-    message: {
-      status: 429,
-      error: "Rate limit exceeded",
-      retryAfter: "Try again in a few minutes.",
-    },
-    handler: (req, res) => {
-      res.status(429).json({
-        error:
-          "Rate Limit Exceeded from this client. Please try after some time",
-      });
-    },
-    legacyHeaders: false,
-    skip: (req) => req.method == "OPTIONS",
-  })
-);
+// app.use(
+//   rateLimit({
+//     windowMs: 15 * 60 * 1000,
+//     max: 1000,
+//     message: {
+//       status: 429,
+//       error: "Rate limit exceeded",
+//       retryAfter: "Try again in a few minutes.",
+//     },
+//     handler: (req, res) => {
+//       res.status(429).json({
+//         error:
+//           "Rate Limit Exceeded from this client. Please try after some time",
+//       });
+//     },
+//     legacyHeaders: false,
+//     skip: (req) => req.method == "OPTIONS",
+//   })
+// );
 app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html");

@@ -10,41 +10,6 @@ const applyCourses = async (req: Request, res: Response) => {
 
     const admittedCourses = userData?.admittedCourses;
     const admittedNames = admittedCourses?.map(course => course.name);
-    // const additionalCourses = userData?.additionalCourses || [];
-    // if(admittedNames?.includes("Computer Science - Placements Made Easier") && additionalCourses.length == 2){
-    //   res.status(400).json({
-    //     message: "Cannot select any more courses as already enrolled in them"
-    //   })
-    //   return;
-    // }
-    // else if(admittedNames?.includes("Computer Science - Placements Made Easier") && additionalCourses.length == 1){
-    //   if(selectedCourses.includes("Computer Science - DSA for Placement and Contests") || selectedCourses.includes("Computer Science - Fundamentals Course: Crack GATE With Ease")){
-    //     res.status(400).json({
-    //       message: "Cannot select any more courses, as already enrolled in them"
-    //     })
-    //     return;
-    //   }
-    //   else if(admittedNames.includes("Computer Science - Placements Made Easier") && additionalCoursesSelected.length > 1){
-    //     res.status(400).json({
-    //       message: "Not permitted to buy this combination of courses"
-    //     })
-    //     return;
-    //   }
-    //   else if((additionalCourses[0] == 'Computer Science - Development Crash Course: Projects Made Easier' && additionalCoursesSelected[0] != "Computer Science - Artificial Intelligence: Explore the Future") || additionalCourses[0] == 'Computer Science - Artificial Intelligence: Explore the Future' && additionalCoursesSelected[0] != "Computer Science - Development Crash Course: Projects Made Easier"){
-    //     res.status(400).json({
-    //       message: "Already pursuing this course"
-    //     })
-    //     return;
-    //   }
-    // }
-    // else if(!admittedNames?.includes("Computer Science - Placements Made Easier")){
-    //   if(selectedCourses.includes("Computer Science - Placements Made Easier")){
-    //     res.status(400).json({
-    //       message: "Cannot select Placements Made Easier"
-    //     })
-    //     return;
-    //   }
-    // }
     const selectedSet = new Set(selectedCourses);
     const admittedMap = new Map(admittedCourses?.map((course) => [course.name, course.upcomingPaymentDate]));
 
