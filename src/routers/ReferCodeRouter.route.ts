@@ -4,6 +4,7 @@ import getAllReferralsGiven from "../controllers/referCodes/GetAllReferralsGiven
 import acceptRejectReferralCode from "../controllers/referCodes/acceptingRejectingReferralCode.controller.js";
 import sendPendingReferralInformation from "../controllers/referCodes/SendPendingReferralInformation.controller.js";
 import saveReferralBankDetails from "../controllers/referCodes/saveBankDetails.controller.js";
+import checkReferCodeExists from "../controllers/referCodes/checkReferCodeExists.controller.js";
 
 const router = Router();
 
@@ -12,5 +13,6 @@ router.route('/getAcceptedReferrals').post(getAllReferralsGiven);
 router.route('/acceptRejectReferral').post(acceptRejectReferralCode);
 router.route('/getPendingReferrals').post(sendPendingReferralInformation);
 router.route('/saveReferralBankDetails').post(saveReferralBankDetails);
+router.route('/checkValidReferCode').post(checkReferCodeExists);
 
 export default router;

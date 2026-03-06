@@ -20,7 +20,7 @@ const authsignupaction = async (req: Request, res: Response) => {
   const data = new collection(req.body);
   data.refercode = generateReferralCode(data.email)
   data.isvalid = 1
-  data.usenumber = 5
+  data.usenumber = 10
   const mail = await collection.find({ email: req.body.email });
   if (mail.length == 0) {
     await data.save();

@@ -15,7 +15,7 @@ const signupaction = async (req: Request, res: Response) => {
   const emailId = data.email;
   data.refercode = generateReferralCode(emailId[0], phoneNumber[0], name[0]);
   data.isvalid = true;
-  data.usenumber = 5;
+  data.usenumber = 10;
   const mail = await collection.find({ email: emailId });
   if (mail.length == 0) {
     const otp = crypto.randomInt(100000, 999999).toString();
