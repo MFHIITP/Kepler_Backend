@@ -47,6 +47,12 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
       }
     }
 
+
+    // have to remove these following lines 52 - 55, on 31st March 2026
+    if(!preventedCourses.includes("Computer Science - Artificial Intelligence: Explore the Future")){
+      preventedCourses.push("Computer Science - Artificial Intelligence: Explore the Future");
+    }
+
     selectedCourses.forEach((val) => {
       if (val.startsWith("Computer Science")) {
         const price = grouplist.find(data => data.name == val)?.price || 0;

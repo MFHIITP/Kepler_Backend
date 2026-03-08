@@ -38,7 +38,7 @@ const getPlayListVideos = async(req: Request, res: Response) => {
         playList = playlistData[examName];
     }
     else {
-        res.status(401).json({
+        res.status(400).json({
             message: "User does not have access to this course"
         })
         return;

@@ -22,11 +22,6 @@ const courseList = async(req: Request, res: Response)=>{
         if(!executive_emails.includes(emailId)){
             newList = newList.filter((group_name) => group_name !== 'Executive Group')
         }
-
-        if(groups.includes("Computer Science - Placements Made Easier")){
-            newList = newList.filter((group_name) => group_name !== 'Placements Made Easier' && group_name !== "Computer Science - Artificial Intelligence: Explore the Future")
-        }
-        
         if (groups.includes("Computer Science - Placements Made Easier")) {
             newList = grouplist.filter(group => group.course == true).map((val: group) => val.name).filter((group_name) =>
                 group_name !== "Computer Science - Artificial Intelligence: Explore the Future" &&
