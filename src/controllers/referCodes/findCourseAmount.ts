@@ -1,11 +1,11 @@
 export class FindCourseReferralAmount {
     private static referralAmounts = {
-        OneCourseWithoutPlacement: 146,
-        TwoCoursesWithoutPlacement: 292,
-        ThreeCoursesWithoutPlacement: 438,
-        FourCoursesWithoutPlacement: 584,
-        ThreeCoursesWithPlacement: 366,
-        FourCoursesWithPlacement: 489
+        OneCourseWithoutPlacement: 150,
+        TwoCoursesWithoutPlacement: 300,
+        ThreeCoursesWithoutPlacement: 450,
+        FourCoursesWithoutPlacement: 600,
+        ThreeCoursesWithPlacement: 375,
+        FourCoursesWithPlacement: 375
     }
 
     constructor () {
