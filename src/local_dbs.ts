@@ -106,7 +106,7 @@ export let executive_names: string[] = ['Farshid Hossain', 'Supratim Mukherjee']
 export let core_emails: string[] = []
 export let c_suit_emails: string[] = []
 export let GM_emails: string[] = [];
-export let teacher_emails: string[] = [];
+export let teacher_emails: string[] = []; 
 export const adminSecretCodes = [
   {
     name: "Md. Farshid Hossain",

@@ -16,25 +16,31 @@ const addStudentToGoogleGroup = async({student_email, selectedCourses} : {studen
     expiryDate.setDate(expiryDate.getDate() + 60);
     for(const course of selectedCourses){
         try{
-            const courseId = MapCourseToGoogleGroup.getCourseToGoogleGroup(course);
-            const groupEmail = `keplercourse_${courseId}@keplercodes.com`;
-            await directory.members.insert({
-                groupKey: groupEmail,
-                requestBody: {
-                    email: student_email,
-                    role: "MEMBER"
-                }
-            });
-            console.log(`${student_email} added to ${groupEmail}`)
-            const findQuery =  `SELECT 1 FROM googlegroupsstudentslist WHERE student_email = $1 AND group_email = $2`;
-            const findResponse = await pool.query(findQuery, [student_email, groupEmail]);
-            if(findResponse.rowCount == 0){
-                const insertQuery = `INSERT INTO googlegroupsstudentslist (student_email, group_email, expiry_date) VALUES ($1, $2, $3)`;
-                await pool.query(insertQuery, [student_email, groupEmail, expiryDate]);
+            const selectedCourseId = MapCourseToGoogleGroup.getCourseToGoogleGroup(course);
+            if(!selectedCourseId){
+                console.warn(`Course mapping not found for ${course}`);
+                continue;
             }
-            else{
-                const updateQuery = `UPDATE googlegroupsstudentslist SET expiry_date = $1 WHERE student_email = $2 AND group_email = $3`;
-                await pool.query(updateQuery, [expiryDate, student_email, groupEmail]);
+            for(const courseId of selectedCourseId){
+                const groupEmail = `keplercourse_${courseId}@keplercodes.com`;
+                await directory.members.insert({
+                    groupKey: groupEmail,
+                    requestBody: {
+                        email: student_email,
+                        role: "MEMBER"
+                    }
+                });
+                console.log(`${student_email} added to ${groupEmail}`)
+                const findQuery =  `SELECT 1 FROM googlegroupsstudentslist WHERE student_email = $1 AND group_email = $2`;
+                const findResponse = await pool.query(findQuery, [student_email, groupEmail]);
+                if(findResponse.rowCount == 0){
+                    const insertQuery = `INSERT INTO googlegroupsstudentslist (student_email, group_email, expiry_date) VALUES ($1, $2, $3)`;
+                    await pool.query(insertQuery, [student_email, groupEmail, expiryDate]);
+                }
+                else{
+                    const updateQuery = `UPDATE googlegroupsstudentslist SET expiry_date = $1 WHERE student_email = $2 AND group_email = $3`;
+                    await pool.query(updateQuery, [expiryDate, student_email, groupEmail]);
+                }
             }
         }
         catch(error) {
