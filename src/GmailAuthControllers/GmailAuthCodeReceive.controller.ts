@@ -20,7 +20,7 @@ const gmailAuthTokenReceiver = async(req: Request, res: Response) => {
 
         const userInfo = await oauth2.userinfo.get();
 
-        if(userInfo.data.email != "hossainfarshid@gmail.com" && userInfo.data.email != "kepler.xxiib.cygnus@gmail.com"){
+        if(userInfo.data.email != "hossainfarshid@gmail.com" && userInfo.data.email != "kepler.xxiib.cygnus@gmail.com" && userInfo.data.email != "kepler@keplercodes.com" && userInfo.data.email != "farshidhossain@keplercodes.com"){
             res.status(401).json({
                 message: "UnAuthorized"
             })

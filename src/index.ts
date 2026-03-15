@@ -52,25 +52,25 @@ const corsConfig = {
 app.options("*", cors(corsConfig));
 app.use(cors(corsConfig));
 
-// app.use(
-//   rateLimit({
-//     windowMs: 15 * 60 * 1000,
-//     max: 1000,
-//     message: {
-//       status: 429,
-//       error: "Rate limit exceeded",
-//       retryAfter: "Try again in a few minutes.",
-//     },
-//     handler: (req, res) => {
-//       res.status(429).json({
-//         error:
-//           "Rate Limit Exceeded from this client. Please try after some time",
-//       });
-//     },
-//     legacyHeaders: false,
-//     skip: (req) => req.method == "OPTIONS",
-//   })
-// );
+app.use(
+  rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 1000,
+    message: {
+      status: 429,
+      error: "Rate limit exceeded",
+      retryAfter: "Try again in a few minutes.",
+    },
+    handler: (req, res) => {
+      res.status(429).json({
+        error:
+          "Rate Limit Exceeded from this client. Please try after some time",
+      });
+    },
+    legacyHeaders: false,
+    skip: (req) => req.method == "OPTIONS",
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 app.set("view-engine", "html");
@@ -90,6 +90,7 @@ export const RAZORPAY_KEY_ID = config.RAZORPAY_KEY_ID;
 export const RAZORPAY_SECRET = config.RAZORPAY_SECRET;
 export const userSockets = new Map<string, Set<WebSocket>>();
 export const OAuth2Client = new google.auth.OAuth2(config.GMAIL_CLIENT_ID, config.GMAIL_CLIENT_SECRET, config.GMAIL_REDIRECT_URI);
+export const OAuth2Client_GoogleGroups = new google.auth.OAuth2(config.GOOGLE_GROUP_CLIENT_ID, config.GOOGLE_GROUP_CLIENT_SECRET, config.GOOGLE_GROUP_CALLBACK);
 
 export const codeRunnerIP = '13.200.236.32'
 const port = config.PORT || 8000;
@@ -106,7 +107,8 @@ import  ("./utils/connection.utils.js");
 import ("./utils/PaymentEmails/sendCourseDeadlineMail.utils.js");
 import ("./utils/postgresConnection.utils.js");
 
-import ("./utils/nodecron.js");
+import ("./utils/cron/nodecron.js");
+import ("./utils/cron/GoogleGroupCron.cron.js");
 
 passport.use(
   new GoogleStrategy(
@@ -157,6 +159,9 @@ export const razorpay = new Razorpay({
   }
   if(await checkTableExists("referral_money_tracker") == false){
     await import("./postgresModels/ReferralMoneyTracker/CreatReferrlalMoneyTracker.postgresModel.js");
+  }
+  if(await checkTableExists("googlegroupsstudentslist") == false){
+    await import("./postgresModels/GoogleGroupsStudentSchema/createGoogleGroupStudentSchema.postgres.js");
   }
 })();
 

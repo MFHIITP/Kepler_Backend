@@ -8,6 +8,7 @@ import getNextPaymentDate from "../utils/NextMonthLastDate.js";
 import { sendRegistrationEmail } from "../utils/mailsend.utils.js";
 import { scheduleEmailPaymentReminder } from "../utils/PaymentEmails/scheduleEmail.js";
 import { collection } from "../models/collection.model.js";
+import addStudentToGoogleGroup from "../GoogleGroups/AddstudentToGoogleGroup.js";
 
 dotenv.config();
 
@@ -258,6 +259,9 @@ const verifyPayment = async (req: Request, res: Response) => {
         });
         await newDoc.save();
       }
+
+      addStudentToGoogleGroup({student_email: userEmail, selectedCourses: coursesSelectedAndAccepted});
+
       res.status(200).json({
         status: "Success",
       });
@@ -271,6 +275,8 @@ const verifyPayment = async (req: Request, res: Response) => {
         <div>This email is to inform you that we have received the payment you made on ${currentTime} for the courses ${coursesSelectedAndAccepted.join(', ')}. We thank you for choosing Kepler and we wish you best of luck for your future endeavors.</div>
         <br>
         <div>Please note the validity of these courses is till ${validity.toLocaleDateString("en-IN")}. If you are unable to pay for these courses before ${validity.toLocaleDateString("en-IN")}, you will lose access to these courses after ${validity.toLocaleDateString("en-IN")}</div>
+        <br>
+        <div>Make note of the fact that the ${coursesSelectedAndAccepted.length == 1 ? "course" : "courses"} shall be available for <b>one more months</b> from the date of the last payment. That would allow you to watch the recorded courses for that duration.</div>
         <br>
         <div>Thank you</div>
         <br>

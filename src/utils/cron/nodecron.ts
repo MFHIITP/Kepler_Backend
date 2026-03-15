@@ -1,5 +1,5 @@
 import cron from 'node-cron'
-import historyschema from '../models/History.model.js';
+import historyschema from '../../models/History.model.js';
 
 (async()=>{
     cron.schedule('0 * * * *', async()=>{
@@ -18,4 +18,4 @@ import historyschema from '../models/History.model.js';
         )
         console.log(`Cron job completed. Modified ${result.modifiedCount} documents.`);
     })
-})()
+})();
