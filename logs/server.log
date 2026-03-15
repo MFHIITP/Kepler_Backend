@@ -23,3 +23,21 @@
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T18:57:21.342Z"}
 {"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:09:02.044Z"}
 {"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:09:11.978Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:13:40.424Z"}
+{"level":"info","message":"Database error Error: queryTxt ETIMEOUT clusterfarshid.vcl5snh.mongodb.net","timestamp":"2026-03-15T19:14:08.210Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:18:45.453Z"}
+{"level":"info","message":"Database error MongooseServerSelectionError: Server selection timed out after 30000 ms","timestamp":"2026-03-15T19:19:16.166Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:22:48.099Z"}
+{"level":"info","message":"Database error Error: queryTxt ETIMEOUT clusterfarshid.vcl5snh.mongodb.net","timestamp":"2026-03-15T19:23:15.828Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:42:21.883Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:42:51.187Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:53:48.011Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:54:02.143Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:54:37.566Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:54:41.147Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:56:15.895Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:56:24.803Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T19:58:56.923Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T19:59:00.985Z"}
+{"level":"info","message":"Server Started Successfully at http://0.0.0.0/8000","timestamp":"2026-03-15T20:00:06.478Z"}
+{"level":"info","message":"Database Successfully Connected","timestamp":"2026-03-15T20:00:16.192Z"}

@@ -24,7 +24,6 @@ const courseList = async(req: Request, res: Response)=>{
         }
         if (groups.includes("Computer Science - Placements Made Easier")) {
             newList = grouplist.filter(group => group.course == true).map((val: group) => val.name).filter((group_name) =>
-                group_name !== "Computer Science - Artificial Intelligence: Explore the Future" &&
                 group_name !== "Computer Science - Placements Made Easier"
             );
         }

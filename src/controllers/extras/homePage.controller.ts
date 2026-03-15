@@ -13,6 +13,7 @@ interface IPInterface {
 const homePage = async(req:Request, res:Response) => {
     const allUsers = await collection.countDocuments();
     const allCourses = grouplist.length;
+    // const fullAccessToken = req.headers['authorizationaccesstoken'];
     res.status(200).json({
         users: allUsers,
         courses: allCourses

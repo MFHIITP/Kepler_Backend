@@ -31,7 +31,7 @@ const getPlayListVideos = async(req: Request, res: Response) => {
     }
     const courseNames = admittedCourses.map((course) => course.name);
     var playList: VideoItem[] = [];
-    if(courseNames.includes("Computer Science - Placements Made Easier") && ["fundamentals", "webdev", "dsa"].includes(examName)){
+    if(courseNames.includes("Computer Science - Placements Made Easier") && ["fundamentals", "webdev", "dsa", "ml"].includes(examName)){
         playList = playlistData[examName];
     }
     else if(courseNames.includes(courseFullName)){
