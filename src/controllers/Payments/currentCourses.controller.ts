@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { admittedCoursesModel } from "../../models/admittedCourses.model.js";
 import { grouplist } from "../../local_dbs.js";
+import { collection } from "../../models/collection.model.js";
 
 interface courseStructure {
   name: string;
@@ -11,6 +12,11 @@ interface courseStructure {
 const currentCoursesFetch = async (req: Request, res: Response) => {
   console.log(req.body);
   const email = req.body.email;
+  const loginData = await collection.findOne({email: email});
+  let showDiscount = false;
+  if(loginData?.education_type == "college" && loginData?.college == "Jadavpur University"){
+    showDiscount = true;
+  }
 
   try {
     const userData = await admittedCoursesModel.findOne({ email: email });
@@ -64,7 +70,8 @@ const currentCoursesFetch = async (req: Request, res: Response) => {
       admittedCourses: currentCourses,
       selectedCourses: onGoingCourses,
       preventedCourses: preventedCourses,
-      allPossibleCourses: allPossibleCourses
+      allPossibleCourses: allPossibleCourses,
+      showDiscount: showDiscount
     });
   } catch (err) {
     console.log(err);

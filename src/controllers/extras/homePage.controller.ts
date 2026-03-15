@@ -4,7 +4,6 @@ import { grouplist } from "../../local_dbs.js";
 import pool from "../../utils/postgresConnection.utils.js";
 import checkTableExists from "../../postgresModels/checkTableExists.postgres.js";
 import axios from "axios";
-import { sendRegistrationEmail } from "../../utils/mailsend.utils.js";
 
 interface IPInterface {
     country_name: string,
