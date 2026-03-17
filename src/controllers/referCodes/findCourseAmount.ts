@@ -27,11 +27,8 @@ export class FindCourseReferralAmount {
                 return FindCourseReferralAmount.referralAmounts.OneCourseWithoutPlacement;
             }
         }
-        else if(additionalCourses.length == 2){
+        else if(courseList.includes('Computer Science - Placements Made Easier'){
             return FindCourseReferralAmount.referralAmounts.FourCoursesWithPlacement;
-        }
-        else if(additionalCourses.length == 1){
-            return FindCourseReferralAmount.referralAmounts.ThreeCoursesWithPlacement;
         }
         return FindCourseReferralAmount.referralAmounts.OneCourseWithoutPlacement;
     }
