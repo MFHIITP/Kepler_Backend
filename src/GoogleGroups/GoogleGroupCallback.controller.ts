@@ -10,7 +10,8 @@ const getGoogleGroupRefreshToken = async(req: Request, res: Response) => {
     }
 
     const { tokens } = await OAuth2Client_GoogleGroups.getToken(code);
-    // OAuth2Client_GoogleGroups.setCredentials(tokens);
+    
+    OAuth2Client_GoogleGroups.setCredentials(tokens);
 
     const oauth2 = google.oauth2({
         auth: OAuth2Client_GoogleGroups,
