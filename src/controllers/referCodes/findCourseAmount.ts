@@ -18,10 +18,10 @@ export class FindCourseReferralAmount {
                 return FindCourseReferralAmount.referralAmounts.TwoCoursesWithoutPlacement;
             }
             else if(courseList.length == 3){
-                return FindCourseReferralAmount.referralAmounts.ThreeCoursesWithPlacement;
+                return FindCourseReferralAmount.referralAmounts.ThreeCoursesWithoutPlacement;
             }
             else if(courseList.length == 4){
-                return FindCourseReferralAmount.referralAmounts.FourCoursesWithPlacement;
+                return FindCourseReferralAmount.referralAmounts.FourCoursesWithoutPlacement;
             }
             else{
                 return FindCourseReferralAmount.referralAmounts.OneCourseWithoutPlacement;
