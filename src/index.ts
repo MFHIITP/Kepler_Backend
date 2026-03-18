@@ -177,14 +177,14 @@ app.use("/api", apiroute);
 app.post("/logout", removetoken);
 
 // Protected Routes
-// app.use(checkAccessToken);
+app.use(checkAccessToken);
 app.get("/liveusers", liveuser);
 app.get("/historyusers", historyuser);
 app.use("/problems", ProblemsRouter);
 app.use("/razorpay", razorpayRouter);
 app.use("/referCode", referCodeRouter);
 
-// app.use(checkValidity);
+app.use(checkValidity);
 
 app.use("/library", libraryrouter);
 app.use("/talks", talkrouter);
