@@ -16,7 +16,7 @@ const verifyCoursePurchase = async(req: Request, res: Response) => {
     const admittedCourses = admittedCourseDetails.admittedCourses.map(val => val.name);
     const courseFullName = grouplist.find(data => data.exam == examname)?.name;
 
-    if(admittedCourses.includes("Computer Science - Placements Made Easier") && ["fundamentals", "webdev", "dsa"].includes(examname)){
+    if(admittedCourses.includes("Computer Science - Placements Made Easier") && ["fundamentals", "webdev", "dsa", "ml"].includes(examname)){
         res.status(200).json({
             message: "User can access this course"
         })

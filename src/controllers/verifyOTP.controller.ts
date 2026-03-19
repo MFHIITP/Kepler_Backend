@@ -19,7 +19,7 @@ const otpVerify = async(req: Request, res: Response)=>{
             process.env.GMAIL_USER ?? "",
             data.email,
             "Kepler",
-            "<div>Welcome to Kepler 22B. Wish you a very happy time at Kepler 22B.</div><br><div>Regards,</div><div>Farshid Hossain</div><div>Co-Founder</div>"
+            "<div>Welcome to Kepler Codes. Wish you a very happy time at Kepler Codes.</div><br><div>Regards,</div><div>Farshid Hossain</div><div>Co-Founder</div>"
         )
         await redis.del(`otp${email}`);
         await redis.del(`userDetails${email}`);

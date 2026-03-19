@@ -270,7 +270,7 @@ const verifyPayment = async (req: Request, res: Response) => {
         process.env.GMAIL_USER ?? "",
         userEmail,
         "Payment Successful",
-        `<div>Greetings from Kepler 22B!</div><br>
+        `<div>Greetings from Kepler Codes!</div><br>
         <div>Dear ${userName}</div>
         <div>This email is to inform you that we have received the payment you made on ${currentTime} for the courses ${coursesSelectedAndAccepted.join(', ')}. We thank you for choosing Kepler and we wish you best of luck for your future endeavors.</div>
         <br>
@@ -280,7 +280,7 @@ const verifyPayment = async (req: Request, res: Response) => {
         <br>
         <div>Thank you</div>
         <br>
-        <div>Kepler 22B</div>`
+        <div>Kepler Codes</div>`
       );
       await scheduleEmailPaymentReminder(userEmail, userName, coursesSelectedAndAccepted) 
     } 
