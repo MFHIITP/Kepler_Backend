@@ -22,6 +22,7 @@ interface envVariablesInterface {
     GOOGLE_GROUP_CLIENT_SECRET: string | undefined,
     GOOGLE_GROUP_CALLBACK: string | undefined,
     GOOGLE_GROUP_REFRESH_TOKEN: string | undefined,
+    GOOGLE_SPREADSHEET_ID: string | undefined
 };
 
 const config: envVariablesInterface = {
@@ -44,7 +45,8 @@ const config: envVariablesInterface = {
     GOOGLE_GROUP_CLIENT_ID: process.env.GOOGLE_GROUP_CLIENT_ID,
     GOOGLE_GROUP_CLIENT_SECRET: process.env.GOOGLE_GROUP_CLIENT_SECRET,
     GOOGLE_GROUP_CALLBACK: process.env.GOOGLE_GROUP_CALLBACK,
-    GOOGLE_GROUP_REFRESH_TOKEN: process.env.GOOGLE_GROUP_REFRESH_TOKEN
+    GOOGLE_GROUP_REFRESH_TOKEN: process.env.GOOGLE_GROUP_REFRESH_TOKEN,
+    GOOGLE_SPREADSHEET_ID: process.env.GOOGLE_SPREADSHEET_ID
 }
 
 export default config;

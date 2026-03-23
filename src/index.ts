@@ -35,6 +35,7 @@ import connectionRouter from "./routers/ConnectionRouter.routes.js";
 import ReferralMoneyTransfer from "./routers/ReferralMoneyTracker.route.js";
 import PlayListRouter from "./routers/Playlist.route.js"
 import AdminRouter from "./routers/AdminRouter.route.js";
+import scheduleSyllabusRouter from "./routers/ScheduleSyllabusRouter.route.js"
 
 const app = express();
 
@@ -170,6 +171,7 @@ app.use("/gmailAuth", gmailAuthRouter);
 app.use("/auth", googleAuthRouter);
 
 app.use("/authRefreshToken", refreshAuthRouter);
+app.use("/scheduleSyllabus", scheduleSyllabusRouter);
 
 app.use("/login", loginrouter);
 app.use("/users", userrouter);

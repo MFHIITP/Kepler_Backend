@@ -5,7 +5,8 @@ const getGoogleGroupAuthCode = async(req: Request, res: Response) => {
     const scopes = [
         "https://www.googleapis.com/auth/admin.directory.group",
         "https://www.googleapis.com/auth/admin.directory.group.member",
-        "https://www.googleapis.com/auth/drive.readonly"
+        "https://www.googleapis.com/auth/drive.readonly",
+        "https://www.googleapis.com/auth/spreadsheets.readonly"
     ];
     const authURL = OAuth2Client_GoogleGroups.generateAuthUrl({
         access_type: "offline",
